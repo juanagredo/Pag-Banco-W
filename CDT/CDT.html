@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="reclamarGirosStyle.css">
+
+    <link rel="stylesheet" href="../public/Components/Cards/Card-article/cardArticle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!--     <link rel="stylesheet" href="/landing.css"> -->
+    <link rel="stylesheet" href="/public/Components/Sidebarproduct/sidebarproduct.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/landing.css">
+    <link rel="stylesheet" href="CDT.css">
+    <link rel="stylesheet" href="/Creditos/credito.css">
+    <link rel="stylesheet" href="/public/Components/Cards/cardArticle.css">
+    <link rel="stylesheet" href="/public/Components/Breadcrumb/breadcrumb.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <w-nav-bar></w-nav-bar>
+
+    <bread-n-title></bread-n-title>
+
+    <section id="bannerTop">
+        <!--Banner info-->
+
+        <!-- Se divide el banner en dos secciones para contener el texto y las imagenes -->
+        <section id="CTAText">
+            <h1 id="">Depósito de dinero de libre negociación</h1>
+            <p>Es la forma fácil de invertir y cumplir tus propósitos para obtener los rendimientos en el plazo que
+                elijas. </p>
+                <button class="btn btn_medium_active botoncard" style="margin-top: 5%;">Abre tu CDT <i class="bi bi-arrow-right float-end"></i></button>
+            
+        </section>
+        
+
+        <section id="CTAimg">
+
+            <img src="/CDT/imgs/CDT.png" alt="">
+
+        </section>
+    </section>
+
+    
+
+
+
+    <section id="cardsInfoCDT">
+
+        <!--Menu lateral-->
+        <aside class="sidebar-container col-12 col-md-3 col-xl-2 bd-sidebar d-sm-none d-md-block desaparecer">
+            <product-sidebar reference="./CDT.html"
+
+                locations="Simulador,Beneficios,Devoluciones,Requisitos,CancelarCDT,Tasas"
+                button-names='Simulador,Beneficios,Devoluciones,Requisitos,Cancelar mi CDT,Tasas y tarifas'>
+/*
+                locations="Abre,Simulador,Beneficios,Caracteristicas,Requisitos,Cancelar,Tasas"
+                button-names='Abre tu CDT,Simulador,Beneficios,Características,Requisitos,Cancelar mi CDT,Tasas y tarifas'>
+          */
+            </product-sidebar>
+        </aside>
+
+        <!--cards derecha-->
+        <main class="main-content col marginis">
+        <div id="cardsInfo">
+
+
+
+            <div id="formulario">
+                <w-form img="./imgs/Abre tu CDT.png"></w-form>
+            </div>
+            
+
+
+
+            <article id="Simulador">
+
+                <div id="simulador">
+                    <w-simulador-cdt recurso = "./imgs/simulador.png"></w-simulador-cdt>
+                </div>
+
+            </article>
+            <!-- Card con tabla -->
+
+            <!-- <article id="cobertura" class="d-sm-none d-md-block">
+
+                <card-productabla3 img="./img/cobertura.png" titulo1='Cobertura' titulo2='Menos de 60'
+                    titulo3='Mayores de 60' datocola1='Muerte por cualquier causa' datocola2='$4.000.000'
+                    datocola3='$4.000.000' datocolb1='Canasta familiar' datocolb2='$600.000' datocolb3='$600.000'
+                    datocolc1='Auxilio financiero' datocolc2='$500.000' datocolc3='$400.000'
+                    datocold1='Gastos medicos por maternidad o paternidad' datocold2='$200.000' datocold3='N/A'
+                    datocole1='Gastos medicos por recien nacido' datocole2='$200.000' datocole3='N/A'
+                    datocolf1='Auxilio de libre destinación por ITP' datocolf2='$200.000' datocolf3='N/A'
+                    datocolg1='Auxilio por muerte accidental' datocolg2='N/A' datocolg3='$300.000' titulo=' '
+                    boton='Me interesa' class="imagen-inCard">
+                </card-productabla3>
+
+
+
+            </article>
+
+ -->
+
+
+
+            <article id="Beneficios">
+
+                <card-imagen boton="Conoce mas" recurso="/CDT/imgs/Beneficios.png" titulo=" "
+                    contenido="
+                &#x2022;Recepción de giros internacionales de más de 190 países.<br>
+                &#x2022; Obtener un CDT fácil y rápido<br>
+                
+                
+                
+                &#x2022; Amplias alternativas de plazos y montos<br>
+                &#x2022; Asesoría personalizada<br>
+                &#x2022; Nuestro CDT cuenta con el respaldo del Seguro de Depósitos Fogafín por lo que tu dinero está seguro">
+
+                </card-imagen>
+            </article>
+
+
+
+
+
+
+
+            <article id="caracteristicas">
+
+                <card-imagen boton="Conoce mas" recurso="/CDT/imgs/Caracteristicas.png" titulo=" " contenido=
+       
+                
+                "
+                <b>CDT Físico</b>
+                <br>
+                &#x2022;
+                CDT Capitalizable: Al vencer el CDT, si el titular no solicita su cancelación, este se extiende más tiempo, por el valor del capital más los intereses y, sobre este valor el banco liquidará los intereses del nuevo periodo.
+                     
+                     
+                <br>
+                &#x2022; CDT Rentabilidad: Al vencer el CDT, si el titular no solicita su cancelación, este se extiende más tiempo, pero solo por el capital inicial, los intereses generados hasta la fecha quedarán en una cuenta y podrán ser reclamados en el momento en el que el titular quiera.<br>
+                <br>
+                <b>CDT desmaterializado</b>
+                <br>
+                &#x2022; No tienen renovación automática, por lo tanto, los recursos del cliente quedarán a la vista sin generar rendimientos adicionales a los términos inicialmente pactados. Si desea realizar el proceso de renovación, deberá contactar al personal comercial 
+                del Banco W.<br> "></card-imagen>
+                
+                
+            </article>
+            <a href=""></a>
+
+
+            
+            <article id="Requisitos">
+
+                <card-imagen boton="Abre tu CDT" recurso="/CDT/imgs/Requisitos.png" titulo=" " contenido=
+       
+                
+                "
+                <b>Persona natural:</b>
+                <br>
+                &#x2022;
+                Fotocopia ampliada al 150% del documento de identificación (con firma y huella) 
+                <br>
+                &#x2022;
+                Documentos soporte de la actividad económica y declaración de origen de fondos. <a href =''>Clic aquí para conocer más.</a>
+                <br>
+
+                <b>Persona jurídica:</b>
+                <br>
+                &#x2022; Certificado de Cámara de Comercio o certificado de existencia y representación legal, expedido por autoridad competente vigente, no mayor a 30 días.<br>
+                &#x2022; Fotocopia del RUT.<br>
+                &#x2022; Fotocopia ampliada al 150% del documento de identidad del representante legal y de las personas autorizadas en el manejo de la inversión con firma y huella.<br>
+                &#x2022; Declaración de renta del último periodo gravable.<br>
+                "></card-imagen>
+                
+                
+            </article>
+            
+
+            <article id=" Beneficios">
+
+                    <card-imagen boton="Conoce mas" recurso="\Giros\imgs\Beneficios.png" titulo=" "
+                        contenido="Reclama con seguridad tus giros internacionales en el Banco W. Somos una entidad con 40 años de trayectoria y 10 años como Banco apoyando a los colombianos.
+                    Seguridad en el pago de tu dinero ya que somos una entidad con 40 años de trayectoria y 10 años como Banco apoyando a los colombianos.">
+                    </card-imagen>
+
+            </article>
+
+
+            <article id="Devoluciones">
+                
+                <card-simple boton="Conoce mas" recurso="\Giros\imgs\Devoluciones.png" titulo=" "
+                    contenido="¿Cuál es el proceso de devolución del dinero de mi giro si éste no podrá ser pagado en Colombia?
+                    
+                Recuerda que tu giro internacional se anulará y será reenviado al origen (a la remesadora del exterior) en el caso en que tu cuenta sea diferente a la cuenta que nos envió el ordenante para depositar el giro, también se anulará si tu documento ID no coincide con el que nos suministró el ordenante para depositar el giro, también podrá anularse si supera el tiempo de disponibilidad del orden especificado por la remesadora. Así mismo, existen diversos motivos por los que no podemos pagar tu giro. ¡Recuerda enviar la información correcta y oportunamente para pagar tu giro!<br>
+                    
+                <b>Si tu giro fue anulado, pasará el siguiente proceso:</b><br>
+                &#x2022;  En Banco W notificamos de manera inmediata a la remesadora que tu giro no podrá ser pagado, y solicitamos devolver el dinero a tu ordenante.<br>
+                &#x2022;  La remesadora recibe esta confirmación y procede con la devolución del dinero.
+                    
+                    Recuerda que el proceso de devolución de dinero obedece a las políticas de reintegros de cada remesadora.
+                    El tiempo de estas devoluciones dependerá de los procesos de reintegro establecidos a cada remesadora.">
+                  
+                </card-simple>
+
+            </article>
+
+            <article id="CancelarCDT">
+                
+                <card-simple boton="Conoce mas" recurso="\CDT\imgs\Cancelar.png" titulo=" "
+                    contenido="<b>CDT físico:</b>
+                    <br>
+                    1.Dirigete a la oficina de radicación del CDT. <br>
+                    2.Entrega el CDT original y presenta documento de identidad. <br>
+                    3.El Banco constata la validez de la titularidad y realiza el pago de acuerdo a la forma en la que lo requieras. <br>
+                    4.Recibe los recursos monetarios. <br>
+
+                    <b>CDT desmaterializado:</b>
+                    <br>
+                    1.Dirígete a la oficina de tu preferencia o contacta a tu ejecutivo de captación. <br>
+                    2.Diligencia la carta de instrucciones para redimir tu título y presenta tu documento de identidad. <br>
+                    3.El Banco constata la validez de la titularidad y realiza el pago de acuerdo a la forma en la que lo requieras. <br>
+                    4. Recibe los recursos monetarios.
+                    
+
+                <article id="Requisitos">
+                    <card-simple boton="Conoce mas" recurso="/CDT/imgs/Requisitos.png" titulo=" " contenido="<b>Persona natural:</b><br>
+                        &#x2022;Fotocopia ampliada al 150% del documento de identificación (con firma y huella)<br>
+                        &#x2022;Documentos soporte de la actividad económica y declaración de origen de fondos. Clic aquí para conocer más.<br>
+                        
+                        <b>Persona jurídica:</b><br>
+                        &#x2022;Certificado de Cámara de Comercio o certificado de existencia y representación legal, expedido por autoridad competente vigente, no mayor a 30 días.<br>
+                        &#x2022;Fotocopia del RUT.<br>
+                        &#x2022;Fotocopia ampliada al 150% del documento de identidad del representante legal y de las personas autorizadas en el manejo de la inversión con firma y huella.<br>
+                        &#x2022;Declaración de renta del último periodo gravable.">
+                    </card-simple>
+
+
+
+
+
+
+               ">
+                </card-simple>
+
+
+            </article>
+
+          
+                   
+
+
+
+
+
+
+                        <article id="Tasas" class="d-sm-none d-md-block">
+
+                            <card-productabla9 img="/CDT/imgs/Tasas y tarifas.png" titulo1='Monto'
+                                titulo2='120 - 170 días' titulo3='180 - 269 días' titulo4='270 - 359 días'
+                                titulo5='Mayor o igual a 360' datocola1='$200.000-$300.000' datocola2='13%'
+                                datocola3='13,20%' datocola4='13,50%' datocola5='13,60%' datocolb1='$300.001-$500.000'
+                                datocolb2='13%' datocolb3='13,20%' datocolb4='13,50%' datocolb5='13,60%'
+                                datocolc1='$200.000-$300.000' datocolc2='13%' datocolc3='13,20%' datocolc4='13,50%'
+                                datocolc5='13,60%' titulo=' ' boton='Me interesa' class="imagen-inCard">
+                            </card-productabla9>
+
+
+
+
+
+
+                        </article>
+
+
+
+
+                    </article>
+
+                    <article id="Tasas">
+                        <card-productablabrutal
+                        img="./imgs/Tasas y tarifas.png" 
+                        titulo1 = 'Monto'
+                        titulo2 = '120-170 días'
+                        titulo3 = '180-269 días'
+                        titulo4 = '270-359 días'
+                        titulo5 = 'Mayor o igual a 350'
+    
+                        datocola1 ='$200.000-$300.000'
+                        datocola2 ='13%'
+                        datocola3 ='13.20%'
+                        datocola4 = '13.50%'
+                        datocola5 = '13.60%'
+                        
+                        datocolb1 ='$300.001-$500.000'
+                        datocolb2 ='13%'
+                        datocolb3 ='13.20%'
+                        datocolb4 = '13.50%'
+                        datocolb5 = '13.60%'
+    
+                        datocolc1 ='$500.000-$999.999'
+                        datocolc2 ='13%'
+                        datocolc3 ='13.20%'
+                        datocolc4 = '13.50%'
+                        datocolc5 = '13.60%'
+
+                        datocold1 ='Gastos medicos por maternidad o paternidad'
+                        datocold2 ='$200.000'
+                        datocold3 ='N/A'
+    
+                        datocole1 ='Gastos medicos por recien nacido'
+                        datocole2 ='$200.000'
+                        datocole3 ='N/A'
+    
+                        datocolf1 ='Auxilio de libre destinación por ITP'
+                        datocolf2 ='$200.000'
+                        datocolf3 ='N/A'
+    
+                        datocolg1 ='Auxilio por muerte accidental'
+                        datocolg2 ='N/A'
+                        datocolg3 ='$300.000'
+    
+    
+    
+                            titulo=' ' 
+                            boton='Mas información aquí' 
+                            class="imagen-inCard">
+                        </card-productablabrutal>
+                </article>
+        </div>
+
+
+    </section>
+
+    </section>
+    </main>
+
+    <w-footer></w-footer>
+
+    <script type="module" src="/public/Components/components.js"></script>
+    <!--Js Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+
+
+    <link rel="stylesheet" href="/Salvavidas/salvavidas.css">
+
+    <script type="module" src="/Salvavidas/ComponenteSalvavidas.js"></script>
+
+    <!--Nuestros css's-->
+    <link rel="stylesheet" href="/landing.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/public/Components/tags/tags.css">
+    <link rel="stylesheet" href="../public/Components/Cards/cardArticle.css">
+    <link rel="stylesheet" href="/public/Components/NavBar/navBar.css">
+    <link rel="stylesheet" href="/public/Components/Footer/footer.css">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="credito.css">
+    <link rel="stylesheet" href="/public/Components/forms/forms.css">
+
+
+
+  
+</body>
+
+</html>

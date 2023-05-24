@@ -1,0 +1,41 @@
+
+
+#bannerTop {
+  display: flex;
+  size: 20%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+}
+
+#CTAText {
+  padding: 10%;
+  /* font-family: 'Montserrat', sans-serif;
+  font-weight: bold; */
+}
+
+#CTAimg {
+  width: auto;
+  height: auto;
+}
+
+ #cardsInfoGiro {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+} 
+
+#menuLateral {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+#cardsInfo{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}

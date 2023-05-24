@@ -1,0 +1,36 @@
+@import '../../../style.scss';
+
+
+
+.btn-sidebar{
+    width: 100% !important;
+    height: auto;
+    color: $color_blue2 !important;
+    border: 1px solid !important;
+    border-color: $color_blue2;
+   
+    margin-bottom: 16px;
+
+    &:hover{
+        background-color: $color_blue1;
+        color: $color_base_white !important;
+    }
+    & :active{
+        background-color: $color_blue1;
+        color: $color_base_white !important;
+    }
+}
+
+.list-group{
+    height: calc(100vh -  100px);
+    overflow-y: auto;
+    
+    
+}
+
+.tam-sidebar{
+    width: 100%;
+    margin-left: 24px;
+}
+
+

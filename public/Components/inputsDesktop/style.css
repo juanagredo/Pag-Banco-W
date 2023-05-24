@@ -1,0 +1,207 @@
+/*Colors*/
+/*Various*/
+/*Blue*/
+/*Dark Violet*/
+/*Violet*/
+/*Orange*/
+/*Yellow*/
+/* Typography */
+h1 {
+  font-weight: 700;
+  font-size: 56px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Styles for elements with maximum width of 50% */
+#labelHeader {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #27262C;
+}
+
+.dropdown-toggle {
+  text-align: left;
+  padding-left: 10px;
+}
+
+#greenInput {
+  width: 423px;
+  height: 42px;
+  border-color: #2DC071;
+  background-color: rgba(45, 192, 113, 0.2);
+  border-radius: 48px;
+}
+
+#redInput {
+  width: 423px;
+  height: 42px;
+  border-color: #FF5247;
+  background-color: rgba(235, 50, 50, 0.2);
+  border-radius: 48px;
+}
+
+#grayInput {
+  width: 423px;
+  height: 42px;
+  border-color: #D3D3D3;
+  background-color: #f4f4f4;
+  border-radius: 48px;
+}
+
+#inputSearch {
+  /* width: 519px;
+  height: 44px; */
+  background-color: #eeeeee;
+  border-radius: 22px;
+  border: none;
+}
+
+#inputSearch input[type=text] {
+  height: 44px;
+  border: none;
+  background-color: #eeeeee;
+}
+
+#inputSearch button {
+  background-color: #00B1BB;
+}
+
+#inputButtonSize {
+  width: 519px;
+  height: 44px;
+  background-color: #eeeeee;
+  border-radius: 22px;
+  border: none;
+  /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
+}
+#inputButtonSize #inputButtonColor {
+  height: 44px;
+  border: none;
+  background-color: #eeeeee;
+}
+
+#dropDownStyleGreen {
+  width: 423px;
+  height: 42px;
+  border-color: #00B1BB;
+  background-color: rgba(0, 177, 187, 0.2);
+  color: #27262c;
+}
+
+#dropDownStyleRed {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  border-color: #FF5247;
+  background-color: rgba(235, 50, 50, 0.2);
+  color: #27262C;
+}
+
+#dropDownStyleCyan {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  border-color: #00B1BB;
+  background-color: rgba(0, 177, 187, 0.2);
+  color: #27262C;
+}
+
+.dropdown-toggle {
+  text-align: left;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #greenInput {
+    width: 29.38%;
+    height: 42px;
+    border-color: #2DC071;
+    background-color: rgba(45, 192, 113, 0.2);
+    border-radius: 48px;
+  }
+  #redInput {
+    width: 29.38%;
+    height: 42px;
+    border-color: #FF5247;
+    background-color: rgba(235, 50, 50, 0.2);
+    border-radius: 48px;
+  }
+  #grayInput {
+    width: 29.38%;
+    height: 42px;
+    border-color: #D3D3D3;
+    background-color: #f4f4f4;
+    border-radius: 48px;
+  }
+  #inputSearch {
+    /* width: 519px;
+    height: 44px; */
+    background-color: #eeeeee;
+    border-radius: 22px;
+    border: none;
+  }
+  #inputSearch input[type=text] {
+    height: 44px;
+    border: none;
+    background-color: #eeeeee;
+  }
+  #inputSearch button {
+    background-color: #00B1BB;
+  }
+  #inputButtonSize {
+    width: 25.93%;
+    height: 44px;
+    background-color: #eeeeee;
+    border-radius: 22px;
+    border: none;
+    /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
+  }
+  #inputButtonSize #inputButtonColor {
+    height: 44px;
+    border: none;
+    background-color: #eeeeee;
+  }
+  #dropDownStyleGreen {
+    width: 29.38%;
+    height: 42px;
+    border-color: #2DC071;
+    background-color: rgba(0, 177, 187, 0.2);
+    color: #27262c;
+  }
+  #dropDownStyleRed {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    border-color: #FF5247;
+    background-color: rgba(235, 50, 50, 0.2);
+    color: #27262C;
+  }
+  #dropDownStyleCyan {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    border-color: #00B1BB;
+    background-color: rgba(0, 177, 187, 0.2);
+    color: #27262C;
+  }
+}/*# sourceMappingURL=style.css.map */

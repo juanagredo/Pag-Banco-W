@@ -1,0 +1,104 @@
+@import '../../../style.scss';
+
+.search_button {
+    width: 15% !important;
+    height: 44px !important;
+    background-color: $color_blue1 !important;
+    color: $color_base_white;
+    border-radius: 0% 48px 48px 0% !important;
+    margin: 0 !important;
+
+    &:hover {
+        background-color: white !important;
+        color: $color_blue1 !important;
+    }
+}
+
+.navup_buttons {
+    width: 100% !important;
+    height: 44px !important;
+    background-color: $color_blue1 !important;
+    color: $color_base_white !important;
+    padding-top: 7% !important;
+
+    &:hover {
+        background-color: rgb(242, 241, 241) !important;
+        color: $color_blue1 !important;
+    }
+}
+
+
+.form-control {
+    margin-right: 0 !important;
+    border-radius: 48px 0px 0px 48px;
+}
+
+.placeholder-input-desktop {
+    width: 459px;
+    height: 44px;
+    border: none;
+    background-color: $fill_input;
+    margin-left: 10%;
+}
+
+.second_nav {
+    background-color: $color_base_white;
+    filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.15));
+
+    &_link {
+        li {
+            a {
+                color: $color_orange1;
+
+                &:hover {
+                    color: $color_base_gray !important;
+                }
+
+                &:active {
+                    color: $color_base_gray !important;
+                }
+
+                &:focus {
+                    color: $color_base_gray !important;
+                }
+
+            }
+
+            .button_toggler {
+                width: 45.22px;
+                height: 45.22px;
+                background-color: $color_orange1;
+                border-radius: 62px !important;
+            }
+
+
+        }
+    }
+}
+
+.button_toggler {
+    width: 45.22px;
+    height: 45.22px;
+    background-color: $color_orange1;
+}
+
+.nav_btn i {
+    margin-left: 0px !important;
+    margin-right: 20px !important;
+}
+
+.change-white {
+    color: $color_base_white;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: none;
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+

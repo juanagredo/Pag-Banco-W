@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificados</title>
+
+    <!--Css Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!--Typography-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/public/Components/tags/tags.css">
+
+    <link rel="stylesheet" href="clasificados.css">
+
+</head>
+
+<body>
+    <w-nav-bar></w-nav-bar>
+
+    <!-- AQUI PONGO EL TITULO DE LA SECCION CON LOS BREADCRUMBS-->
+    <div class="breadcrumb-title-section">
+        <div class="container">
+            <div class="row ">
+                <div class="col">
+                    <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item" id="bread_lv1"><a href="/landing.html"><span>Inicio</span></a></li>
+                            <li class="breadcrumb-item" id="bread_lv2"><a href="/ComunidadW/comunidadw.html"><span>Comunidad W</span></a></li>
+                            <li class="breadcrumb-item active" id="bread_lv3" aria-current="page"><span>Clasificados</span></li>
+                        </ol>
+                    </nav>
+                    <h4 class="breadcrumb-title" id="bread_title"><span>Clasificados</span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AQUI PONGO EL BANNER INICIAL DE LOS CLASIFICADOS-->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 classified-banner_leftCol">
+                <h1>Apoya los negocios de microempresarios colombianos</h1>
+                <p class="body_1">Aquí encontrarás lo que necesites y podrás publicar tu anuncio</p>
+                <a href="add_commerce.html">
+                    <button class="btn_large btn_large_active btn text_button_medium">Publica tu clasificado aquí<i
+                            class="bi bi-arrow-right"></i></button>
+                </a>
+            </div>
+            <div class="col col-md-6">
+                <img class="classified-banner-img" src="res/classified-banner-img.png" alt="señorita sonriente.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTROS DE LOS CLASIFICADOS-->
+    <div class="filter-section">
+        <div class="container">
+            <form>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="city-filter"></label>
+                            <select class="form-control btn_large btn_large_active btn text_button_medium"
+                                id="exampleFormControlSelect1">
+                                <option disabled selected>Ciudad</option>
+                                <option>Bogotá</option>
+                                <option>Cali</option>
+                                <option>Popayan</option>
+                                <option>Palmira</option>
+                                <option>Santander de Quilichao</option>
+                                <option>Yumbo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="category-filter"></label>
+                            <select class="form-control filters btn_large btn_large_active btn text_button_medium"
+                                id="exampleFormControlSelect1">
+                                <option disabled selected>Categoría</option>
+                                <option>Construcción</option>
+                                <option>Diseño</option>
+                                <option>Estética y Cosmetica</option>
+                                <option>Inmobiliaria</option>
+                                <option>Joyería</option>
+                                <option>Restaurante</option>
+                                <option>Ropa</option>
+                                <option>Veterinaria</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- DISPLAY DE LOS COMERCIOS DE LOS CLASIFICADOS-->
+    <div class="container">
+        <main class="row classified-container" id="commerce-section">
+            <div class="classified-section">
+
+                <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
+                    recurso="res/commerce-1.png" titulo="Luzatt Accesorios"
+                    contenido="Luzatt es una marca Colombiana de accesorios en tendencia, para mujeres que quieren sentirse...">
+                </card-forblog>
+
+                <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
+                    recurso="res/commerce-2.png" titulo="Venta de Apartamento"
+                    contenido="Venta de apartamento en Ciudad Pacífica, 62 m2, 4 Piso, amplio balcón, estudio, habitación...">
+                </card-forblog>
+
+                <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
+                    recurso="res/commerce-3.png" titulo="Acuarela"
+                    contenido="Creamos y producimos Jabones artesanales, Exfoliantes Cremas y sérum naturales...">
+                </card-forblog>
+
+                <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
+                    recurso="res/commerce-4.png" titulo="Eli Gonzalez"
+                    contenido="Contribuyo a personas, marcas y empresas a activar su poder a través de la imagen efectiva.">
+                </card-forblog>
+
+                <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
+                    recurso="res/commerce-5.png" titulo="Austral"
+                    contenido="Acabados obra civil servicios de aseo construciones de edificios casa locales comerciales...">
+                </card-forblog>
+
+                <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
+                    recurso="res/commerce-6.png" titulo="Califood"
+                    contenido="restaurante street food que nació en la ciudad de Cali. utilizando materia prima de la mas alta...">
+                </card-forblog>
+
+                <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
+                    recurso="res/commerce-2.png" titulo="Venta de Apartamento"
+                    contenido="Venta de apartamento en Ciudad Pacífica, 62 m2, 4 Piso, amplio balcón, estudio, habitación...">
+                </card-forblog>
+
+                <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
+                    recurso="res/commerce-1.png" titulo="Eli Gonzalez"
+                    contenido="Contribuyo a personas, marcas y empresas a activar su poder a través de la imagen efectiva.">
+                </card-forblog>
+
+                <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
+                    recurso="res/placeholder.png" titulo="Breve título"
+                    contenido="The gradual accumulation of information about atomic and small-scale behaviour during">
+                </card-forblog>
+
+            </div>
+
+            <div class="see_more_button">
+                <button class="btn_large btn_large_active btn text_button_medium">Ver más<i
+                        class="bi bi-arrow-right"></i></button>
+            </div>
+        </main>
+
+        <div class="row" id="add_commerce_card">
+            <div class="publish_card">
+                <div class="publish_img">
+                    <img src="res/publish_card_img.png" alt="señora sonrriente quiere que publiques.png">
+                </div>
+                <div class="publish_body">
+                    <h3>Publica tu clasificado ahora</h3>
+                    <p class="body_2">Publica un anuncio de tu negocio, producto, servicio o microempresa para que
+                        llegue a más personas y así ayudarte a impulsar tu iniciativa</p>
+                    <a href="add_commerce.html">
+                        <button class="btn_large btn_large_active btn text_button_medium">Publica tu clasificado<i
+                                class="bi bi-arrow-right"></i></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <w-footer></w-footer>
+
+    <script type="module" src="../public/Components/components.js"></script>
+    <!--Js Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

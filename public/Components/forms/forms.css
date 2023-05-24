@@ -1,0 +1,1526 @@
+@charset "UTF-8";
+/*Colors*/
+/*Various*/
+/*Blue*/
+/*Dark Violet*/
+/*Violet*/
+/*Orange*/
+/*Yellow*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif !important;
+  font-style: normal;
+  line-height: 120% !important;
+}
+
+p {
+  margin-bottom: 0px;
+}
+
+/* Typography */
+h1 {
+  font-weight: 700;
+  font-size: 56px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.body {
+  font-weight: 500;
+}
+.body_1 {
+  font-size: 18px;
+}
+.body_2 {
+  font-size: 16px;
+}
+.body_3 {
+  font-size: 14px;
+}
+
+#labelHeader {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #27262C;
+}
+
+.dropdown-toggle {
+  text-align: left;
+  padding-left: 10px;
+}
+
+#greenInput {
+  width: 300px;
+  height: 42px;
+  border-color: #2DC071;
+  background-color: rgba(45, 192, 113, 0.2);
+  border-radius: 48px;
+}
+
+#redInput {
+  width: 300px;
+  height: 42px;
+  border-color: #EB3232;
+  background-color: rgba(235, 50, 50, 0.2);
+  border-radius: 48px;
+}
+
+#grayInput {
+  width: 300px;
+  height: 42px;
+  border-color: #CDCFD0;
+  background-color: #F2F2F2;
+  border-radius: 48px;
+}
+
+#inputSearch {
+  /* width: 519px;
+  height: 44px; */
+  background-color: #eeeeee;
+  border-radius: 22px;
+  border: none;
+}
+
+#inputSearch input[type=text] {
+  height: 44px;
+  border: none;
+  background-color: #eeeeee;
+}
+
+#inputSearch button {
+  background-color: #00B1BB;
+}
+
+#inputButtonSize {
+  width: 519px;
+  height: 44px;
+  background-color: #eeeeee;
+  border-radius: 22px;
+  border: none;
+  /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
+}
+#inputButtonSize #inputButtonColor {
+  height: 44px;
+  border: none;
+  background-color: #eeeeee;
+}
+
+#dropDownStyleGreen {
+  width: 300px;
+  height: 42px;
+  border-color: #00B1BB;
+  background-color: rgba(0, 177, 187, 0.2);
+  color: #27262c;
+  margin: 0px 20px;
+}
+
+#dropDownStyleRed {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  border-color: #EB3232;
+  background-color: rgba(235, 50, 50, 0.2);
+  color: #27262C;
+}
+
+#dropDownStyleCyan {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  border-color: #00B1BB;
+  background-color: rgba(0, 177, 187, 0.2);
+  color: #27262C;
+}
+
+.dropdown-toggle {
+  text-align: left;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 28px;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  h4 {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  h5 {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .body {
+    font-weight: 500;
+  }
+  .body_1 {
+    font-size: 16px;
+  }
+  .body_2 {
+    font-size: 14px;
+  }
+  .body_3 {
+    font-size: 12px;
+  }
+}
+.text_button_bold {
+  font-weight: 600;
+  font-size: 20px;
+}
+.text_button_medium {
+  font-weight: 600;
+  font-size: 18px;
+}
+.text_button_small {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.text_field::-moz-placeholder {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.text_field::placeholder {
+  font-weight: 600;
+  font-size: 20px;
+}
+.text_field_title {
+  font-weight: 400;
+  font-size: 14px;
+}
+.text_field_description {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.btn {
+  height: 42px;
+  border-radius: 48px;
+  box-shadow: 0px 4px 10px rgba(0, 177, 187, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_large {
+  width: auto;
+  padding: 0px 82px;
+}
+.btn_large i {
+  position: relative;
+  margin-left: 45px;
+  margin-right: -62px;
+}
+.btn_large_active {
+  border: none;
+  background: #00B1BB;
+  color: #F2F2F2;
+}
+.btn_large:hover {
+  border: none;
+  background: #BDF0F2;
+  color: #00B1BB;
+}
+.btn_large:disabled {
+  border: none;
+  background: #E3E5E5;
+  color: #979C9E;
+}
+.btn_large_outline {
+  filter: drop-shadow(0px 4px 10px rgba(0, 177, 187, 0.3));
+  background-color: transparent;
+}
+.btn_large_outline_active {
+  border: 1px solid #00B1BB;
+  color: #00B1BB;
+}
+.btn_large_outline:disabled {
+  border: 1px solid #CDCFD0;
+  color: #CDCFD0;
+}
+.btn_large_transparent {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn_large_transparent_active {
+  color: #00B1BB;
+}
+.btn_large_transparent:disabled {
+  color: #CDCFD0;
+}
+.btn_medium {
+  width: auto;
+  padding: 9px 75px;
+}
+.btn_medium i {
+  position: relative;
+  margin-left: 45px;
+  margin-right: -55px;
+}
+.btn_medium_active {
+  border: none;
+  background: #00B1BB;
+  color: #F2F2F2;
+}
+.btn_medium:hover {
+  border: none;
+  background: #BDF0F2;
+  color: #00B1BB;
+}
+.btn_medium:disabled {
+  border: none;
+  background: #E3E5E5;
+  color: #979C9E;
+}
+.btn_medium_outline {
+  filter: drop-shadow(0px 4px 10px rgba(0, 177, 187, 0.3));
+  background-color: transparent;
+}
+.btn_medium_outline_active {
+  border: 1px solid #00B1BB;
+  color: #00B1BB;
+}
+.btn_medium_outline:disabled {
+  border: 1px solid #CDCFD0;
+  color: #CDCFD0;
+}
+.btn_medium_transparent {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn_medium_transparent_active {
+  color: #00B1BB;
+}
+.btn_medium_transparent:disabled {
+  color: #CDCFD0;
+}
+.btn_small {
+  width: 10.7%;
+}
+.btn_small_active {
+  border: none;
+  background: #00B1BB;
+  color: #F2F2F2;
+}
+.btn_small:hover {
+  border: none;
+  background: #BDF0F2;
+  color: #00B1BB;
+}
+.btn_small:disabled {
+  border: none;
+  background: #E3E5E5;
+  color: #979C9E;
+}
+.btn_small_outline {
+  filter: drop-shadow(0px 4px 10px rgba(0, 177, 187, 0.3));
+  background-color: transparent;
+}
+.btn_small_outline_active {
+  border: 1px solid #00B1BB;
+  color: #00B1BB;
+}
+.btn_small_outline:disabled {
+  border: 1px solid #CDCFD0;
+  color: #CDCFD0;
+}
+.btn_small_transparent {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn_small_transparent_active {
+  color: #00B1BB;
+}
+.btn_small_transparent:disabled {
+  color: #CDCFD0;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn_large {
+    width: auto;
+    padding: 9px 65px;
+  }
+  .btn_medium {
+    width: auto;
+    padding: 9px 25px;
+  }
+  .btn_small {
+    width: 50%;
+  }
+}
+/* Input internacional */
+/* Cajita */
+.form-group {
+  width: 100%;
+  max-width: 310px;
+  height: 42px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.form-group:not(.form-group_error):not(.form-group_exito):focus-within {
+  background: rgba(0, 177, 187, 0.2);
+  border: 2px solid #2FD9DE;
+}
+.form-group_error {
+  border-color: #EB3232;
+  background: rgba(235, 50, 50, 0.2);
+}
+.form-group_error:focus-within {
+  background: rgba(235, 50, 50, 0.2);
+  border: 2px solid #EB3232;
+}
+.form-group_exito {
+  border-color: #2DC071;
+  background: rgba(45, 192, 113, 0.2);
+}
+.form-group_exito:focus-within {
+  background: rgba(45, 192, 113, 0.2);
+  border: 2px solid #2DC071;
+}
+
+/* No difiere */
+.select-container {
+  width: 80px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Se agrega para centrar verticalmente el ícono de la bandera */
+}
+
+/* Form de el country a elegir */
+.country-select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  padding-left: 24px;
+  border-radius: 48px;
+}
+
+/* Contenedor de la flag */
+.flag-icon-container {
+  width: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+}
+
+/* Icono de la flag */
+.flag-icon {
+  width: 20px;
+  height: 8px;
+}
+
+/* Escribir dentro del imput */
+.input-number {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  border-radius: 48px;
+  margin-left: 10%;
+}
+
+@media (max-width: 768px) {
+  .form-group {
+    display: flex;
+    /* Utilizar flexbox para disposición */
+    flex-direction: row;
+    /* Especificar la dirección de fila o columna según las necesidades */
+    display: grid;
+    grid-template-columns: 20% 80%;
+    /* Especificar columnas de ancho flexible */
+  }
+  .country-select {
+    font-size: 16px;
+    /* Cambiar el tamaño de fuente en pantallas más pequeñas */
+  }
+  .input-number {
+    margin-left: 16%;
+    font-size: 16px;
+    width: 100%;
+    /* Cambiar el tamaño de fuente en pantallas más pequeñas */
+  }
+  #greenInput {
+    width: 29.38%;
+    height: 42px;
+    border-color: #2DC071;
+    background-color: rgba(45, 192, 113, 0.2);
+    border-radius: 48px;
+  }
+  #redInput {
+    width: 29.38%;
+    height: 42px;
+    border-color: #EB3232;
+    background-color: rgba(235, 50, 50, 0.2);
+    border-radius: 48px;
+  }
+  #grayInput {
+    width: 29.38%;
+    height: 42px;
+    border-color: #CDCFD0;
+    background-color: #f4f4f4;
+    border-radius: 48px;
+  }
+  #inputSearch {
+    /* width: 519px;
+    height: 44px; */
+    background-color: #eeeeee;
+    border-radius: 22px;
+    border: none;
+  }
+  #inputSearch input[type=text] {
+    height: 44px;
+    border: none;
+    background-color: #eeeeee;
+  }
+  #inputSearch button {
+    background-color: #00B1BB;
+  }
+  #inputButtonSize {
+    width: 25.93%;
+    height: 44px;
+    background-color: #eeeeee;
+    border-radius: 22px;
+    border: none;
+    /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
+  }
+  #inputButtonSize #inputButtonColor {
+    height: 44px;
+    border: none;
+    background-color: #eeeeee;
+  }
+  #dropDownStyleGreen {
+    width: 29.38%;
+    height: 42px;
+    border-color: #2DC071;
+    background-color: rgba(0, 177, 187, 0.2);
+    color: #27262c;
+  }
+  #dropDownStyleRed {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    border-color: #EB3232;
+    background-color: rgba(235, 50, 50, 0.2);
+    color: #27262C;
+  }
+  #dropDownStyleCyan {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    border-color: #00B1BB;
+    background-color: rgba(0, 177, 187, 0.2);
+    color: #27262C;
+  }
+}
+/*Colors*/
+/*Various*/
+/*Blue*/
+/*Dark Violet*/
+/*Violet*/
+/*Orange*/
+/*Yellow*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif !important;
+  font-style: normal;
+  line-height: 120% !important;
+}
+
+p {
+  margin-bottom: 0px;
+}
+
+/* Typography */
+h1 {
+  font-weight: 700;
+  font-size: 56px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.body {
+  font-weight: 500;
+}
+.body_1 {
+  font-size: 18px;
+}
+.body_2 {
+  font-size: 16px;
+}
+.body_3 {
+  font-size: 14px;
+}
+
+#labelHeader {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #27262C;
+}
+
+.dropdown-toggle {
+  text-align: left;
+  padding-left: 10px;
+}
+
+#greenInput {
+  width: 300px;
+  height: 42px;
+  border-color: #2DC071;
+  background-color: rgba(45, 192, 113, 0.2);
+  border-radius: 48px;
+}
+
+#redInput {
+  width: 300px;
+  height: 42px;
+  border-color: #EB3232;
+  background-color: rgba(235, 50, 50, 0.2);
+  border-radius: 48px;
+}
+
+#grayInput {
+  width: 300px;
+  height: 42px;
+  border-color: #CDCFD0;
+  background-color: #F2F2F2;
+  border-radius: 48px;
+}
+
+#inputSearch {
+  /* width: 519px;
+  height: 44px; */
+  background-color: #eeeeee;
+  border-radius: 22px;
+  border: none;
+}
+
+#inputSearch input[type=text] {
+  height: 44px;
+  border: none;
+  background-color: #eeeeee;
+}
+
+#inputSearch button {
+  background-color: #00B1BB;
+}
+
+#inputButtonSize {
+  width: 519px;
+  height: 44px;
+  background-color: #eeeeee;
+  border-radius: 22px;
+  border: none;
+  /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
+}
+#inputButtonSize #inputButtonColor {
+  height: 44px;
+  border: none;
+  background-color: #eeeeee;
+}
+
+#dropDownStyleGreen {
+  width: 300px;
+  height: 42px;
+  border-color: #00B1BB;
+  background-color: rgba(0, 177, 187, 0.2);
+  color: #27262c;
+  margin: 0px 20px;
+}
+
+#dropDownStyleRed {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  border-color: #EB3232;
+  background-color: rgba(235, 50, 50, 0.2);
+  color: #27262C;
+}
+
+#dropDownStyleCyan {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  border-color: #00B1BB;
+  background-color: rgba(0, 177, 187, 0.2);
+  color: #27262C;
+}
+
+.dropdown-toggle {
+  text-align: left;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 28px;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  h4 {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  h5 {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .body {
+    font-weight: 500;
+  }
+  .body_1 {
+    font-size: 16px;
+  }
+  .body_2 {
+    font-size: 14px;
+  }
+  .body_3 {
+    font-size: 12px;
+  }
+}
+.text_button_bold {
+  font-weight: 600;
+  font-size: 20px;
+}
+.text_button_medium {
+  font-weight: 600;
+  font-size: 18px;
+}
+.text_button_small {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.text_field::-moz-placeholder {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.text_field::placeholder {
+  font-weight: 600;
+  font-size: 20px;
+}
+.text_field_title {
+  font-weight: 400;
+  font-size: 14px;
+}
+.text_field_description {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.btn {
+  height: 42px;
+  border-radius: 48px;
+  box-shadow: 0px 4px 10px rgba(0, 177, 187, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_large {
+  width: auto;
+  padding: 0px 82px;
+}
+.btn_large i {
+  position: relative;
+  margin-left: 45px;
+  margin-right: -62px;
+}
+.btn_large_active {
+  border: none;
+  background: #00B1BB;
+  color: #F2F2F2;
+}
+.btn_large:hover {
+  border: none;
+  background: #BDF0F2;
+  color: #00B1BB;
+}
+.btn_large:disabled {
+  border: none;
+  background: #E3E5E5;
+  color: #979C9E;
+}
+.btn_large_outline {
+  filter: drop-shadow(0px 4px 10px rgba(0, 177, 187, 0.3));
+  background-color: transparent;
+}
+.btn_large_outline_active {
+  border: 1px solid #00B1BB;
+  color: #00B1BB;
+}
+.btn_large_outline:disabled {
+  border: 1px solid #CDCFD0;
+  color: #CDCFD0;
+}
+.btn_large_transparent {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn_large_transparent_active {
+  color: #00B1BB;
+}
+.btn_large_transparent:disabled {
+  color: #CDCFD0;
+}
+.btn_medium {
+  width: auto;
+  padding: 9px 75px;
+}
+.btn_medium i {
+  position: relative;
+  margin-left: 45px;
+  margin-right: -55px;
+}
+.btn_medium_active {
+  border: none;
+  background: #00B1BB;
+  color: #F2F2F2;
+}
+.btn_medium:hover {
+  border: none;
+  background: #BDF0F2;
+  color: #00B1BB;
+}
+.btn_medium:disabled {
+  border: none;
+  background: #E3E5E5;
+  color: #979C9E;
+}
+.btn_medium_outline {
+  filter: drop-shadow(0px 4px 10px rgba(0, 177, 187, 0.3));
+  background-color: transparent;
+}
+.btn_medium_outline_active {
+  border: 1px solid #00B1BB;
+  color: #00B1BB;
+}
+.btn_medium_outline:disabled {
+  border: 1px solid #CDCFD0;
+  color: #CDCFD0;
+}
+.btn_medium_transparent {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn_medium_transparent_active {
+  color: #00B1BB;
+}
+.btn_medium_transparent:disabled {
+  color: #CDCFD0;
+}
+.btn_small {
+  width: 10.7%;
+}
+.btn_small_active {
+  border: none;
+  background: #00B1BB;
+  color: #F2F2F2;
+}
+.btn_small:hover {
+  border: none;
+  background: #BDF0F2;
+  color: #00B1BB;
+}
+.btn_small:disabled {
+  border: none;
+  background: #E3E5E5;
+  color: #979C9E;
+}
+.btn_small_outline {
+  filter: drop-shadow(0px 4px 10px rgba(0, 177, 187, 0.3));
+  background-color: transparent;
+}
+.btn_small_outline_active {
+  border: 1px solid #00B1BB;
+  color: #00B1BB;
+}
+.btn_small_outline:disabled {
+  border: 1px solid #CDCFD0;
+  color: #CDCFD0;
+}
+.btn_small_transparent {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn_small_transparent_active {
+  color: #00B1BB;
+}
+.btn_small_transparent:disabled {
+  color: #CDCFD0;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn_large {
+    width: auto;
+    padding: 9px 65px;
+  }
+  .btn_medium {
+    width: auto;
+    padding: 9px 25px;
+  }
+  .btn_small {
+    width: 50%;
+  }
+}
+/* Input internacional */
+/* Cajita */
+.form-group {
+  width: 100%;
+  max-width: 310px;
+  height: 42px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.form-group:not(.form-group_error):not(.form-group_exito):focus-within {
+  background: rgba(0, 177, 187, 0.2);
+  border: 2px solid #2FD9DE;
+}
+.form-group_error {
+  border-color: #EB3232;
+  background: rgba(235, 50, 50, 0.2);
+}
+.form-group_error:focus-within {
+  background: rgba(235, 50, 50, 0.2);
+  border: 2px solid #EB3232;
+}
+.form-group_exito {
+  border-color: #2DC071;
+  background: rgba(45, 192, 113, 0.2);
+}
+.form-group_exito:focus-within {
+  background: rgba(45, 192, 113, 0.2);
+  border: 2px solid #2DC071;
+}
+
+/* No difiere */
+.select-container {
+  width: 80px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Se agrega para centrar verticalmente el ícono de la bandera */
+}
+
+/* Form de el country a elegir */
+.country-select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  padding-left: 24px;
+  border-radius: 48px;
+}
+
+/* Contenedor de la flag */
+.flag-icon-container {
+  width: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+}
+
+/* Icono de la flag */
+.flag-icon {
+  width: 20px;
+  height: 8px;
+}
+
+/* Escribir dentro del imput */
+.input-number {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  border-radius: 48px;
+  margin-left: 10%;
+}
+
+@media (max-width: 768px) {
+  .form-group {
+    display: flex;
+    /* Utilizar flexbox para disposición */
+    flex-direction: row;
+    /* Especificar la dirección de fila o columna según las necesidades */
+    display: grid;
+    grid-template-columns: 20% 80%;
+    /* Especificar columnas de ancho flexible */
+  }
+  .country-select {
+    font-size: 16px;
+    /* Cambiar el tamaño de fuente en pantallas más pequeñas */
+  }
+  .input-number {
+    margin-left: 16%;
+    font-size: 16px;
+    width: 100%;
+    /* Cambiar el tamaño de fuente en pantallas más pequeñas */
+  }
+  #greenInput {
+    width: 29.38%;
+    height: 42px;
+    border-color: #2DC071;
+    background-color: rgba(45, 192, 113, 0.2);
+    border-radius: 48px;
+  }
+  #redInput {
+    width: 29.38%;
+    height: 42px;
+    border-color: #EB3232;
+    background-color: rgba(235, 50, 50, 0.2);
+    border-radius: 48px;
+  }
+  #grayInput {
+    width: 29.38%;
+    height: 42px;
+    border-color: #CDCFD0;
+    background-color: #f4f4f4;
+    border-radius: 48px;
+  }
+  #inputSearch {
+    /* width: 519px;
+    height: 44px; */
+    background-color: #eeeeee;
+    border-radius: 22px;
+    border: none;
+  }
+  #inputSearch input[type=text] {
+    height: 44px;
+    border: none;
+    background-color: #eeeeee;
+  }
+  #inputSearch button {
+    background-color: #00B1BB;
+  }
+  #inputButtonSize {
+    width: 25.93%;
+    height: 44px;
+    background-color: #eeeeee;
+    border-radius: 22px;
+    border: none;
+    /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
+  }
+  #inputButtonSize #inputButtonColor {
+    height: 44px;
+    border: none;
+    background-color: #eeeeee;
+  }
+  #dropDownStyleGreen {
+    width: 29.38%;
+    height: 42px;
+    border-color: #2DC071;
+    background-color: rgba(0, 177, 187, 0.2);
+    color: #27262c;
+  }
+  #dropDownStyleRed {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    border-color: #EB3232;
+    background-color: rgba(235, 50, 50, 0.2);
+    color: #27262C;
+  }
+  #dropDownStyleCyan {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    border-color: #00B1BB;
+    background-color: rgba(0, 177, 187, 0.2);
+    color: #27262C;
+  }
+}
+.imagefondo {
+  max-width: 328px !important;
+}
+
+.fondo-card {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+  padding: 35px 40px;
+  margin-top: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 772px;
+}
+.fondo-card .card_button {
+  border: 1px solid #00B1BB;
+  color: #00B1BB;
+}
+.fondo-card .card_button:hover {
+  background-color: #00B1BB;
+  color: #F2F2F2;
+}
+.fondo-card .card_button > h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.fondo-card .titulo-naranja {
+  background-color: #00B1BB;
+  width: calc(100% + 80px);
+  height: 80px;
+  position: relative;
+  top: -35px;
+  left: -40px;
+  margin-bottom: -9px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px;
+}
+.fondo-card .titulo-naranja .imagen-inOrange {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+.fondo-card .titulo-naranja .usuario-naranja {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FAFAFA;
+}
+.fondo-card .nombre-usuario {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+.fondo-card .comentario {
+  display: flex;
+  align-content: center;
+  gap: 15px;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+.fondo-card .comentario .fondo-comentario {
+  width: 90%;
+  padding: 9px 23px;
+  background-color: #F2F4F5;
+  height: auto;
+  border-radius: 48px;
+}
+.fondo-card .comentario .fondo-comentario .parrafo {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #979C9E;
+}
+.fondo-card .comentario .perfil-usuario {
+  width: 51px;
+  height: 51px;
+  border-radius: 100%;
+}
+.fondo-card .labels-site {
+  display: flex;
+  gap: 15px;
+}
+.fondo-card .card-interactions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -35px;
+}
+.fondo-card .card-interactions .punticos {
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.fondo-card .card-interactions .left {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.fondo-card .card-interactions .left .likes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.fondo-card .card-interactions .left .likes * {
+  color: #EB3232;
+}
+.fondo-card .card-interactions .left .comments {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.fondo-card .card-interactions .left .comments * {
+  color: #707070;
+}
+.fondo-card .horizontal {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.fondo-card .horizontal .arrow {
+  margin-left: -10px;
+  border: solid #252B42;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(-45deg);
+  border-radius: 2px;
+}
+.fondo-card .logo-inCard {
+  position: relative;
+  top: -40px;
+  left: -40px;
+  width: calc(100% + 80px);
+  height: auto;
+}
+.fondo-card .card-imagen {
+  margin-top: -35px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.fondo-card .card-imagen .imagen-inCard {
+  position: relative;
+  top: 0px;
+  left: -40px;
+  width: calc(100% + 80px);
+  height: auto;
+}
+.fondo-card .texto-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.fondo-card .texto-card .titulo {
+  color: #252B42;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+.fondo-card .texto-card .orange-type {
+  color: #F25C05;
+}
+.fondo-card .texto-card .parrafo {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #737373;
+  line-height: 180% !important;
+}
+
+.card_horizontal_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 301px;
+  background: #FAFAFA;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  color: #27262C;
+}
+.card_horizontal_img {
+  width: 44.5%;
+  height: 301px;
+  border-radius: 20px 0px 0px 20px;
+}
+.card_horizontal_body {
+  padding: 33px 55px;
+}
+.card_horizontal_body h3 {
+  margin-bottom: 20px;
+}
+.card_horizontal_body p {
+  margin: 20px 0px;
+}
+.card_horizontal_body button {
+  margin-top: 40px;
+}
+
+.title_row {
+  background-color: #8A90B5 !important;
+  width: 100%;
+  border-radius: 8.84097px 8.84097px 0px 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.title_row h4 {
+  font-size: 16px !important;
+}
+
+.title_col .title_row2 {
+  background-color: #6321A6 !important;
+  width: 100%;
+  height: auto;
+  border-radius: 8.84097px 8.84097px 0px 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.title_col .title_row2 h4 {
+  font-size: 10px;
+}
+.title_col .title_col {
+  justify-content: space-between;
+  width: 100%;
+}
+.title_col .title_col h4 {
+  font-size: 10px !important;
+  font-weight: 500 !important;
+}
+
+.contenedores .row .col.title_col h4 {
+  width: 100%;
+}
+
+.contenedores {
+  width: 100%;
+  padding-top: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 50px;
+  color: #F25C05;
+}
+
+.w-100 {
+  border-bottom: 1px solid #2D3982;
+}
+
+.locura {
+  width: 100%;
+  background-color: #F2F2F2;
+  margin: 0;
+}
+.locura h4 {
+  font-size: 15px !important;
+  font-weight: 500;
+}
+
+.superior_row {
+  background-color: #6321A6 !important;
+  width: 100%;
+  height: auto;
+  border-radius: 8.84097px 8.84097px 0px 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.superior_row h4 {
+  font-size: 18px !important;
+  font-weight: 700;
+}
+
+.body-details {
+  border-radius: 80px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+.title-inputcard {
+  margin-top: 10px;
+  color: #6321A6;
+}
+
+.botoncard {
+  width: 100%;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  background-color: whitesmoke;
+  width: 100%;
+}
+
+.formdrop {
+  width: 100%;
+  background-color: rgba(0, 177, 187, 0.2);
+}
+.formdrop button {
+  text-align: left;
+}
+
+.dropdown-menu button {
+  text-align: left;
+}
+
+/* Estilo para la sección del formulario */
+.fondo-card {
+  background-color: white;
+  padding: 40px;
+  margin-top: 50px;
+}
+
+/* Estilo para la imagen en el formulario */
+.card-imagen {
+  margin-bottom: 40px;
+}
+
+/* Estilo para los botones del formulario */
+.btn_formulario {
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+
+/* Estilo para el dropdown del formulario */
+.dropdown {
+  margin-bottom: 100px;
+}
+
+/* Estilo para el título del formulario */
+h2 {
+  margin-bottom: 30px;
+}
+
+/* Estilo para la barra de progreso */
+.progress {
+  margin-bottom: 30px;
+}
+
+/* Estilo para el contenedor de los elementos del formulario */
+#etapa-1, #etapa-2 {
+  margin-bottom: 30px;
+}
+
+/* Estilo para las etiquetas del formulario */
+label {
+  margin-bottom: 10px;
+}
+
+/* Estilo para los inputs del formulario */
+.form-control_formulario {
+  margin-bottom: 20px !important;
+}
+
+.form-input {
+  border-radius: 20px !important;
+}
+
+.progress-bar {
+  background-color: #5cb85c; /* Cambiar a tu color deseado */
+}
+
+.progress-bar[aria-valuenow="100"] {
+  background-color: #f0ad4e; /* Cambiar a tu color deseado */
+}
+
+.my-label {
+  width: 50%;
+}
+
+.btn_continuar {
+  width: 50%;
+  background-color: #00B1BB;
+  color: white;
+}
+
+.form-check {
+  margin-top: 30px;
+}
+
+.dropdown_form {
+  max-height: 500px;
+  overflow-y: auto;
+}/*# sourceMappingURL=forms.css.map */

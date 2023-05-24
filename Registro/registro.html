@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco W</title>
+
+    <!--Css Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!--Css link-->
+    <link rel="stylesheet" href="./registro.css">
+
+    <!--Typography-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header>
+        <w-nav-bar></w-nav-bar>
+    </header>
+
+
+    
+    <section class="log_in">
+            <img src="./images/bar.png" alt="" style="width: 18px; margin:30px">
+        <div class="log_in_text">
+            <h3>Crea una cuenta</h3>
+            <p class="body_2">Ingresa tus datos por favor</p>
+
+            <div class="text_input_signup">
+                <p class="text_btn_link_normal">Nombres</p>
+                <input class="form-control rounded-pill" id="grayInput" placeholder="Escribe aquí">
+            </div>
+            <div class="text_input_signup">
+                <p class="text_btn_link_normal">Apellidos</p>
+                <input class="form-control rounded-pill" id="grayInput" placeholder="Escribe aquí">
+            </div>
+            <div class="text_input_signup">
+                <p class="text_btn_link_normal">Correo elctrónico</p>
+                <input class="form-control rounded-pill" id="grayInput" placeholder="Escribe aquí" type="email">
+            </div>
+            <div class="text_input_signup">
+                <p class="text_btn_link_normal">Confirmar correo electrónico</p>
+                <input class="form-control rounded-pill" id="grayInput" placeholder="Escribe aquí">
+            </div>
+            <div class="btn_class">
+                <a href="./registro2.html" class="btn_a">
+                    <button class="btn btn_medium btn_medium_active">Continuar <i class="bi bi-arror-right"></i></button>
+                </a>
+            </div>
+            <p class="body_2" style="margin-top: 20px;">¿Ya tienes cuenta? <a href="./iniciarSesión.html" class="log">Inicia Sesión</a> </p>
+        </div>
+
+
+        <div class="log_in_img">
+            <img class="log_in_img_img" src="./images/1.png" alt="">
+        </div>
+
+
+    </section>
+
+    <img class="planB_mobile" src="../planB/regis.png" alt="">
+    <a href="../Perfil/perfil.html">
+        <button class="btn btn_large btn_large_active planB_mobile_btn">Continuar</button>
+    </a>
+    <footer>
+        <w-footer></w-footer>
+    </footer>
+
+
+    <script type="module" src="../public/Components/components.js"></script>
+
+    <!--Js Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

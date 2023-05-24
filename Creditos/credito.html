@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credito - Banco W</title>
+
+    <!--Css Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+
+    <!--Typography-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <w-nav-bar></w-nav-bar>
+
+
+
+    <bread-n-title></bread-n-title>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <!-- <aside class="sidebar-container col-12 col-md-3 col-xl-2 bd-sidebar">
+                <user-sidebar></user-sidebar>
+            </aside> -->
+            <section class="portada">
+                <div class="container">
+                    <div class="row flex-column-reverse flex-md-row ">
+                        <div class="col-md-6 style_better">
+                            <h1 class="headline1">Fortalecimiento para tu negocio</h1>
+                            <span>
+                                <h3 class="">Tenemos un crédito enfocado a microempresarios y
+                                    emprendedores como tú.</h3>
+                            </span>
+
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="img/portada.png" class="img-fluid" alt="Imagen de ejemplo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside class="sidebar-container col-12 col-md-3 col-xl-2 bd-sidebar d-sm-none d-md-block desaparecer">
+                <product-sidebar reference="./credito.html"
+                    locations="formulario,simulador,caracteristicas,requisitos,tasas,cancelar,mas informacion"
+                    button-names='Formulario, Simulador,Caracteristicas, Requisitos, Tasas y tarifas, Cancelar credito, Más información'>
+                </product-sidebar>
+            </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <main class="main-content col marginis">
+                <div class="container-fluid mx-auto text-center">
+                    <div class="dropdown d-sm-block d-md-none d-flex justify-content-center">
+
+
+
+
+                        <ul class="dropdown-menu dropdown_form" aria-labelledby="dropdownMenuButton1">
+                            <card-productasas recurso="./img/caracteristicas.png" meses='
+                                    &#x2022; Antigüedad mínima del negocio: 1 año.
+                                    <br>&#x2022; Monto: desde 1 SMMLV hasta 120 SMMLV </br>
+                                    <br>&#x2022;<b> Tasa fija </b> durante toda la vigencia del préstamo.</br>
+                                    <br>&#x2022; El plazo será dado de acuerdo al monto y al tipo de cliente.</br>
+                                    <br>&#x2022; Disponible para clientes nuevos, renovación y preferenciales.</br>
+                                    <br>&#x2022; Opción de adquirir de manera <b> opcional seguros </b> como: Soy Previsión
+                                    Exequial,Soy Vida, Soy Protección Familiar y Soy Patrimonio Seguro.</br>
+                                    <br>&#x2022; Opción de ahorrar mientras se paga el crédito con el <b> Pagahorro.</b></br>
+                                    ' class="imagen-inCard"></card-productasas>
+
+                        </ul>
+
+
+                        <!-- Repetir el código anterior para crear las 6 secciones -->
+
+
+                    </div>
+
+                </div>
+
+                <div id="formulario">
+                    <w-form img="./img/titulo_form1.png"></w-form>
+                </div>
+
+                <div id="simulador">
+                    <w-simulador recurso="./img/simulador.png"></w-simulador>
+                </div>
+
+
+                <div class="card cardmobile d-sm-block d-md-none">
+                    <div class="card-body flex-column">
+                        <div class="dropdown dropdown_W border-top border-bottom border-start dropdown_form">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive"
+                                type="button" id="dropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <h4> Simulador <i class="bi bi-chevron-down float-end"></i>
+                            </button></h4>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive"
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <h4>Caracteristicas
+                                    <i class="bi bi-chevron-down float-end"></i>
+                            </button>
+                            </h4>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+
+
+                                <article class="d-sm-none d-md-block">
+
+                                    <card-imagen recurso="./img/caracteristicas.png" contenido='
+                        &#x2022; Antigüedad mínima del negocio: 1 año.
+                         <br>&#x2022; Monto: desde 1 SMMLV hasta 120 SMMLV </br>
+                         <br>&#x2022;<b> Tasa fija </b> durante toda la vigencia del préstamo.</br>
+                        <br>&#x2022; El plazo será dado de acuerdo al monto y al tipo de cliente.</br>
+                        <br>&#x2022; Disponible para clientes nuevos, renovación y preferenciales.</br>
+                        <br>&#x2022; Opción de adquirir de manera <b> opcional seguros </b> como: Soy Previsión
+                        Exequial,Soy Vida, Soy Protección Familiar y Soy Patrimonio Seguro.</br>
+                        <br>&#x2022; Opción de ahorrar mientras se paga el crédito con el <b> Pagahorro.</b></br>
+                        ' titulo=' ' boton='Más sobre pagahorro' class="imagen-inCard">
+                                    </card-imagen>
+
+
+
+                                </article>
+
+                            </ul>
+                        </div>
+
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive"
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <h4>Requisitos
+                                    <i class="bi bi-chevron-down float-end"></i>
+                            </button>
+                            </h4>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <div class="d-md-block d-sm-none">
+                                    <card-imagen recurso="./img/requisitos.png" contenido='
+                                    &#x2022; Fotocopia de la <b>cédula de ciudadanía</b>
+                                    <br>&#x2022; 2 <b> referencias comerciales</b> y/o personales, y una familiar.
+                                    <br>&#x2022; <b>Facturas </b> de compra del ultimo año y servicios públicos al día.
+                                    <br>&#x2022; Seguro <b>deudores</b>.
+                                    ' titulo=' ' boton='Seguro deudores aquí' class="imagen-inCard">
+                                    </card-imagen>
+                                </div>
+
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive"
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <h4> Tasas y tarifas <i class="bi bi-chevron-down float-end"></i>
+                            </button> </h4>
+
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <div>
+                                    <card-productasas img="./img/Tasas y tarifas.png" datacredito='$5.500 * + IVA'
+                                        cifin='$3.700 + IVA' meses='1 a 36' intereses='3.58%' plazos='Tasas en días E.A'
+                                        plazo1='90-119' plazo2='120-149' plazo3='150-179' plazos1='4.00%'
+                                        plazos2='14.90%' plazos3='15.00%' class="imagen-inCard"></card-productasas>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive"
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <h4> Cancelar mi crédito <i class="bi bi-chevron-down float-end"></i>
+                            </button> </h4>
+
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <div class="d-md-block d-sm-none">
+                                    <card-simple recurso="./img/cancelacion.png" contenido='
+                                    El crédito queda cancelado en el momento en que se pague la totalidad de cuotas y el saldo quede en cero. Puedes solicitar el paz y salvo a través de la Línea de Servicio al Cliente o en la agencia en la que tu crédito fue desembolsado.
+                                    ' titulo=' ' class="imagen-inCard">
+                                    </card-simple>
+                                </div>
+
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive"
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <h4> Más información <i class="bi bi-chevron-down float-end"></i>
+                            </button> </h4>
+
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <article id="caracteristicas" class="desaparecer-cards">
+
+                    <card-imagen recurso="./img/caracteristicas.png" contenido='
+                        &#x2022; Antigüedad mínima del negocio: 1 año.
+                        <br>&#x2022; Monto: desde 1 SMMLV hasta 120 SMMLV </br>
+                        <br>&#x2022;<b> Tasa fija </b> durante toda la vigencia del préstamo.</br>
+                        <br>&#x2022; El plazo será dado de acuerdo al monto y al tipo de cliente.</br>
+                        <br>&#x2022; Disponible para clientes nuevos, renovación y preferenciales.</br>
+                        <br>&#x2022; Opción de adquirir de manera <b> opcional seguros </b> como: Soy Previsión
+                        Exequial,Soy Vida, Soy Protección Familiar y Soy Patrimonio Seguro.</br>
+                        <br>&#x2022; Opción de ahorrar mientras se paga el crédito con el <b> Pagahorro.</b></br>
+                        ' titulo=' ' boton='Más sobre pagahorro' class="imagen-inCard">
+                    </card-imagen>
+
+
+
+                </article>
+
+
+                <div id="requisitos" class="d-md-block d-sm-none desaparecer-cards">
+                    <card-imagen recurso="./img/requisitos.png" contenido='
+                        &#x2022; Fotocopia de la <b>cédula de ciudadanía</b>
+                        <br>&#x2022; 2 <b> referencias comerciales</b> y/o personales, y una familiar.
+                        <br>&#x2022; <b>Facturas </b> de compra del ultimo año y servicios públicos al día.
+                        <br>&#x2022; Seguro <b>deudores</b>.
+                        ' titulo=' ' boton='Seguro deudores aquí' class="imagen-inCard" id="caracteristicas">
+                    </card-imagen>
+                </div>
+
+                <div id="tasas" class="d-md-block d-sm-none">
+                    <card-productasas img="./img/Tasas y tarifas.png" datacredito='$5.500 * + IVA' cifin='$3.700 + IVA'
+                        meses='1 a 36' intereses='3.58%' plazos='Tasas en días E.A' plazo1='90-119' plazo2='120-149'
+                        plazo3='150-179' plazos1='4.00%' plazos2='14.90%' plazos3='15.00%' class="imagen-inCard"
+                        id="caracteristicas"></card-productasas>
+                </div>
+
+                <div id="cancelar" class="d-md-block d-sm-none desaparecer-cards">
+                    <card-simple recurso="./img/cancelacion.png" contenido='
+                        El crédito queda cancelado en el momento en que se pague la totalidad de cuotas y el saldo quede en cero. Puedes solicitar el paz y salvo a través de la Línea de Servicio al Cliente o en la agencia en la que tu crédito fue desembolsado.
+                        ' titulo=' ' class="imagen-inCard" id="caracteristicas">
+                    </card-simple>
+                </div>
+
+                <div id="mas informacion" class="d-md-block d-sm-none desaparecer-cards">
+                    <card-inputs4 recurso="/Creditos/img/informacion.png"
+                        contenido="Puedes hacer tu solicitud de crédito o cualquier consulta a través de los siguientes canales:" " titulocard="
+                        Analista de crédito" botoncard="Solicitalo aquí" titulocard2="Línea gratuita"
+                        botoncard2="01 8000 515656" titulocard3="Celular" botoncard3="323 5996557"
+                        titulocard4="Oficinas físicas" botoncard4="Encuentra la oficina aquí">
+
+
+
+
+
+
+                    </card-inputs4>
+                </div>
+
+
+
+
+                <div id="locate_caract">
+                    <card-productablas img="./img/cobertura.png" titulo1='Cobertura' titulo2=' ' titulo3=' '
+                        titulo4='Menores de 60' titulo5='Mayores de 60' datocola1='hola' datocola2=' ' datocola3=' '
+                        class="imagen-inCard" id="caracteristicas">
+                    </card-productablas>
+                </div>
+
+
+
+
+        </div>
+
+        </main>
+
+    </div>
+    </div>
+
+
+
+    <!--user-product></user-product>
+    <user-agenda></user-agenda>
+    <breadcrumb-line></breadcrumb-line>
+    <bread-n-title></bread-n-title-->
+    <w-footer></w-footer>
+
+
+
+
+    <script type="module" src="/public/Components/components.js"></script>
+    <!--Js Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+
+
+    <link rel="stylesheet" href="/Salvavidas/salvavidas.css">
+
+    <script type="module" src="/Salvavidas/ComponenteSalvavidas.js"></script>
+
+    <!--Nuestros css's-->
+    <link rel="stylesheet" href="/landing.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/public/Components/tags/tags.css">
+    <link rel="stylesheet" href="../public/Components/Cards/cardArticle.css">
+    <link rel="stylesheet" href="/public/Components/NavBar/navBar.css">
+    <link rel="stylesheet" href="/public/Components/Footer/footer.css">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="credito.css">
+    <link rel="stylesheet" href="/public/Components/forms/forms.css">
+
+
+
+    <salvavidas-comp></salvavidas-comp>
+</body>
+
+</html>

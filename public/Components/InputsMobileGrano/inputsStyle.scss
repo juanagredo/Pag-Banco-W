@@ -1,0 +1,189 @@
+@media (max-width: 768px) {
+    /* Styles for elements with maximum width of 50% */
+
+    .dropdown-toggle {
+        text-align: left;
+        padding-left: 10px;
+      }
+      
+      #greenInput {
+        width: 310px;
+        height: 42px;
+        border-color: #2dc071;
+        background-color: rgba(45, 192, 113, 0.1);
+        border-radius: 48px;
+      }
+      #redInput {
+        width: 310px;
+        height: 42px;
+        border-color: #ff5247;
+        background-color: rgba(255, 82, 71, 0.2);
+        border-radius: 48px;
+      }
+      
+      #grayInput {
+        width: 310px;
+        height: 42px;
+        border-color: #d3d3d3;
+        background-color: #f4f4f4;
+        border-radius: 48px;
+      }
+      
+      #inputSearch {
+        /* width: 519px;
+        height: 44px; */
+        background-color: #eeeeee;
+        border-radius: 22px;
+        border: none;
+      }
+      
+      #inputSearch input[type="text"] {
+        height: 44px;
+        border: none;
+        background-color: #eeeeee;
+      }
+      
+      #inputSearch button {
+        background-color: #00b1bb;
+      }
+      
+      #inputButtonSize {
+        width: 519px;
+        height: 44px;
+        background-color: #eeeeee;
+        border-radius: 22px;
+        border: none;
+        /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
+      
+        #inputButtonColor {
+          height: 44px;
+          border: none;
+          background-color: #eeeeee;
+        }
+      }
+      
+      #dropDownStyleGreen {
+        width: 310px;
+        height: 42px;
+        border-color: #2dc071;
+        background-color: rgba(45, 192, 113, 0.2);
+        color: #27262c;
+      
+        
+      }
+      
+      #dropDownStyleRed {
+          width: 310px;
+          height: 42px;
+          border-width: 2px;
+          border-color: #EB3232;
+          background-color: rgba(235, 50, 50, 0.2);
+          color: #27262C;
+        }
+      
+        #dropDownStyleCyan {
+          width: 310px;
+          height: 42px;
+          border-width: 2px;
+          border-color: #00B1BB;
+          background-color: rgba(0, 177, 187, 0.2);
+          color: #27262C;
+        }
+        
+            
+  }
+  
+
+  @media all and (min-width: 769px)and (max-width:1600px){
+
+
+
+    .dropdown-toggle {
+        text-align: left;
+        padding-left: 10px;
+      }
+      
+      #greenInput {
+        width: 29.38%;
+        height: 42px;
+        border-color: #2dc071;
+        background-color: rgba(45, 192, 113, 0.1);
+        border-radius: 48px;
+      }
+      #redInput {
+        width: 29.38%;
+        height: 42px;
+        border-color: #ff5247;
+        background-color: rgba(255, 82, 71, 0.2);
+        border-radius: 48px;
+      }
+      
+      #grayInput {
+        width: 29.38%;
+        height: 42px;
+        border-color: #d3d3d3;
+        background-color: #f4f4f4;
+        border-radius: 48px;
+      }
+      
+      #inputSearch {
+        /* width: 519px;
+        height: 44px; */
+        background-color: #eeeeee;
+        border-radius: 22px;
+        border: none;
+      }
+      
+      #inputSearch input[type="text"] {
+        height: 44px;
+        border: none;
+        background-color: #eeeeee;
+      }
+      
+      #inputSearch button {
+        background-color: #00b1bb;
+      }
+      
+      #inputButtonSize {
+        width: 25.93%;
+        height: 44px;
+        background-color: #eeeeee;
+        border-radius: 22px;
+        border: none;
+        /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
+      
+        #inputButtonColor {
+          height: 44px;
+          border: none;
+          background-color: #eeeeee;
+        }
+      }
+      
+      #dropDownStyleGreen {
+        width: 29.38%;
+        height: 42px;
+        border-color: #2dc071;
+        background-color: rgba(45, 192, 113, 0.2);
+        color: #27262c;
+      
+        
+      }
+      
+      #dropDownStyleRed {
+          width: 29.38%;
+          height: 42px;
+          border-width: 2px;
+          border-color: #EB3232;
+          background-color: rgba(235, 50, 50, 0.2);
+          color: #27262C;
+        }
+      
+        #dropDownStyleCyan {
+          width: 29.38%;
+          height: 42px;
+          border-width: 2px;
+          border-color: #00B1BB;
+          background-color: rgba(0, 177, 187, 0.2);
+          color: #27262C;
+        }
+  }
