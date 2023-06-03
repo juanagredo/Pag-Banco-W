@@ -11,7 +11,7 @@ class NavBar extends HTMLElement {
           title: 'CDT'
         },
         {
-          url: '../../../Creditos/credito.html',
+          url: './Pag-Banco-W/Creditos/credito.html',
           title: 'Microcrédito'
         },
         {
