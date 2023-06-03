@@ -130,4 +130,4 @@ carruselInv.addEventListener('mousemove', (e) => {
   const dragDistance = x - startX;
   carruselInv.scrollLeft = scrollLeft - dragDistance;
 });
-
+ 
