@@ -1,0 +1,74 @@
+@import '../../style.scss';
+
+main {
+    padding: 25px 12% 0px 12%;
+}
+
+#banner {
+    display: flex;
+    flex-direction: row;
+
+    & h1 {
+        color: $color_text;
+    }
+
+    & p {
+        color: $color_text;
+    }
+
+    & img {
+        width: 50%;
+    }
+}
+
+.banner {
+    &_text {
+        width: 48%;
+        margin-top: 115px;
+    }
+}
+
+#credits_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4.7%;
+    margin: 100px 0px;
+}
+
+.container {
+    &_card {
+        width: 30%;
+        margin-top: 20px;
+    }
+}
+
+#tips {
+    display: flex;
+    flex-direction: column;
+    margin: 0px -20%;
+    height: 750px;
+    padding: 40px 20%;
+    background: $color_blue3;
+
+    & h3 {
+        color: $color_text;
+    }
+
+    & p {
+        color: $color_text;
+    }
+}
+
+.container_buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+    margin-left: 20%;
+    padding-top: 100px;
+}
+
+footer {
+    margin: 0px;
+}

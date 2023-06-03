@@ -1,122 +1,140 @@
-@import '../../../style.scss';
-@import '../Cards/cardArticle.scss';
+// @import '../../../style.scss';
+// @import '../Cards/cardArticle.scss';
 
 
-.dropdown-toggle::after {
-    display: none;
-}
+// .dropdown-toggle::after {
+//     display: none !important;
+// }
 
-.dropdown-menu{
-    background-color:whitesmoke;
-    width: 100%;
+ .dropdown-menu-forms{
+     background-color:whitesmoke;
+     width: 100% !important;
  
-    // overflow-y: auto;
+      overflow-y: auto;
     
 }
-.formdrop{
+
+
+.form-group-forms{
+    margin-top: 20px;
     width: 100%;
-    background-color:rgba(0, 177, 187, 0.2);
-    & button{
-        text-align: left;
-    }
 }
+.form-input{
+    border-radius: 20px !important;
+}
+// .formdrop{
+//     width: 100% !important;
+//     background-color:rgba(0, 177, 187, 0.2);
+//     & button{
+//         text-align: left;
+//     }
+// }
 
-.dropdown-menu button {
-    text-align: left;
-  }
+// .dropdown-menu button {
+//     text-align: left !important;
+//   }
   
 
   
-// .col-lg-3 {
-//     position: fixed;
-//     height: 50%;
+// // .col-lg-3 {
+// //     position: fixed;
+// //     height: 50%;
+// //   }
+
+//     // .dme_link{
+//     //     margin-top: 30px;
+//     //     text-align: center;
+
+//     //     & a{
+//     //         background-color: white;
+//     //         font-weight: bold;
+//     //         color: $color_blue1;
+//     //     }
+//     // }
+
+//     /* Estilo para la sección del formulario */
+//  .fondo-card {
+//      background-color: white;
+//      padding: 40px !important;
+//      height: fit-content !important;
+//      margin-top: 50px !important;
+//    }
+  
+
+
+//     .formulario{
+//         display: flex !important;
+//         flex-direction: column !important;
+//         gap: 20px !important;
+//         justify-content: space-between !important;
+//     }
+//   /* Estilo para la imagen en el formulario */
+//   .card-imagen {
+//     margin-bottom: 40px !important;
+//   }
+  
+//   /* Estilo para los botones del formulario */
+//   .btn_formulario {
+//     margin-bottom: 20px !important;
+//     margin-right: 40px !important;
+//   }
+  
+//   /* Estilo para el dropdown del formulario */
+//   // .dropdown {
+//   //   margin-bottom: 100px !important;
+//   // }
+  
+//   /* Estilo para el título del formulario */
+//   h2 {
+//     margin-bottom: 30px !important;
+//   }
+  
+//   /* Estilo para la barra de progreso */
+//   .progress {
+//     margin-bottom: 30px !important;
+//   }
+  
+//   /* Estilo para el contenedor de los elementos del formulario */
+//   #etapa-1, #etapa-2 {
+//     margin-bottom: 30px !important;
+//   }
+  
+//   /* Estilo para las etiquetas del formulario */
+//   label {
+//     margin-bottom: 10px !important;
+//   }
+  
+//   /* Estilo para los inputs del formulario */
+//   .form-control_formulario {
+//     margin-bottom: 20px !important;
+//   }
+//   .form-input{
+//     border-radius: 20px !important;
+//   }
+   .progress-bar {
+     background-color: #5cb85c !important;  /* Cambiar a tu color deseado */
+   }
+//   .progress-bar[aria-valuenow="100"] {
+//     background-color: #f0ad4e; /* Cambiar a tu color deseado */
 //   }
 
-    // .dme_link{
-    //     margin-top: 30px;
-    //     text-align: center;
+//   .my-label{
+//     width: 50% !important;
+//   }
 
-    //     & a{
-    //         background-color: white;
-    //         font-weight: bold;
-    //         color: $color_blue1;
-    //     }
-    // }
+//   .btn{
+//     &_continuar{
+//         width: 50% !important;
+//         background-color: $color_blue1;
+//         color: white;
+//     }
+//   }
 
-    /* Estilo para la sección del formulario */
-.fondo-card {
-    background-color: white;
-    padding: 40px;
-    margin-top: 50px;
-  }
-  
-  /* Estilo para la imagen en el formulario */
-  .card-imagen {
-    margin-bottom: 40px;
-  }
-  
-  /* Estilo para los botones del formulario */
-  .btn_formulario {
-    margin-bottom: 20px;
-    margin-right: 40px;
-  }
-  
-  /* Estilo para el dropdown del formulario */
-  .dropdown {
-    margin-bottom: 100px;
-  }
-  
-  /* Estilo para el título del formulario */
-  h2 {
-    margin-bottom: 30px;
-  }
-  
-  /* Estilo para la barra de progreso */
-  .progress {
-    margin-bottom: 30px;
-  }
-  
-  /* Estilo para el contenedor de los elementos del formulario */
-  #etapa-1, #etapa-2 {
-    margin-bottom: 30px;
-  }
-  
-  /* Estilo para las etiquetas del formulario */
-  label {
-    margin-bottom: 10px;
-  }
-  
-  /* Estilo para los inputs del formulario */
-  .form-control_formulario {
-    margin-bottom: 20px !important;
-  }
-  .form-input{
-    border-radius: 20px !important;
-  }
-  .progress-bar {
-    background-color: #5cb85c; /* Cambiar a tu color deseado */
-  }
-  .progress-bar[aria-valuenow="100"] {
-    background-color: #f0ad4e; /* Cambiar a tu color deseado */
-  }
-
-  .my-label{
-    width: 50%;
-  }
-
-  .btn{
-    &_continuar{
-        width: 50%;
-        background-color: $color_blue1;
-        color: white;
-    }
-  }
-
-  .form-check{
-    margin-top: 30px;
-  }
+//   .form-check{
+//     margin-top: 30px !important;
+//   }
   
   .dropdown_form{
-    max-height: 500px;
-    overflow-y: auto;
-  }
+     max-height: 250px !important;
+     overflow-y: auto !important;
+   }

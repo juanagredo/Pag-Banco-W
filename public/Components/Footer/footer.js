@@ -38,7 +38,7 @@ class Footer extends HTMLElement {
               <hr class= separadortitulo>
 
               <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Microcrédito</a></li>
+                <li><a href="../../../Creditos/credito.html" class="text-white">Microcrédito</a></li>
                 </ul>
                 <ul class="list-unstyled">
                 <li><a href="#" class="text-white">Libranza</a></li>
@@ -52,7 +52,7 @@ class Footer extends HTMLElement {
                 <li><a href="#" class="text-white">Depósito de bajo monto</a></li>
                 </ul>
                 <ul class="list-unstyled">
-                <li><a href="#" class="text-white">CDT</a></li>
+                <li><a href="../../../CDT/CDT.html" class="text-white">CDT</a></li>
               </ul>
             </div>
             <div class="col-md-3">
@@ -78,10 +78,10 @@ class Footer extends HTMLElement {
               <hr class= separadortitulo>
 
               <ul class="list-unstyled d-flex ">
-                <li class="px-3"><a href="#" class="text-white "><i class="bi bi-facebook h2"></i></a></li>
-                <li class="px-3"><a href="#" class="text-white"><i class="bi bi-twitter h2"></i></a></li>
-                <li class="px-3"><a href="#" class="text-white"><i class="bi bi-youtube h2 "></i></a></li>
-                <li class="px-3"><a href="#" class="text-white"><i class="bi bi-instagram h2"></i></a></li>
+                <li class="px-3"><a href="https://www.facebook.com/bancowoficial" class="text-white "><i class="bi bi-facebook h2"></i></a></li>
+                <li class="px-3"><a href="https://twitter.com/BancoWOficial" class="text-white"><i class="bi bi-twitter h2"></i></a></li>
+                <li class="px-3"><a href="https://www.youtube.com/c/BancoW" class="text-white"><i class="bi bi-youtube h2 "></i></a></li>
+                <li class="px-3"><a href="https://www.instagram.com/bancowoficial/" class="text-white"><i class="bi bi-instagram h2"></i></a></li>
                 </ul><a href="#" class="text-white"style= "font-size:13px" >Pagina Web Defensoría del Consumidor Financiero www.defensorialg.com.co</a>
 
                 </div>

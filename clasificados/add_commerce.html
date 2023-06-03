@@ -16,7 +16,6 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/public/Components/tags/tags.css">
 
     
     <link rel="stylesheet" href="clasificados.css">
@@ -24,25 +23,10 @@
 </head>
 
 <body>
-    <w-nav-bar></w-nav-bar>
-    <!-- AQUI PONGO EL TITULO DE LA SECCION CON LOS BREADCRUMBS-->
-    <div class="breadcrumb-title-section">
-        <div class="container">
-            <div class="row ">
-                <div class="col">
-                    <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item" id="bread_lv1"><a href="/landing.html"><span>Inicio</span></a></li>
-                            <li class="breadcrumb-item" id="bread_lv2"><a href="/ComunidadW/comunidadw.html"><span>Comunidad W</span></a></li>
-                            <li class="breadcrumb-item" id="bread_lv2"><a href="/clasificados/clasificados.html"><span>Clasificados</span></a></li>
-                            <li class="breadcrumb-item active" id="bread_lv3" aria-current="page"><span>Publica tu Clasificado</span></li>
-                        </ol>
-                    </nav>
-                    <h4 class="breadcrumb-title" id="bread_title"><span>Clasificados</span></h4>
-                </div>
-            </div>
-        </div>
-    </div>
+    <header>
+        <w-nav-bar></w-nav-bar>
+        <bread-n-title actual="Clasificados" link="../landing.html-../ComunidadW/comunidadw.html" level="Inicio >-Comunidad W >"></bread-n-title>
+    </header>
 
     <!-- CIRUCLO DE FONDO-->
     <span class="dot"></span>

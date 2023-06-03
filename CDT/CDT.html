@@ -8,7 +8,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="reclamarGirosStyle.css">
@@ -34,95 +33,301 @@
 </head>
 
 <body>
-    <w-nav-bar></w-nav-bar>
+    <header>
+        <w-nav-bar></w-nav-bar>
+        <bread-n-title actual="CDT" link="../landing.html-../CDT/CDT.html" level="Inicio >-Ahorro e inversión >"></bread-n-title>
+    </header>
+ 
 
-    <bread-n-title></bread-n-title>
 
-    <section id="bannerTop">
-        <!--Banner info-->
 
-        <!-- Se divide el banner en dos secciones para contener el texto y las imagenes -->
-        <section id="CTAText">
-            <h1 id="">Depósito de dinero de libre negociación</h1>
-            <p>Es la forma fácil de invertir y cumplir tus propósitos para obtener los rendimientos en el plazo que
-                elijas. </p>
-                <button class="btn btn_medium_active botoncard" style="margin-top: 5%;">Abre tu CDT <i class="bi bi-arrow-right float-end"></i></button>
-            
-        </section>
-        
 
-        <section id="CTAimg">
+    <div class="container-fluid">
+        <div class="row">
 
-            <img src="/CDT/imgs/CDT.png" alt="">
 
-        </section>
-    </section>
-
+            <!-- <aside class="sidebar-container col-12 col-md-3 col-xl-2 bd-sidebar">
+                <user-sidebar></user-sidebar>
+            </aside> -->
+            <section class="portada">
+                <div class="container">
+                    <div class="row flex-column-reverse flex-md-row container_text">
+                        <div class="col-md-6 style_better">
+                            <h1 class="headline1">Depósito de dinero de libre negociación</h1>
+                            <span>
+                                <h3 class="">Es la forma fácil de invertir y cumplir tus propósitos para obtener los rendimientos en el plazo que
+                                    elijas.</h3>
+                            </span>
+                            <a href="#Simulador" class="btn btn_medium_active botoncard">Abre tu CDT <i class="bi bi-arrow-right float-end"></i></a>
     
+                        </div>
+                        <div class="col-md-6 img_banner">
+                            <img src="imgs/CDT.png" class="img-fluid img_banner-responsive" alt="Imagen de ejemplo">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-
-    <section id="cardsInfoCDT">
-
-        <!--Menu lateral-->
-        <aside class="sidebar-container col-12 col-md-3 col-xl-2 bd-sidebar d-sm-none d-md-block desaparecer">
-            <product-sidebar reference="./CDT.html"
-
-                locations="Simulador,Beneficios,Devoluciones,Requisitos,CancelarCDT,Tasas"
-                button-names='Simulador,Beneficios,Devoluciones,Requisitos,Cancelar mi CDT,Tasas y tarifas'>
-/*
-                locations="Abre,Simulador,Beneficios,Caracteristicas,Requisitos,Cancelar,Tasas"
-                button-names='Abre tu CDT,Simulador,Beneficios,Características,Requisitos,Cancelar mi CDT,Tasas y tarifas'>
-          */
-            </product-sidebar>
-        </aside>
-
-        <!--cards derecha-->
-        <main class="main-content col marginis">
-        <div id="cardsInfo">
-
-
-
-            <div id="formulario">
-                <w-form img="./imgs/Abre tu CDT.png"></w-form>
-            </div>
             
+            <aside class="sidebar-container col-12 col-md-3 col-xl-2 bd-sidebar d-sm-none d-md-block desaparecer">
+                <product-sidebar reference="./CDT.html"
+    
+                    locations="Simulador,Beneficios,caracteristicas,requisitos,CancelarCDT,Tasas"
+                    button-names='Simulador,Beneficios,Características,Requisitos,Cancelar mi CDT,Tasas y tarifas'>
+    
+                </product-sidebar>
+            </aside>
 
 
 
-            <article id="Simulador">
+            <main class="main-content col marginis">
+                <div class="container-fluid mx-auto text-center">
+                    <div class="dropdown d-sm-block d-md-none d-flex justify-content-center">
 
-                <div id="simulador">
-                    <w-simulador-cdt recurso = "./imgs/simulador.png"></w-simulador-cdt>
+
+
+
+                        <ul class="dropdown-menu dropdown_form dropdown_reactive" aria-labelledby="dropdownMenuButton1">
+                            <card-productasas recurso="./img/caracteristicas.png" meses='
+                                    &#x2022; Antigüedad mínima del negocio: 1 año.
+                                    <br>&#x2022; Monto: desde 1 SMMLV hasta 120 SMMLV </br>
+                                    <br>&#x2022;<b> Tasa fija </b> durante toda la vigencia del préstamo.</br>
+                                    <br>&#x2022; El plazo será dado de acuerdo al monto y al tipo de cliente.</br>
+                                    <br>&#x2022; Disponible para clientes nuevos, renovación y preferenciales.</br>
+                                    <br>&#x2022; Opción de adquirir de manera <b> opcional seguros </b> como: Soy Previsión
+                                    Exequial,Soy Vida, Soy Protección Familiar y Soy Patrimonio Seguro.</br>
+                                    <br>&#x2022; Opción de ahorrar mientras se paga el crédito con el <b> Pagahorro.</b></br>
+                                    ' class="imagen-inCard"></card-productasas>
+
+                        </ul>
+
+
+                        <!-- Repetir el código anterior para crear las 6 secciones -->
+
+
+                    </div>
+
                 </div>
 
-            </article>
-            <!-- Card con tabla -->
+                <div id="formulario">
+                    <w-form img="./imgs/Abre tu CDT.png"></w-form>
+                </div>
 
-            <!-- <article id="cobertura" class="d-sm-none d-md-block">
-
-                <card-productabla3 img="./img/cobertura.png" titulo1='Cobertura' titulo2='Menos de 60'
-                    titulo3='Mayores de 60' datocola1='Muerte por cualquier causa' datocola2='$4.000.000'
-                    datocola3='$4.000.000' datocolb1='Canasta familiar' datocolb2='$600.000' datocolb3='$600.000'
-                    datocolc1='Auxilio financiero' datocolc2='$500.000' datocolc3='$400.000'
-                    datocold1='Gastos medicos por maternidad o paternidad' datocold2='$200.000' datocold3='N/A'
-                    datocole1='Gastos medicos por recien nacido' datocole2='$200.000' datocole3='N/A'
-                    datocolf1='Auxilio de libre destinación por ITP' datocolf2='$200.000' datocolf3='N/A'
-                    datocolg1='Auxilio por muerte accidental' datocolg2='N/A' datocolg3='$300.000' titulo=' '
-                    boton='Me interesa' class="imagen-inCard">
-                </card-productabla3>
+                <div id="Simulador">
+                    <w-simulador recurso="./imgs/Simulador.png"></w-simulador>
+                </div>
 
 
+                <div class="card cardmobile d-sm-block d-md-none " style="margin-top: 5%;">
+                    <div class="card-body flex-column style_card">
+                        <div class="dropdown dropdown_W border-top border-bottom border-start dropdown_form">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive"
+                                type="button" id="dropdown1" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 0%;">
+                                <h4> Simulador <i class="bi bi-chevron-down float-end"></i>
+                            </button></h4>
 
-            </article>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
 
- -->
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive" style="border-radius: 0%;"
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false"  >
+                                <h4>Beneficios
+                                    <i class="bi bi-chevron-down float-end"></i>
+                            </button>
+                            </h4>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+
+
+                                <article class="d-sm-none d-md-block">
+                                    <card-imagen boton="Conoce mas" recurso="/CDT/imgs/Beneficios.png" titulo=" "
+                                    contenido="
+                                &#x2022;Recepción de giros internacionales de más de 190 países.<br>
+                                &#x2022; Obtener un CDT fácil y rápido<br>
+                                
+                                
+                                
+                                &#x2022; Amplias alternativas de plazos y montos<br>
+                                &#x2022; Asesoría personalizada<br>
+                                &#x2022; Nuestro CDT cuenta con el respaldo del Seguro de Depósitos Fogafín por lo que tu dinero está seguro">
+                
+                                </card-imagen>
+
+
+                                </article>
+
+                            </ul>
+                        </div>
+
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive" 
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 0%;">
+                                <h4>Características
+                                    <i class="bi bi-chevron-down float-end"></i>
+                            </button>
+                            </h4>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <div class="d-md-block d-sm-none">
+                                    
+                    <card-imagen boton="Conoce mas" recurso="/CDT/imgs/Caracteristicas.png" titulo=" " contenido=
+       
+                
+                    "
+                    <b>CDT Físico</b>
+                    <br>
+                    &#x2022;
+                    CDT Capitalizable: Al vencer el CDT, si el titular no solicita su cancelación, este se extiende más tiempo, por el valor del capital más los intereses y, sobre este valor el banco liquidará los intereses del nuevo periodo.
+                         
+                         
+                    <br>
+                    &#x2022; CDT Rentabilidad: Al vencer el CDT, si el titular no solicita su cancelación, este se extiende más tiempo, pero solo por el capital inicial, los intereses generados hasta la fecha quedarán en una cuenta y podrán ser reclamados en el momento en el que el titular quiera.<br>
+                    <br>
+                    <b>CDT desmaterializado</b>
+                    <br>
+                    &#x2022; No tienen renovación automática, por lo tanto, los recursos del cliente quedarán a la vista sin generar rendimientos adicionales a los términos inicialmente pactados. Si desea realizar el proceso de renovación, deberá contactar al personal comercial 
+                    del Banco W.<br> "></card-imagen>
+                                </div>
+
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive" style="border-radius: 0%;"
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <h4> Requisitos <i class="bi bi-chevron-down float-end"></i>
+                            </button> </h4>
+
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <div>
+                                    <card-imagen boton="Abre tu CDT" recurso="/CDT/imgs/Requisitos.png" titulo=" " contenido=
+       
+                
+                                    "
+                                    <b>Persona natural:</b>
+                                    <br>
+                                    &#x2022;
+                                    Fotocopia ampliada al 150% del documento de identificación (con firma y huella) 
+                                    <br>
+                                    &#x2022;
+                                    Documentos soporte de la actividad económica y declaración de origen de fondos. <a href =''>Clic aquí para conocer más.</a>
+                                    <br>
+                    
+                                    <b>Persona jurídica:</b>
+                                    <br>
+                                    &#x2022; Certificado de Cámara de Comercio o certificado de existencia y representación legal, expedido por autoridad competente vigente, no mayor a 30 días.<br>
+                                    &#x2022; Fotocopia del RUT.<br>
+                                    &#x2022; Fotocopia ampliada al 150% del documento de identidad del representante legal y de las personas autorizadas en el manejo de la inversión con firma y huella.<br>
+                                    &#x2022; Declaración de renta del último periodo gravable.<br>
+                                    "></card-imagen>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive" style="border-radius: 0%;"
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <h4> Cancelar mi crédito <i class="bi bi-chevron-down float-end"></i>
+                            </button> </h4>
+
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <div class="d-md-block d-sm-none">
+                                    <card-simple boton="Conoce mas" recurso="\CDT\imgs\Cancelar.png" titulo=" "
+                        contenido="<b>CDT físico:</b>
+                        <br>
+                        1.Dirigete a la oficina de radicación del CDT. <br>
+                        2.Entrega el CDT original y presenta documento de identidad. <br>
+                        3.El Banco constata la validez de la titularidad y realiza el pago de acuerdo a la forma en la que lo requieras. <br>
+                        4.Recibe los recursos monetarios. <br>
+            
+                        <b>CDT desmaterializado:</b>
+                        <br>
+                        1.Dirígete a la oficina de tu preferencia o contacta a tu ejecutivo de captación. <br>
+                        2.Diligencia la carta de instrucciones para redimir tu título y presenta tu documento de identidad. <br>
+                        3.El Banco constata la validez de la titularidad y realiza el pago de acuerdo a la forma en la que lo requieras. <br>
+                        4. Recibe los recursos monetarios.
+                        "></card-simple>
+                                </div>
+
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown_W border-top border-bottom border-end">
+                            <button
+                                class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive"style="border-radius: 0%;"
+                                type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+                                <h4> Tasas y tarifas <i class="bi bi-chevron-down float-end"></i>
+                            </button> </h4>
+
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <card-productablabrutal
+                                img="./imgs/Tasas y tarifas.png" 
+                                titulo1 = 'Monto'
+                                titulo2 = '120-170 días'
+                                titulo3 = '180-269 días'
+                                titulo4 = '270-359 días'
+                                titulo5 = 'Mayor o igual a 350'
+                        
+                                datocola1 ='$200.000-$300.000'
+                                datocola2 ='13%'
+                                datocola3 ='13.20%'
+                                datocola4 = '13.50%'
+                                datocola5 = '13.60%'
+                                
+                                datocolb1 ='$300.001-$500.000'
+                                datocolb2 ='13%'
+                                datocolb3 ='13.20%'
+                                datocolb4 = '13.50%'
+                                datocolb5 = '13.60%'
+                        
+                                datocolc1 ='$500.000-$999.999'
+                                datocolc2 ='13%'
+                                datocolc3 ='13.20%'
+                                datocolc4 = '13.50%'
+                                datocolc5 = '13.60%'
+                        
+                                datocold1 ='Gastos medicos por maternidad o paternidad'
+                                datocold2 ='$200.000'
+                                datocold3 ='N/A'
+                        
+                                datocole1 ='Gastos medicos por recien nacido'
+                                datocole2 ='$200.000'
+                                datocole3 ='N/A'
+                        
+                                datocolf1 ='Auxilio de libre destinación por ITP'
+                                datocolf2 ='$200.000'
+                                datocolf3 ='N/A'
+                        
+                                datocolg1 ='Auxilio por muerte accidental'
+                                datocolg2 ='N/A'
+                                datocolg3 ='$300.000'
+                        
+                        
+                        
+                                    titulo=' ' 
+                                    boton='Mas información aquí' 
+                                    class="imagen-inCard">
+                                </card-productablabrutal>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
 
 
-            <article id="Beneficios">
 
-                <card-imagen boton="Conoce mas" recurso="/CDT/imgs/Beneficios.png" titulo=" "
+
+                <article id="Beneficios" class="desaparecer-cards separar-cards ">
+
+                    <card-imagen boton="Conoce mas" recurso="/CDT/imgs/Beneficios.png" titulo=" "
                     contenido="
                 &#x2022;Recepción de giros internacionales de más de 190 países.<br>
                 &#x2022; Obtener un CDT fácil y rápido<br>
@@ -134,43 +339,42 @@
                 &#x2022; Nuestro CDT cuenta con el respaldo del Seguro de Depósitos Fogafín por lo que tu dinero está seguro">
 
                 </card-imagen>
-            </article>
 
 
 
+                </article>
 
+                <article id="caracteristicas" class="desaparecer-cards separar-cards">
 
-
-
-            <article id="caracteristicas">
-
-                <card-imagen boton="Conoce mas" recurso="/CDT/imgs/Caracteristicas.png" titulo=" " contenido=
+                    <card-imagen boton="Conoce mas" recurso="/CDT/imgs/Caracteristicas.png" titulo=" " contenido=
        
                 
-                "
-                <b>CDT Físico</b>
-                <br>
-                &#x2022;
-                CDT Capitalizable: Al vencer el CDT, si el titular no solicita su cancelación, este se extiende más tiempo, por el valor del capital más los intereses y, sobre este valor el banco liquidará los intereses del nuevo periodo.
-                     
-                     
-                <br>
-                &#x2022; CDT Rentabilidad: Al vencer el CDT, si el titular no solicita su cancelación, este se extiende más tiempo, pero solo por el capital inicial, los intereses generados hasta la fecha quedarán en una cuenta y podrán ser reclamados en el momento en el que el titular quiera.<br>
-                <br>
-                <b>CDT desmaterializado</b>
-                <br>
-                &#x2022; No tienen renovación automática, por lo tanto, los recursos del cliente quedarán a la vista sin generar rendimientos adicionales a los términos inicialmente pactados. Si desea realizar el proceso de renovación, deberá contactar al personal comercial 
-                del Banco W.<br> "></card-imagen>
-                
-                
-            </article>
-            <a href=""></a>
+            "
+            <b>CDT Físico</b>
+            <br>
+            &#x2022;
+            CDT Capitalizable: Al vencer el CDT, si el titular no solicita su cancelación, este se extiende más tiempo, por el valor del capital más los intereses y, sobre este valor el banco liquidará los intereses del nuevo periodo.
+                 
+                 
+            <br>
+            &#x2022; CDT Rentabilidad: Al vencer el CDT, si el titular no solicita su cancelación, este se extiende más tiempo, pero solo por el capital inicial, los intereses generados hasta la fecha quedarán en una cuenta y podrán ser reclamados en el momento en el que el titular quiera.<br>
+            <br>
+            <b>CDT desmaterializado</b>
+            <br>
+            &#x2022; No tienen renovación automática, por lo tanto, los recursos del cliente quedarán a la vista sin generar rendimientos adicionales a los términos inicialmente pactados. Si desea realizar el proceso de renovación, deberá contactar al personal comercial 
+            del Banco W.<br> "></card-imagen>
 
 
-            
-            <article id="Requisitos">
 
-                <card-imagen boton="Abre tu CDT" recurso="/CDT/imgs/Requisitos.png" titulo=" " contenido=
+                </article>
+
+
+
+              
+
+
+                <div id="requisitos" class="d-md-block d-sm-none desaparecer-cards separar-cards ">
+                    <card-imagen boton="Abre tu CDT" recurso="/CDT/imgs/Requisitos.png" titulo=" " contenido=
        
                 
                 "
@@ -190,170 +394,106 @@
                 &#x2022; Fotocopia ampliada al 150% del documento de identidad del representante legal y de las personas autorizadas en el manejo de la inversión con firma y huella.<br>
                 &#x2022; Declaración de renta del último periodo gravable.<br>
                 "></card-imagen>
+                </div>
+
                 
+
+                <article id="CancelarCDT" class="separar-cards">
                 
+                    <card-simple boton="Conoce mas" recurso="\CDT\imgs\Cancelar.png" titulo=" "
+                        contenido="<b>CDT físico:</b>
+                        <br>
+                        1.Dirigete a la oficina de radicación del CDT. <br>
+                        2.Entrega el CDT original y presenta documento de identidad. <br>
+                        3.El Banco constata la validez de la titularidad y realiza el pago de acuerdo a la forma en la que lo requieras. <br>
+                        4.Recibe los recursos monetarios. <br>
+            
+                        <b>CDT desmaterializado:</b>
+                        <br>
+                        1.Dirígete a la oficina de tu preferencia o contacta a tu ejecutivo de captación. <br>
+                        2.Diligencia la carta de instrucciones para redimir tu título y presenta tu documento de identidad. <br>
+                        3.El Banco constata la validez de la titularidad y realiza el pago de acuerdo a la forma en la que lo requieras. <br>
+                        4. Recibe los recursos monetarios.
+                        "></card-simple>
+            
+                </article>
+
+                <article id="Tasas" class="separar-cards">
+                    <card-productablabrutal
+                    img="./imgs/Tasas y tarifas.png" 
+                    titulo1 = 'Monto'
+                    titulo2 = '120-170 días'
+                    titulo3 = '180-269 días'
+                    titulo4 = '270-359 días'
+                    titulo5 = 'Mayor o igual a 350'
+            
+                    datocola1 ='$200.000-$300.000'
+                    datocola2 ='13%'
+                    datocola3 ='13.20%'
+                    datocola4 = '13.50%'
+                    datocola5 = '13.60%'
+                    
+                    datocolb1 ='$300.001-$500.000'
+                    datocolb2 ='13%'
+                    datocolb3 ='13.20%'
+                    datocolb4 = '13.50%'
+                    datocolb5 = '13.60%'
+            
+                    datocolc1 ='$500.000-$999.999'
+                    datocolc2 ='13%'
+                    datocolc3 ='13.20%'
+                    datocolc4 = '13.50%'
+                    datocolc5 = '13.60%'
+            
+                    datocold1 ='Gastos medicos por maternidad o paternidad'
+                    datocold2 ='$200.000'
+                    datocold3 ='N/A'
+            
+                    datocole1 ='Gastos medicos por recien nacido'
+                    datocole2 ='$200.000'
+                    datocole3 ='N/A'
+            
+                    datocolf1 ='Auxilio de libre destinación por ITP'
+                    datocolf2 ='$200.000'
+                    datocolf3 ='N/A'
+            
+                    datocolg1 ='Auxilio por muerte accidental'
+                    datocolg2 ='N/A'
+                    datocolg3 ='$300.000'
+            
+            
+            
+                        titulo=' ' 
+                        boton='Mas información aquí' 
+                        class="imagen-inCard">
+                    </card-productablabrutal>
             </article>
             
-
-            <article id=" Beneficios">
-
-                    <card-imagen boton="Conoce mas" recurso="\Giros\imgs\Beneficios.png" titulo=" "
-                        contenido="Reclama con seguridad tus giros internacionales en el Banco W. Somos una entidad con 40 años de trayectoria y 10 años como Banco apoyando a los colombianos.
-                    Seguridad en el pago de tu dinero ya que somos una entidad con 40 años de trayectoria y 10 años como Banco apoyando a los colombianos.">
-                    </card-imagen>
-
-            </article>
-
-
-            <article id="Devoluciones">
-                
-                <card-simple boton="Conoce mas" recurso="\Giros\imgs\Devoluciones.png" titulo=" "
-                    contenido="¿Cuál es el proceso de devolución del dinero de mi giro si éste no podrá ser pagado en Colombia?
-                    
-                Recuerda que tu giro internacional se anulará y será reenviado al origen (a la remesadora del exterior) en el caso en que tu cuenta sea diferente a la cuenta que nos envió el ordenante para depositar el giro, también se anulará si tu documento ID no coincide con el que nos suministró el ordenante para depositar el giro, también podrá anularse si supera el tiempo de disponibilidad del orden especificado por la remesadora. Así mismo, existen diversos motivos por los que no podemos pagar tu giro. ¡Recuerda enviar la información correcta y oportunamente para pagar tu giro!<br>
-                    
-                <b>Si tu giro fue anulado, pasará el siguiente proceso:</b><br>
-                &#x2022;  En Banco W notificamos de manera inmediata a la remesadora que tu giro no podrá ser pagado, y solicitamos devolver el dinero a tu ordenante.<br>
-                &#x2022;  La remesadora recibe esta confirmación y procede con la devolución del dinero.
-                    
-                    Recuerda que el proceso de devolución de dinero obedece a las políticas de reintegros de cada remesadora.
-                    El tiempo de estas devoluciones dependerá de los procesos de reintegro establecidos a cada remesadora.">
-                  
-                </card-simple>
-
-            </article>
-
-            <article id="CancelarCDT">
-                
-                <card-simple boton="Conoce mas" recurso="\CDT\imgs\Cancelar.png" titulo=" "
-                    contenido="<b>CDT físico:</b>
-                    <br>
-                    1.Dirigete a la oficina de radicación del CDT. <br>
-                    2.Entrega el CDT original y presenta documento de identidad. <br>
-                    3.El Banco constata la validez de la titularidad y realiza el pago de acuerdo a la forma en la que lo requieras. <br>
-                    4.Recibe los recursos monetarios. <br>
-
-                    <b>CDT desmaterializado:</b>
-                    <br>
-                    1.Dirígete a la oficina de tu preferencia o contacta a tu ejecutivo de captación. <br>
-                    2.Diligencia la carta de instrucciones para redimir tu título y presenta tu documento de identidad. <br>
-                    3.El Banco constata la validez de la titularidad y realiza el pago de acuerdo a la forma en la que lo requieras. <br>
-                    4. Recibe los recursos monetarios.
-                    
-
-                <article id="Requisitos">
-                    <card-simple boton="Conoce mas" recurso="/CDT/imgs/Requisitos.png" titulo=" " contenido="<b>Persona natural:</b><br>
-                        &#x2022;Fotocopia ampliada al 150% del documento de identificación (con firma y huella)<br>
-                        &#x2022;Documentos soporte de la actividad económica y declaración de origen de fondos. Clic aquí para conocer más.<br>
-                        
-                        <b>Persona jurídica:</b><br>
-                        &#x2022;Certificado de Cámara de Comercio o certificado de existencia y representación legal, expedido por autoridad competente vigente, no mayor a 30 días.<br>
-                        &#x2022;Fotocopia del RUT.<br>
-                        &#x2022;Fotocopia ampliada al 150% del documento de identidad del representante legal y de las personas autorizadas en el manejo de la inversión con firma y huella.<br>
-                        &#x2022;Declaración de renta del último periodo gravable.">
-                    </card-simple>
+              
 
 
 
 
 
-
-               ">
-                </card-simple>
-
-
-            </article>
-
-          
-                   
+               
 
 
 
-
-
-
-                        <article id="Tasas" class="d-sm-none d-md-block">
-
-                            <card-productabla9 img="/CDT/imgs/Tasas y tarifas.png" titulo1='Monto'
-                                titulo2='120 - 170 días' titulo3='180 - 269 días' titulo4='270 - 359 días'
-                                titulo5='Mayor o igual a 360' datocola1='$200.000-$300.000' datocola2='13%'
-                                datocola3='13,20%' datocola4='13,50%' datocola5='13,60%' datocolb1='$300.001-$500.000'
-                                datocolb2='13%' datocolb3='13,20%' datocolb4='13,50%' datocolb5='13,60%'
-                                datocolc1='$200.000-$300.000' datocolc2='13%' datocolc3='13,20%' datocolc4='13,50%'
-                                datocolc5='13,60%' titulo=' ' boton='Me interesa' class="imagen-inCard">
-                            </card-productabla9>
-
-
-
-
-
-
-                        </article>
-
-
-
-
-                    </article>
-
-                    <article id="Tasas">
-                        <card-productablabrutal
-                        img="./imgs/Tasas y tarifas.png" 
-                        titulo1 = 'Monto'
-                        titulo2 = '120-170 días'
-                        titulo3 = '180-269 días'
-                        titulo4 = '270-359 días'
-                        titulo5 = 'Mayor o igual a 350'
-    
-                        datocola1 ='$200.000-$300.000'
-                        datocola2 ='13%'
-                        datocola3 ='13.20%'
-                        datocola4 = '13.50%'
-                        datocola5 = '13.60%'
-                        
-                        datocolb1 ='$300.001-$500.000'
-                        datocolb2 ='13%'
-                        datocolb3 ='13.20%'
-                        datocolb4 = '13.50%'
-                        datocolb5 = '13.60%'
-    
-                        datocolc1 ='$500.000-$999.999'
-                        datocolc2 ='13%'
-                        datocolc3 ='13.20%'
-                        datocolc4 = '13.50%'
-                        datocolc5 = '13.60%'
-
-                        datocold1 ='Gastos medicos por maternidad o paternidad'
-                        datocold2 ='$200.000'
-                        datocold3 ='N/A'
-    
-                        datocole1 ='Gastos medicos por recien nacido'
-                        datocole2 ='$200.000'
-                        datocole3 ='N/A'
-    
-                        datocolf1 ='Auxilio de libre destinación por ITP'
-                        datocolf2 ='$200.000'
-                        datocolf3 ='N/A'
-    
-                        datocolg1 ='Auxilio por muerte accidental'
-                        datocolg2 ='N/A'
-                        datocolg3 ='$300.000'
-    
-    
-    
-                            titulo=' ' 
-                            boton='Mas información aquí' 
-                            class="imagen-inCard">
-                        </card-productablabrutal>
-                </article>
         </div>
 
+        </main>
 
-    </section>
+    </div>
+    </div>
 
-    </section>
-    </main>
 
+
+    <!--user-product></user-product>
+    <user-agenda></user-agenda>
+    <breadcrumb-line></breadcrumb-line>
+    <bread-n-title></bread-n-title-->
     <w-footer></w-footer>
+  
 
     <script type="module" src="/public/Components/components.js"></script>
     <!--Js Bootstrap-->
@@ -374,7 +514,7 @@
     <link rel="stylesheet" href="/public/Components/NavBar/navBar.css">
     <link rel="stylesheet" href="/public/Components/Footer/footer.css">
     <link rel="stylesheet" href="perfil.css">
-    <link rel="stylesheet" href="credito.css">
+
     <link rel="stylesheet" href="/public/Components/forms/forms.css">
 
 

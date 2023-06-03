@@ -1,0 +1,46 @@
+@import "../../style.css";
+
+
+.i1 {
+    position: absolute;
+    width: 341px;
+    height: 42px;
+    left: 63%;
+    right: 19px;
+    top: 907px;
+    /* Blanco base */
+
+    background: #F2F2F2;
+    /* Base */
+
+    border: 1px solid #CDCFD0;
+    border-radius: 48px;
+
+    color: gray;
+    padding: 20px;
+}
+
+.i2 {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 62.5%;
+    top: 992px;
+
+    /* fill-inputs */
+
+    background: #F2F4F5;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+}
+
+.bntB {
+    position: absolute;
+    width: 20% !important;
+    height: 42px;
+    left: 65%;
+    right: 64px;
+    top: 1101px;
+}

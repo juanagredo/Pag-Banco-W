@@ -31,7 +31,6 @@
         <w-nav-bar></w-nav-bar>
     </header>
 
-    <img class="img_planB" src="./Images/homeMobile.png" alt="">
 
     <section id="title_home">
         <h1>Inicio</h1>
@@ -124,21 +123,21 @@
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="bi bi-caret-left-fill"></i></span>
+                data-bs-slide="prev" style="height: 20%; margin-top: 20%">
+                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
+                data-bs-slide="next" style="height: 20%; margin-top: 20%; align-self: center">
                 <span class="carousel-control-next-icon" aria-hidden="true"><i
-                        class="bi bi-caret-right-fill"></i></span>
+                        class="bi bi-chevron-right"></i></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </section> 
 
     <section id="w_contigo_landing">
-        <h3> W Contigo </h3>
+        <h2> W Contigo </h2>
         <div class="card_desk">
             <w-card-desk photo="/Images/card.png" title="Historias de grandeza que marcan la diferencia"
             text="Aprende de educación financiera y explora mas sobre la Comunidad W, mediante historias que dejan huella"
@@ -152,51 +151,85 @@
     </section>
 
     <section id="product_similar">
-        <h3>Conoce más sobre nuestros productos dinámicos</h3>
-        <div class="container_all">
-            <div class="container_all_products">
-
-                <div class="container_product_similar container_product_similar_active">
-                    <i class="bi bi-credit-card"></i>
-                    <p class="container_product_similar_active_text body_1"> Créditos </p>
+        <h2>Conoce más sobre nuestros productos dinámicos</h2>
+        <article id="container_products">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="container_product_similar nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                        <i class="bi bi-coin"></i>
+                        <span class="body_1 name_label">Créditos</span></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="container_product_similar nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false"> <i class="bi bi-person-lock"></i>
+                        <span class="body_1 name_label">Seguros</span></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="container_product_similar nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false"> <i class="bi bi-piggy-bank"></i>
+                        <span class="body_1 name_label">Ahorro</span></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="container_product_similar nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false"> <i class="bi bi-book"></i>
+                        <span class="body_1 name_label">Servicios</span></button>
+                </li>
+            </ul>
+        
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                    tabindex="0">
+                    <div id="container_product_select">
+                        <img class="product_selected_img" src="/Images/2.png">
+                        <div class="product_selected_text">
+                            <h5>Créditos</h5>
+                            <h4>Consigue lo que deseas y necesitas</h4>
+                            <ul class="list_product">
+                                <li class="body_1">Créditos para negocios e independientes</li>
+                                <li class="body_1"> Yo construyo </li>
+                                <li class="body_1"> Gotahorro </li>
+                                <li class="body_1"> Libranza y vehiculos </li>
+                                <li class="body_1"> Inmueble productivo </li>
+                            </ul>
+                            <button class="btn btn_icon btn_medium btn_medium_active text_button_small">Saber más <i
+                                    class="bi bi-arrow-right right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="container_product_similar">
-                    <i class="bi bi-person-lock"></i>
-                    <p class="container_product_similar_text body_1"> Seguros </p>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                    <div id="container_product_select">
+                        <img class="product_selected_img" src="/Images/2.png">
+                        <div class="product_selected_text">
+                            <h5>Seguros</h5>
+                            <h4>Nos adaptamos a tus necesidades </h4>
+                            <ul class="list_product">
+                                <li class="body_1">Soy Vida</li>
+                                <li class="body_1">Incendio y Terremoto</li>
+                                <li class="body_1">Deudores Microcrédito</li>
+                                <li class="body_1">Deudores Libranza</li>
+                                <li class="body_1">Soy Previsión Exequial</li>
+                            </ul>
+                            <button class="btn btn_icon btn_medium btn_medium_active text_button_small">Saber más <i
+                                    class="bi bi-arrow-right right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="container_product_similar ">
-                    <i class="bi bi-piggy-bank"></i>
-                    <p class="container_product_similar_text body_1 "> Ahorro </p>
-                </div>
-                <div class="container_product_similar">
-                    <i class="bi bi-currency-exchange"></i>
-                    <p class="container_product_similar_text body_1"> Servicios </p>
-                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                    ...</div>
+                <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                    tabindex="0">...</div>
             </div>
-
-            <div id="container_product_select">
-                <div class="product_selected_img_container">
-                    <img class="product_selected_img" src="/Images/2.png">
-                </div>
-                <div class="product_selected_text">
-                    <p class="body_1 credit_text">Créditos</p>
-                    <h4>Consigue lo que deseas y necesitas</h4>
-                    <ul class="list_product">
-                        <li>Créditos para negocios e independientes</li>
-                        <li> Yo construyo </li>
-                        <li> Gotahorro </li>
-                        <li> Libranza y vehiculos </li>
-                        <li> Inmueble productivo </li>
-                    </ul>
-                    <button class="btn btn_medium btn_medium_active">Saber más <i
-                            class="bi bi-arrow-right"></i> </button>
-                </div>
-            </div>
-        </div>
+        </article>
     </section>
 
     <section id="about_profile">
-        <h3>Mi perfil W</h3>
+        <h2>Mi perfil W</h2>
 
         <section id="about_profile_cards">
             <div class="container_cards_img">
@@ -252,7 +285,7 @@
     </section>
 
     <section id="channels_assistance">
-        <h3>Canales de Atención</h3>
+        <h2>Canales de Atención</h2>
         <section class="channels_container">
             <div class="channels_container_channel">
                 <i class="bi bi-person-lines-fill"></i>

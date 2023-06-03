@@ -22,12 +22,11 @@
 </head>
 
 <body>
-
-    <w-nav-bar></w-nav-bar>
-
-
-
-    <bread-n-title></bread-n-title>
+    <header>
+        <link rel="stylesheet" href="">
+        <w-nav-bar></w-nav-bar>
+        <bread-n-title actual="Microcrédito" link="../landing.html-../Creditos/All/all-credits.html" level="Inicio >-Créditos >"></bread-n-title>
+    </header>
 
 
 
@@ -41,7 +40,7 @@
             </aside> -->
             <section class="portada">
                 <div class="container">
-                    <div class="row flex-column-reverse flex-md-row ">
+                    <div class="row flex-column-reverse flex-md-row container_text">
                         <div class="col-md-6 style_better">
                             <h1 class="headline1">Fortalecimiento para tu negocio</h1>
                             <span>
@@ -50,29 +49,21 @@
                             </span>
 
                         </div>
-                        <div class="col-md-6 ">
+                        <div class="col-md-6 img_banner">
                             <img src="img/portada.png" class="img-fluid" alt="Imagen de ejemplo">
                         </div>
                     </div>
                 </div>
             </section>
+
+
+            
             <aside class="sidebar-container col-12 col-md-3 col-xl-2 bd-sidebar d-sm-none d-md-block desaparecer">
                 <product-sidebar reference="./credito.html"
                     locations="formulario,simulador,caracteristicas,requisitos,tasas,cancelar,mas informacion"
                     button-names='Formulario, Simulador,Caracteristicas, Requisitos, Tasas y tarifas, Cancelar credito, Más información'>
                 </product-sidebar>
             </aside>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -83,7 +74,7 @@
 
 
 
-                        <ul class="dropdown-menu dropdown_form" aria-labelledby="dropdownMenuButton1">
+                        <ul class="dropdown-menu dropdown_form " aria-labelledby="dropdownMenuButton1">
                             <card-productasas recurso="./img/caracteristicas.png" meses='
                                     &#x2022; Antigüedad mínima del negocio: 1 año.
                                     <br>&#x2022; Monto: desde 1 SMMLV hasta 120 SMMLV </br>
@@ -114,8 +105,8 @@
                 </div>
 
 
-                <div class="card cardmobile d-sm-block d-md-none">
-                    <div class="card-body flex-column">
+                <div class="card cardmobile d-sm-block d-md-none " style="margin-top: 5%;">
+                    <div class="card-body flex-column style_card">
                         <div class="dropdown dropdown_W border-top border-bottom border-start dropdown_form">
                             <button
                                 class="btn btn_large_transparent dropdown-toggle border-0 ms-2 text-start dropdown_reactive"
@@ -143,14 +134,14 @@
 
                                     <card-imagen recurso="./img/caracteristicas.png" contenido='
                         &#x2022; Antigüedad mínima del negocio: 1 año.
-                         <br>&#x2022; Monto: desde 1 SMMLV hasta 120 SMMLV </br>
-                         <br>&#x2022;<b> Tasa fija </b> durante toda la vigencia del préstamo.</br>
+                        <br>&#x2022; Monto: desde 1 SMMLV hasta 120 SMMLV </br>
+                        <br>&#x2022;<b> Tasa fija </b> durante toda la vigencia del préstamo.</br>
                         <br>&#x2022; El plazo será dado de acuerdo al monto y al tipo de cliente.</br>
                         <br>&#x2022; Disponible para clientes nuevos, renovación y preferenciales.</br>
                         <br>&#x2022; Opción de adquirir de manera <b> opcional seguros </b> como: Soy Previsión
                         Exequial,Soy Vida, Soy Protección Familiar y Soy Patrimonio Seguro.</br>
                         <br>&#x2022; Opción de ahorrar mientras se paga el crédito con el <b> Pagahorro.</b></br>
-                        ' titulo=' ' boton='Más sobre pagahorro' class="imagen-inCard">
+                        ' titulo=' ' boton='Más sobre pagahorro'>
                                     </card-imagen>
 
 
@@ -226,7 +217,18 @@
 
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <card-inputs4 recurso="/Creditos/img/informacion.png"
+                        contenido="Puedes hacer tu solicitud de crédito o cualquier consulta a través de los siguientes canales:" " titulocard="
+                        Analista de crédito" botoncard="Solicitalo aquí" titulocard2="Línea gratuita"
+                        botoncard2="01 8000 515656" titulocard3="Celular" botoncard3="323 5996557"
+                        titulocard4="Oficinas físicas" botoncard4="Encuentra la oficina aquí">
 
+
+
+
+
+
+                    </card-inputs4>
                             </ul>
                         </div>
                     </div>
@@ -348,7 +350,7 @@
     <link rel="stylesheet" href="/public/Components/Footer/footer.css">
     <link rel="stylesheet" href="perfil.css">
     <link rel="stylesheet" href="credito.css">
-    <link rel="stylesheet" href="/public/Components/forms/forms.css">
+    <!-- <link rel="stylesheet" href="/public/Components/forms/forms.css"> -->
 
 
 

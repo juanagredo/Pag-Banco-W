@@ -70,7 +70,7 @@ h5 {
   padding-left: 10px;
 }
 
-#greenInput {
+.greenInput {
   width: 300px;
   height: 42px;
   border-color: #2DC071;
@@ -78,7 +78,7 @@ h5 {
   border-radius: 48px;
 }
 
-#redInput {
+.redInput {
   width: 300px;
   height: 42px;
   border-color: #EB3232;
@@ -86,12 +86,53 @@ h5 {
   border-radius: 48px;
 }
 
-#grayInput {
-  width: 300px;
+.grayInput {
+  width: 30%;
   height: 42px;
+  border: solid;
+  border-width: 1px;
   border-color: #CDCFD0;
-  background-color: #F2F2F2;
+  background-color: #F2F4F5;
   border-radius: 48px;
+  padding: 2%;
+}
+
+.messageInput {
+  width: 30%;
+  height: 140px;
+  border: solid;
+  border-width: 1px;
+  border-color: #CDCFD0;
+  background-color: #F2F4F5;
+  border-radius: 20px;
+  padding: 2%;
+}
+.messageInput::-moz-placeholder {
+  position: relative;
+  top: -40px;
+}
+.messageInput::placeholder {
+  position: relative;
+  top: -40px;
+}
+
+.label_file {
+  padding: 6px 12px;
+  cursor: pointer;
+  width: 30%;
+  height: 80px;
+  border: solid;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #CDCFD0;
+  background-color: #F2F4F5;
+  border-radius: 20px;
+  padding: 2%;
+}
+
+.inputFile {
+  visibility: hidden;
+  width: 0;
 }
 
 #inputSearch {
@@ -133,6 +174,23 @@ h5 {
   background-color: rgba(0, 177, 187, 0.2);
   color: #27262c;
   margin: 0px 20px;
+}
+
+#dropDownStyleRed {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  background-color: rgba(235, 50, 50, 0.2);
+  color: #27262C;
+}
+
+#dropDownStyleCyan {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  border-color: #00B1BB;
+  background-color: rgba(0, 177, 187, 0.2);
+  color: #27262C;
 }
 
 #dropDownStyleRed {
@@ -191,6 +249,31 @@ h5 {
   .body_3 {
     font-size: 12px;
   }
+  .grayInput {
+    width: 100%;
+  }
+  .messageInput {
+    width: 100%;
+  }
+  .messageInput::-moz-placeholder {
+    position: relative;
+    top: -40px;
+  }
+  .messageInput::placeholder {
+    position: relative;
+    top: -40px;
+  }
+  .label_file {
+    padding: 0px 0px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .checkInput {
+    border-radius: 1px;
+    border: solid;
+    border-width: 1px;
+    border-color: #CDCFD0;
+  }
 }
 .text_button_bold {
   font-weight: 600;
@@ -223,6 +306,16 @@ h5 {
   font-size: 12px;
 }
 
+.right {
+  margin-left: 50px;
+  margin-right: -35px;
+}
+
+.left {
+  margin-right: 50px;
+  margin-left: -35px;
+}
+
 .btn {
   height: 42px;
   border-radius: 48px;
@@ -230,6 +323,9 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.btn_icon {
+  justify-content: space-around !important;
 }
 .btn_large {
   width: auto;
@@ -278,14 +374,18 @@ h5 {
 .btn_large_transparent:disabled {
   color: #CDCFD0;
 }
+.btn_large_form {
+  border: none;
+  background-color: #BDF0F2;
+}
+.btn_large_form:active {
+  background-color: #FAFAFA;
+  color: #00B1BB;
+}
 .btn_medium {
   width: auto;
-  padding: 9px 75px;
-}
-.btn_medium i {
-  position: relative;
-  margin-left: 45px;
-  margin-right: -55px;
+  height: 42px;
+  padding: 9px 55px;
 }
 .btn_medium_active {
   border: none;
@@ -303,12 +403,13 @@ h5 {
   color: #979C9E;
 }
 .btn_medium_outline {
+  background-color: #FFFFFF;
   filter: drop-shadow(0px 4px 10px rgba(0, 177, 187, 0.3));
-  background-color: transparent;
 }
 .btn_medium_outline_active {
   border: 1px solid #00B1BB;
   color: #00B1BB;
+  text-shadow: none;
 }
 .btn_medium_outline:disabled {
   border: 1px solid #CDCFD0;
@@ -324,6 +425,14 @@ h5 {
 }
 .btn_medium_transparent:disabled {
   color: #CDCFD0;
+}
+.btn_medium_form {
+  border: none;
+  background-color: #BDF0F2;
+}
+.btn_medium_form:active {
+  background-color: #FAFAFA;
+  color: #00B1BB;
 }
 .btn_small {
   width: 10.7%;
@@ -366,11 +475,30 @@ h5 {
 .btn_small_transparent:disabled {
   color: #CDCFD0;
 }
+.btn_small_form {
+  border: none;
+  background-color: #BDF0F2;
+}
+.btn_small_form:active {
+  background-color: #FAFAFA;
+  color: #00B1BB;
+}
 
 @media only screen and (max-width: 768px) {
+  i {
+    font-size: 24px;
+  }
+  .right {
+    margin-left: 20px;
+    margin-right: -10px;
+  }
+  .left {
+    margin-right: 50px;
+    margin-left: -35px;
+  }
   .btn_large {
     width: auto;
-    padding: 9px 65px;
+    padding: 9px 45px;
   }
   .btn_medium {
     width: auto;
@@ -532,7 +660,7 @@ h5 {
     border: none;
     /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
   }
-  #inputButtonSize #inputButtonColor {
+  #inputButtonColor {
     height: 44px;
     border: none;
     background-color: #eeeeee;
@@ -543,6 +671,21 @@ h5 {
     border-color: #2DC071;
     background-color: rgba(0, 177, 187, 0.2);
     color: #27262c;
+  }
+  #dropDownStyleRed {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    background-color: rgba(235, 50, 50, 0.2);
+    color: #27262C;
+  }
+  #dropDownStyleCyan {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    border-color: #00B1BB;
+    background-color: rgba(0, 177, 187, 0.2);
+    color: #27262C;
   }
   #dropDownStyleRed {
     width: 29.38%;
@@ -591,11 +734,10 @@ p {
 .tag_w {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 20px;
   border-radius: 32px;
-  padding: 8px 16px;
+  margin-top: 20px;
+  padding: 6px 12px;
 }
 .tag_family {
   background-color: #BA93D2;
@@ -640,13 +782,30 @@ p {
   line-height: 24px;
 }
 
-.breadcrumb-title h4 {
-  color: #F25C05;
-  padding: 0px 12%;
+#breadcrumb {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0%;
+  color: #6321A6;
 }
-.breadcrumb-title-section {
+#breadcrumb li {
+  margin-right: 5px;
+}
+#breadcrumb a {
+  text-decoration: none;
+  color: #6321A6;
+}
+#breadcrumb-item {
+  font-weight: bold;
+}
+#breadcrumb-title {
+  color: #F25C05;
+}
+#breadcrumb-title-section {
+  height: 100px;
   background-color: #FAFAFA;
-  padding: 14px 12%;
+  padding: 20px 12%;
   border-radius: 0 0 20px 20px;
 }
 
@@ -667,88 +826,85 @@ a .active {
 
 .user-product-container {
   background-color: #FAFAFA;
-}
-.user-product-product-container {
-  background-color: #FAFAFA;
-  max-width: 528px;
-  min-width: 450px;
+  width: 450px;
   max-height: 290px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 14px #E4D4ED;
 }
-.user-product-product-head {
+.user-product-head {
   background-color: #6321A6;
   padding: 10px 30px 1px;
 }
-.user-product-product-head h5 {
+.user-product-head h5 {
   color: #F2F2F2;
 }
-.user-product-product-body {
+.user-product-body {
   padding: 27px 50px 0px;
 }
-.user-product-product-body h3 {
+.user-product-body h3 {
   color: #6321A6;
 }
-.user-product-product-data {
+.user-product-data {
   display: flex;
   flex-direction: row;
   padding: 10px 25px;
 }
-.user-product-product-data-item-head {
-  padding: 10px 30px 1px;
-}
-.user-product-product-data-item-head h5 {
-  color: #F2F2F2;
-}
-.user-product-product-data-item-body {
-  padding: 27px 50px 0px;
-}
-.user-product-product-data-item-body h3 {
-  color: #6321A6;
-}
-.user-product-product-data-item-data {
-  display: flex;
-  flex-direction: row;
-  padding: 10px 25px;
-}
-.user-product-product-data-item-data-item {
+.user-product-data-item {
   margin-right: 50px;
 }
+.user-product-data-item-head {
+  padding: 10px 30px 1px;
+}
+.user-product-data-item-head h5 {
+  color: #F2F2F2;
+}
+.user-product-data-item-body {
+  padding: 27px 50px 0px;
+}
+.user-product-data-item-body h3 {
+  color: #6321A6;
+}
+
+.agenda {
+  /* REVISAR SI ESTO SI ESTA BIEN PUESTO AQUI O NO
+          .ahorro {
+              background-color: $color_violet1;
+          }
+
+          .credito {
+              background-color: $color_orange1;
+
+          }
+
+          .seguro {
+              background-color: $color_blue1;
+          }
+
+          .inversion {
+              background-color: #343c7f;
+          }
+          */
+}
 .agenda-container {
-  width: 100%;
-  max-width: 528px;
-}
-.agenda-container .ahorro {
-  background-color: #6321A6;
-}
-.agenda-container .credito {
-  background-color: #F25C05;
-}
-.agenda-container .seguro {
-  background-color: #00B1BB;
-}
-.agenda-container .inversion {
-  background-color: #343c7f;
-}
-.agenda-container .agenda-container {
+  width: 80%;
   background-color: #BDF0F2;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 14px #BDF0F2;
-  width: 100%;
 }
-.agenda-container .agenda-head {
+.agenda-head {
   background-color: #00B1BB;
   padding: 10px 25px 1px;
 }
-.agenda-container .agenda-head h5 {
+.agenda-head h5 {
   color: #F2F2F2;
 }
-.agenda-container .agenda-body {
+.agenda-body {
   padding: 10px 35px 1px;
 }
-.agenda .calendar {
+
+.calendar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -757,43 +913,46 @@ a .active {
   box-shadow: 0 3px 11px rgba(0, 0, 0, 0.15);
   padding: 10px 43px 1px;
 }
-.agenda .calendar-container {
+.calendar-container {
   background-color: #F2F4F5;
   border-radius: 20px;
 }
-.agenda .calendar-item-selected {
+.calendar-item-selected {
   font-weight: 700;
 }
-.agenda .calendar-item-selected p {
+.calendar-item-selected p {
   color: #00B1BB;
 }
-.agenda .calendar-data {
+.calendar-data {
   padding: 30px 30px;
   margin-bottom: 30px;
 }
-.agenda .calendar-event-head h5 {
+.calendar-event-head h5 {
   font-family: 700;
   color: #535C97;
 }
-.agenda .calendar-event-head p {
+.calendar-event-head p {
   color: #27262C;
 }
-.agenda .calendar-event-body {
+.calendar-event-body {
   display: flex;
   flex-direction: row;
 }
-.agenda .calendar-event-detail {
+.calendar-event-detail {
   margin-right: 50px;
 }
-.agenda .calendar-event-detail :first-child {
+.calendar-event-detail :first-child {
   font-weight: 700;
   color: #535C97;
 }
-.agenda .calendar-event-detail p {
+.calendar-event-detail p {
   color: #27262C;
 }
 
 @media only screen and (max-width: 768px) {
+  .user-product-container {
+    width: 95vw;
+  }
   .user-product-head {
     padding: 15px 20px 1px;
   }
@@ -802,6 +961,10 @@ a .active {
   }
   .user-product-data {
     padding: 10px 20px;
+  }
+  .agenda-container {
+    width: 95vw;
+    margin: 0 auto;
   }
   .agenda-head {
     padding: 15px 20px 1px;
@@ -818,5 +981,9 @@ a .active {
   }
   .calendar-event-detail {
     margin-right: 25px;
+  }
+  #breadcrumb-title-section {
+    padding: 20px 5.2%;
+    height: 90px;
   }
 }/*# sourceMappingURL=tags.css.map */

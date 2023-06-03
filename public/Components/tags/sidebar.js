@@ -10,7 +10,7 @@ class Sidebar extends HTMLElement {
 
     render(route) {
         this.innerHTML = `
-            <link rel="stylesheet" href="tags.css">
+            <link rel="stylesheet" href="../../../public/Components/tags/tags.css">
             <div class="sidebar-container d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" >
                 <h3 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                     <span class="fs-4">Mi Perfil W</span>
@@ -31,6 +31,13 @@ class Sidebar extends HTMLElement {
                         <a href="/Perfil/productos.html" class="side-link nav-link link-body-emphasis ${route === 'productos' ? 'active' : ''}">
                         <i class="bi bi-wallet2"></i>
                         <span>Tus Productos</span>
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="/Perfil/gamificacion/gamificacion.html" class="side-link nav-link link-body-emphasis ${route === 'mis logros' ? 'active' : ''}">
+                        <i class="bi bi-wallet2"></i>
+                        <span>Mis logros</span>
                         </a>
                     </li>
 

@@ -1,50 +1,50 @@
 class cardSimple extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo = 0;
-        this.contenido = 0;
+    this.recurso;
+    this.titulo = 0;
+    this.contenido = 0;
 
 
+  }
+
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido"
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+      case "titulo":
+
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
     }
 
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido"
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  connectedCallback() {
 
-        switch (nameAtr) {
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-        }
-
-    }
-
-    connectedCallback() {
-
-        this.innerHTML = `
+    this.innerHTML = `
         
         <section class="fondo-card">
         <section class="logo-section">
@@ -61,7 +61,7 @@ class cardSimple extends HTMLElement {
         
         `
 
-    }
+  }
 
 
 }
@@ -73,51 +73,51 @@ window.customElements.define("card-simple", cardSimple)
 
 class cardOrange extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.boton;
-        this.titulo;
-        this.contenido;
+    this.boton;
+    this.titulo;
+    this.contenido;
 
 
+  }
+
+  static get observedAttributes() {
+    return [
+      "boton",
+      "titulo",
+      "contenido"
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "boton":
+
+        this.boton = newValue
+
+        break;
+
+      case "titulo":
+
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
     }
 
-    static get observedAttributes() {
-        return [
-            "boton",
-            "titulo",
-            "contenido"
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  connectedCallback() {
 
-        switch (nameAtr) {
-            case "boton":
-
-                this.boton = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-        }
-
-    }
-
-    connectedCallback() {
-
-        this.innerHTML = `
+    this.innerHTML = `
         
         <section class="fondo-card">
         <section class="texto-card">
@@ -131,7 +131,7 @@ class cardOrange extends HTMLElement {
         
         `
 
-    }
+  }
 
 
 }
@@ -143,83 +143,85 @@ window.customElements.define("card-orange", cardOrange)
 
 class cardBoton extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.icon;
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
+    this.icon;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
 
 
+  }
+
+  static get observedAttributes() {
+    return [
+      "icon",
+      "recurso",
+      "titulo",
+      "contenido",
+      "boton",
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "icon":
+
+        this.icon = newValue
+
+        break;
+
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+      case "titulo":
+
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
+
+      case "boton":
+
+        this.boton = newValue
+
+        break;
     }
 
-    static get observedAttributes() {
-        return [
-            "icon",
-            "recurso",
-            "titulo",
-            "contenido",
-            "boton",
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  connectedCallback() {
 
-        switch (nameAtr) {
-            case "icon":
-
-                this.icon = newValue
-
-                break;
-
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "boton":
-
-                this.boton = newValue
-
-                break;
-        }
-
-    }
-
-    connectedCallback() {
-
-        this.innerHTML = `
-        
+    this.innerHTML = `
+        <link rel="stylesheet" href="../../../public/Components/Cards/cardArticle.css">
         <section class="fondo-card">
+          <div class="section_icon">
         <i class="${this.icon} icon">
         </i>
+    </div>
         <section class="texto-card">
             <h5 class="titulo">${this.titulo}</h5>
-            <p class="parrafo">
+            <p class="body_3">
             ${this.contenido}   
             </p>
         </section>
-        <button class="btn btn_medium btn_medium_active"><!--  aca poner estilo de boton ♥ --><h5>${this.boton}</h5></button>
+        <button style="margin: -20px 30px 30px 30px; width: 85%" class="btn btn_medium btn_medium_active text_button_normal">${this.boton}</button>
     </section>
         
         `
 
-    }
+  }
 
 
 }
@@ -230,89 +232,91 @@ window.customElements.define("card-boton", cardBoton)
 
 class cardImagen extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
-        this.link;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
+    this.link;
 
 
+  }
+
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido",
+      "boton",
+      "link",
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+      case "titulo":
+
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
+
+      case "boton":
+
+        this.boton = newValue
+
+        break;
+
+      case "link":
+
+        this.link = newValue
+
+        break;
     }
 
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido",
-            "boton",
-            "link",
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  connectedCallback() {
 
-        switch (nameAtr) {
-            case "recurso":
+    const titulo = this.titulo.trim();
 
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "boton":
-
-                this.boton = newValue
-
-                break;
-            
-            case "link":
-
-                this.link = newValue
-
-                break;
-        }
-
-    }
-
-    connectedCallback() {
-
-        this.innerHTML = `
-        <div class = 'supreme'>
-        
-        <section class="fondo-card">
-        <section class="card-imagen">
-            <img src= "${this.recurso}" class="imagen-inCard" alt="">
-        </section>
-        <section class="texto-card">
-            <h5 class="titulo">${this.titulo}</h5>
-            <p class="parrafo">
-            ${this.contenido}   
-            </p>
-        </section>
-        <a href="${this.link}">
-          <button class = 'btn btn_medium btn_medium_active'><!--  aca poner estilo de boton ♥ --><h4 class = "text_button_small">${this.boton}</h4></button>    
-        </a>
-    </section>
+    this.innerHTML = `
+        <link rel="stylesheet" href="../../../public/Components/Cards/cardArticle.css">
+        <div class="supreme">
+          <section class="fondo-card">
+            <section class="card-imagen">
+              <img src="${this.recurso}" class="imagen-inCard" alt="">
+            </section>
+            <section class="texto-card">
+              <h5 class="titulo${titulo === '' ? ' titulo-vacio' : ''}" id="miTitulo">${this.titulo}</h5>
+              <p class="parrafo">
+                ${this.contenido}   
+              </p>
+            </section>
+            <section id="section-btn">
+            <a href="${this.link}">
+              <button class = 'btn btn_icon btn_medium btn_medium_outline_active text_button_small'>${this.boton} <i class="bi bi-arrow-right right"></i></button>   
+            </a>
+          </section>
+          </section>
 
         </div>
-        
-        `
-
-    }
+      `;
+  }
 
 
 }
@@ -324,51 +328,51 @@ window.customElements.define("card-imagen", cardImagen)
 
 class miniCard extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
+    this.recurso;
+    this.titulo;
+    this.contenido;
 
 
+  }
+
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido"
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+      case "titulo":
+
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
     }
 
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido"
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  connectedCallback() {
 
-        switch (nameAtr) {
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-        }
-
-    }
-
-    connectedCallback() {
-
-        this.innerHTML = `
+    this.innerHTML = `
         
         <section class="fondo-card">
         <section class="horizontal">
@@ -384,7 +388,7 @@ class miniCard extends HTMLElement {
         
         `
 
-    }
+  }
 
 
 }
@@ -395,82 +399,103 @@ window.customElements.define("mini-card", miniCard)
 
 class cardForBlog extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
-        this.tags = "";
-        this.likes = 0;
-        this.comments = 0;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
+    this.tags = ""; //texto tag 1;
+    this.color = ""; //color tag 1: family , business, grow
+    this.tags_2 = "" //texto tag 2;
+    this.color_2 = ""; //color tag 2: family , business, grow
+    this.likes = 0;
+    this.comments = 0;
+  }
 
+  static get observedAttributes() {
+    return ["recurso", "titulo", "contenido", "likes", "comments", "tags", "color", "tags_2", "color_2"];
+  }
 
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+      case "titulo":
+
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
+
+      case "likes":
+
+        this.likes = newValue
+
+        break;
+
+      case "comments":
+
+        this.comments = newValue
+
+        break;
+
+      case "tags":
+
+        this.tags = newValue
+
+        break;
+
+      case "color":
+        this.color = newValue;
+
+        break;
+
+      case "tags_2":
+        this.tags_2 = newValue;
+
+        break;
+
+      case "color_2":
+        this.color_2 = newValue;
+
+        break;
     }
+  }
 
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido",
-            "likes",
-            "comments",
-            "tags"
-        ]
-    }
+  connectedCallback() {
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+    this.innerHTML = `
+        <link rel="stylesheet" href="../../../public/Components/Cards/cardArticle.css">
 
-        switch (nameAtr) {
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "likes":
-
-                this.likes = newValue
-
-                break;
-
-            case "comments":
-
-                this.comments = newValue
-
-                break;
-                
-                case "tags":
-
-                this.tags = newValue
-
-                break;
-        }
-
-    }
-
-    connectedCallback() {
-
-        this.innerHTML = `
        <section class="fondo-card">
         <section class="card-imagen">
             <img src="${this.recurso}" class="imagen-inCard" alt="">
         </section>
         <section class="labels-site">
-        ${this.tags}
+        
+        <h6>
+          <span class="badge rounded-pill tag_w tag_${this.color}">
+            ${this.tags}
+          </span>
+        </h6>
+        <h6>
+          <span class="badge rounded-pill tag_w tag_${this.color_2}">
+            ${this.tags_2}
+          </span>
+        </h6>
+        
            
         </section>
         <section class="texto-card">
@@ -492,12 +517,12 @@ class cardForBlog extends HTMLElement {
 
         `
 
- 
-      }
-    }
+
+  }
+}
 
 
-    
+
 
 
 window.customElements.define("card-forblog", cardForBlog)
@@ -507,74 +532,74 @@ window.customElements.define("card-forblog", cardForBlog)
 
 class cardComentarios extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
-        this.tags;
-        this.likes = 0;
-        this.comments = 0;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
+    this.tags;
+    this.likes = 0;
+    this.comments = 0;
 
 
+  }
+
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido",
+      "name",
+      "likes",
+      "comments",
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+      case "titulo":
+
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
+
+      case "name":
+
+        this.name = newValue
+
+        break;
+      case "comments":
+
+        this.comments = newValue
+
+        break;
+      case "likes":
+
+        this.likes = newValue
+
+        break;
     }
 
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido",
-            "name",
-            "likes",
-            "comments",
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  connectedCallback() {
 
-        switch (nameAtr) {
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "name":
-
-                this.name = newValue
-
-                break;
-            case "comments":
-
-                this.comments = newValue
-
-                break;
-            case "likes":
-
-                this.likes = newValue
-
-                break;
-        }
-
-    }
-
-    connectedCallback() {
-
-        this.innerHTML = `   <section class="fondo-card">
+    this.innerHTML = `   <section class="fondo-card">
         <section class="nombre-usuario">${this.name}</section>
         <section class="comentario">
             <img class="perfil-usuario" src="${this.recurso}" alt="">
@@ -600,7 +625,7 @@ class cardComentarios extends HTMLElement {
     </section>
         `
 
-    }
+  }
 
 
 }
@@ -612,91 +637,91 @@ window.customElements.define("card-comentario", cardComentarios)
 
 class cardBlogDetalle extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
 
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.tags;
-        this.likes = 0;
-        this.comments = 0;
-        this.userprofile;
-        this.name;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.tags;
+    this.likes = 0;
+    this.comments = 0;
+    this.userprofile;
+    this.name;
+
+
+  }
+
+  static get observedAttributes() {
+    return [
+
+      "recurso",
+      "name",
+      "titulo",
+      "contenido",
+
+      "userprofile",
+      "comments",
+      "likes"
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+      case "userprofile":
+
+        this.userprofile = newValue
+
+        break;
+
+      case "name":
+
+        this.name = newValue
+
+        break;
+
+      case "titulo":
+
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
+
+      case "comments":
+
+        this.comments = newValue
+
+        break;
+      case "likes":
+
+        this.likes = newValue
+
+        break;
 
 
     }
 
-    static get observedAttributes() {
-        return [
+  }
 
-            "recurso",
-            "name",
-            "titulo",
-            "contenido",
-
-            "userprofile",
-            "comments",
-            "likes"
-        ]
-    }
-
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
-
-        switch (nameAtr) {
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "userprofile":
-
-                this.userprofile = newValue
-
-                break;
-
-            case "name":
-
-                this.name = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "comments":
-
-                this.comments = newValue
-
-                break;
-            case "likes":
-
-                this.likes = newValue
-
-                break;
-
-
-        }
-
-    }
-
-    connectedCallback() {
+  connectedCallback() {
 
 
 
-        this.innerHTML = `
+    this.innerHTML = `
         <link rel="stylesheet" href="../../../public/Components/Cards/cardArticle.css">
         <section class="fondo-card">
         <section class="titulo-naranja">
@@ -724,7 +749,7 @@ class cardBlogDetalle extends HTMLElement {
     </section>
         `
 
-    }
+  }
 
 
 }
@@ -736,86 +761,86 @@ window.customElements.define("card-blogdetalle", cardBlogDetalle)
 //---------------------
 class cardProductasas extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.img;
-        this.datacredito;
-        this.cifin;
-        this.meses;
-        this.interes;
-        this.plazos;
-        this.plazo1;
-        this.plazo2;
-        this.plazo3;
-        this.plazos1;
-        this.plazos2;
-        this.plazos3;
+    this.img;
+    this.datacredito;
+    this.cifin;
+    this.meses;
+    this.interes;
+    this.plazos;
+    this.plazo1;
+    this.plazo2;
+    this.plazo3;
+    this.plazos1;
+    this.plazos2;
+    this.plazos3;
+  }
+
+  static get observedAttributes() {
+    return [
+      "img",
+      "datacredito",
+      "cifin",
+      "meses",
+      "intereses",
+      "plazos",
+      "plazo1",
+      "plazo2",
+      "plazo3",
+      "plazos1",
+      "plazos2",
+      "plazos3",
+
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+    switch (nameAtr) {
+      case "datacredito":
+        this.datacredito = newValue;
+        break;
+      case "cifin":
+        this.cifin = newValue;
+        break;
+      case "meses":
+        this.meses = newValue;
+        break;
+      case "intereses":
+        this.interes = newValue;
+        break;
+      case "plazos":
+        this.plazos = newValue;
+        break;
+      case "img":
+        this.img = newValue;
+        break;
+
+      case "plazo1":
+        this.plazo1 = newValue;
+        break;
+      case "plazo2":
+        this.plazo2 = newValue;
+        break;
+      case "plazo3":
+        this.plazo3 = newValue;
+        break;
+      case "plazos1":
+        this.plazos1 = newValue;
+        break;
+      case "plazos2":
+        this.plazos2 = newValue;
+        break;
+      case "plazos3":
+        this.plazos3 = newValue;
+        break;
+
     }
+  }
 
-    static get observedAttributes() {
-        return [
-            "img",
-            "datacredito",
-            "cifin",
-            "meses",
-            "intereses",
-            "plazos",
-            "plazo1",
-            "plazo2",
-            "plazo3",
-            "plazos1",
-            "plazos2",
-            "plazos3",
-
-        ]
-    }
-
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
-        switch (nameAtr) {
-            case "datacredito":
-                this.datacredito = newValue;
-                break;
-            case "cifin":
-                this.cifin = newValue;
-                break;
-            case "meses":
-                this.meses = newValue;
-                break;
-            case "intereses":
-                this.interes = newValue;
-                break;
-            case "plazos":
-                this.plazos = newValue;
-                break;
-            case "img":
-                this.img = newValue;
-                break;
-
-            case "plazo1":
-                this.plazo1 = newValue;
-                break;
-            case "plazo2":
-                this.plazo2 = newValue;
-                break;
-            case "plazo3":
-                this.plazo3 = newValue;
-                break;
-            case "plazos1":
-                this.plazos1 = newValue;
-                break;
-            case "plazos2":
-                this.plazos2 = newValue;
-                break;
-            case "plazos3":
-                this.plazos3 = newValue;
-                break;
-
-        }
-    }
-
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
     <section class="fondo-card">
     <section class="card-imagen">
       <img src="${this.img}" class="imagen-inCard" alt="">
@@ -892,7 +917,7 @@ class cardProductasas extends HTMLElement {
 
    
     `;
-    }
+  }
 }
 
 window.customElements.define("card-productasas", cardProductasas);
@@ -901,236 +926,236 @@ window.customElements.define("card-productasas", cardProductasas);
 
 class Cardproducttablas extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.img;
-        this.titulo1;
-        this.titulo2;
-        this.titulo3;
-        this.titulo4;
-        this.titulo5;
-        this.datocola1;
-        this.datocola2;
-        this.datocola3;
-        this.datocola4;
-        this.datocola5;
-        this.datocolb1;
-        this.datocolb2;
-        this.datocolb3;
-        this.datocolb4;
-        this.datocolb5;
-        this.datocolc1;
-        this.datocolc2;
-        this.datocolc3;
-        this.datocolc4;
-        this.datocolc5;
-        this.datocold1;
-        this.datocold2;
-        this.datocold3;
-        this.datocold4;
-        this.datocold5;
-        this.datocole1;
-        this.datocole2;
-        this.datocole3;
-        this.datocole4;
-        this.datocole5;
-        this.datocolf1;
-        this.datocolf2;
-        this.datocolf3;
-        this.datocolf4;
-        this.datocolf5;
+    this.img;
+    this.titulo1;
+    this.titulo2;
+    this.titulo3;
+    this.titulo4;
+    this.titulo5;
+    this.datocola1;
+    this.datocola2;
+    this.datocola3;
+    this.datocola4;
+    this.datocola5;
+    this.datocolb1;
+    this.datocolb2;
+    this.datocolb3;
+    this.datocolb4;
+    this.datocolb5;
+    this.datocolc1;
+    this.datocolc2;
+    this.datocolc3;
+    this.datocolc4;
+    this.datocolc5;
+    this.datocold1;
+    this.datocold2;
+    this.datocold3;
+    this.datocold4;
+    this.datocold5;
+    this.datocole1;
+    this.datocole2;
+    this.datocole3;
+    this.datocole4;
+    this.datocole5;
+    this.datocolf1;
+    this.datocolf2;
+    this.datocolf3;
+    this.datocolf4;
+    this.datocolf5;
+  }
+
+  static get observedAttributes() {
+    return [
+      "img",
+      "titulo1",
+      "titulo2",
+      "titulo3",
+      "titulo4",
+      "titulo5",
+      "datocola1",
+      "datocola2",
+      "datocola3",
+      "datocola4",
+      "datocola5",
+      "datocolb1",
+      "datocolb2",
+      "datocolb3",
+      "datocolb4",
+      "datocolb5",
+      "datocolc1",
+      "datocolc2",
+      "datocolc3",
+      "datocolc4",
+      "datocolc5",
+      "datocold1",
+      "datocold2",
+      "datocold3",
+      "datocold4",
+      "datocold5",
+      "datocole1",
+      "datocole2",
+      "datocole3",
+      "datocole4",
+      "datocole5",
+      "datocolf1",
+      "datocolf2",
+      "datocolf3",
+      "datocolf4",
+      "datocolf5",
+
+
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+    switch (nameAtr) {
+      case "img":
+        this.img = newValue;
+        break;
+        //Columnas
+      case "titulo1":
+        this.titulo1 = newValue;
+        break;
+      case "titulo2":
+        this.titulo2 = newValue;
+        break;
+      case "titulo3":
+        this.titulo3 = newValue;
+        break;
+      case "titulo4":
+        this.titulo4 = newValue;
+        break;
+
+      case "titulo5":
+        this.titulo5 = newValue;
+        break;
+
+
+        //Filas   
+      case "datocola1":
+        this.datocola1 = newValue;
+        break;
+
+      case "datocola2":
+        this.datocola2 = newValue;
+        break;
+      case "datocola3":
+        this.datocola3 = newValue;
+        break;
+      case "datocola4":
+        this.datocola4 = newValue;
+        break;
+      case "datocola5":
+        this.datocola5 = newValue;
+        break;
+
+      case "datocolb1":
+        this.datocolb1 = newValue;
+        break;
+      case "datocolb2":
+        this.datocolb2 = newValue;
+        break;
+      case "datocolb3":
+        this.datocolb3 = newValue;
+        break;
+      case "datocolb4":
+        this.datocolb4 = newValue;
+        break;
+      case "datocolb5":
+        this.datocolb5 = newValue;
+        break;
+      case "datocolc1":
+        this.datocolc1 = newValue;
+        break;
+      case "datocolc2":
+        this.datocolc2 = newValue;
+        break;
+
+      case "datocolc3":
+        this.datocolc3 = newValue;
+        break;
+      case "datocolc4":
+        this.datocolc4 = newValue;
+        break;
+      case "datocolc5":
+        this.datocolc5 = newValue;
+        break;
+      case "datocold1":
+        this.datocold1 = newValue;
+        break;
+      case "datocold2":
+        this.datocold2 = newValue;
+        break;
+      case "datocold3":
+        this.datocold3 = newValue;
+        break;
+      case "datocold4":
+        this.datocold4 = newValue;
+        break;
+      case "datocold5":
+        this.datocold5 = newValue;
+        break;
+      case "datocole1":
+        this.datocole1 = newValue;
+        break;
+      case "datocole2":
+        this.datocole2 = newValue;
+        break;
+      case "datocole3":
+        this.datocole3 = newValue;
+        break;
+      case "datocole4":
+        this.datocole4 = newValue;
+        break;
+      case "datocole5":
+        this.datocole5 = newValue;
+        break;
+
+
+      case "datocolf1":
+        this.datocolf1 = newValue;
+        break;
+      case "datocolf2":
+        this.datocolf2 = newValue;
+        break;
+      case "datocolf3":
+        this.datocolf3 = newValue;
+        break;
+      case "datocolf4":
+        this.datocolf4 = newValue;
+        break;
+      case "datocolf5":
+        this.datocolf5 = newValue;
+        break;
+      case "datocolg1":
+        this.datocolg1 = newValue;
+        break;
+      case "datocolg2":
+        this.datocolg2 = newValue;
+        break;
+      case "datocolg3":
+        this.datocolg3 = newValue;
+        break;
+      case "datocolg4":
+        this.datocolg4 = newValue;
+        break;
+
+      case "datocolg5":
+        this.datocolg5 = newValue;
+        break;
+
+
+
+
+
     }
+  }
 
-    static get observedAttributes() {
-        return [
-            "img",
-            "titulo1",
-            "titulo2",
-            "titulo3",
-            "titulo4",
-            "titulo5",
-            "datocola1",
-            "datocola2",
-            "datocola3",
-            "datocola4",
-            "datocola5",
-            "datocolb1",
-            "datocolb2",
-            "datocolb3",
-            "datocolb4",
-            "datocolb5",
-            "datocolc1",
-            "datocolc2",
-            "datocolc3",
-            "datocolc4",
-            "datocolc5",
-            "datocold1",
-            "datocold2",
-            "datocold3",
-            "datocold4",
-            "datocold5",
-            "datocole1",
-            "datocole2",
-            "datocole3",
-            "datocole4",
-            "datocole5",
-            "datocolf1",
-            "datocolf2",
-            "datocolf3",
-            "datocolf4",
-            "datocolf5",
-
-
-        ]
-    }
-
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
-        switch (nameAtr) {
-            case "img":
-                this.img = newValue;
-                break;
-                //Columnas
-            case "titulo1":
-                this.titulo1 = newValue;
-                break;
-            case "titulo2":
-                this.titulo2 = newValue;
-                break;
-            case "titulo3":
-                this.titulo3 = newValue;
-                break;
-            case "titulo4":
-                this.titulo4 = newValue;
-                break;
-
-            case "titulo5":
-                this.titulo5 = newValue;
-                break;
-
-
-                //Filas   
-            case "datocola1":
-                this.datocola1 = newValue;
-                break;
-
-            case "datocola2":
-                this.datocola2 = newValue;
-                break;
-            case "datocola3":
-                this.datocola3 = newValue;
-                break;
-            case "datocola4":
-                this.datocola4 = newValue;
-                break;
-            case "datocola5":
-                this.datocola5 = newValue;
-                break;
-
-            case "datocolb1":
-                this.datocolb1 = newValue;
-                break;
-            case "datocolb2":
-                this.datocolb2 = newValue;
-                break;
-            case "datocolb3":
-                this.datocolb3 = newValue;
-                break;
-            case "datocolb4":
-                this.datocolb4 = newValue;
-                break;
-            case "datocolb5":
-                this.datocolb5 = newValue;
-                break;
-            case "datocolc1":
-                this.datocolc1 = newValue;
-                break;
-            case "datocolc2":
-                this.datocolc2 = newValue;
-                break;
-
-            case "datocolc3":
-                this.datocolc3 = newValue;
-                break;
-            case "datocolc4":
-                this.datocolc4 = newValue;
-                break;
-            case "datocolc5":
-                this.datocolc5 = newValue;
-                break;
-            case "datocold1":
-                this.datocold1 = newValue;
-                break;
-            case "datocold2":
-                this.datocold2 = newValue;
-                break;
-            case "datocold3":
-                this.datocold3 = newValue;
-                break;
-            case "datocold4":
-                this.datocold4 = newValue;
-                break;
-            case "datocold5":
-                this.datocold5 = newValue;
-                break;
-            case "datocole1":
-                this.datocole1 = newValue;
-                break;
-            case "datocole2":
-                this.datocole2 = newValue;
-                break;
-            case "datocole3":
-                this.datocole3 = newValue;
-                break;
-            case "datocole4":
-                this.datocole4 = newValue;
-                break;
-            case "datocole5":
-                this.datocole5 = newValue;
-                break;
-
-
-            case "datocolf1":
-                this.datocolf1 = newValue;
-                break;
-            case "datocolf2":
-                this.datocolf2 = newValue;
-                break;
-            case "datocolf3":
-                this.datocolf3 = newValue;
-                break;
-            case "datocolf4":
-                this.datocolf4 = newValue;
-                break;
-            case "datocolf5":
-                this.datocolf5 = newValue;
-                break;
-            case "datocolg1":
-                this.datocolg1 = newValue;
-                break;
-            case "datocolg2":
-                this.datocolg2 = newValue;
-                break;
-            case "datocolg3":
-                this.datocolg3 = newValue;
-                break;
-            case "datocolg4":
-                this.datocolg4 = newValue;
-                break;
-
-            case "datocolg5":
-                this.datocolg5 = newValue;
-                break;
-
-
-
-
-
-        }
-    }
-
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <section class="fondo-card">
         <section class="card-imagen">
           <img src="${this.img}" class="imagen-inCard" alt="">
@@ -1225,7 +1250,7 @@ class Cardproducttablas extends HTMLElement {
 
    
     `;
-    }
+  }
 }
 
 window.customElements.define("card-productabla5", Cardproducttablas);
@@ -1233,193 +1258,193 @@ window.customElements.define("card-productabla5", Cardproducttablas);
 //-----------------------------------------------------------------------------------------------------------------
 class Cardtablatres extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.img;
-        this.titulo1;
-        this.titulo2;
-        this.titulo3;
+    this.img;
+    this.titulo1;
+    this.titulo2;
+    this.titulo3;
 
-        this.datocola1;
-        this.datocola2;
-        this.datocola3;
+    this.datocola1;
+    this.datocola2;
+    this.datocola3;
 
-        this.datocolb1;
-        this.datocolb2;
-        this.datocolb3;
+    this.datocolb1;
+    this.datocolb2;
+    this.datocolb3;
 
-        this.datocolc1;
-        this.datocolc2;
-        this.datocolc3;
+    this.datocolc1;
+    this.datocolc2;
+    this.datocolc3;
 
-        this.datocold1;
-        this.datocold2;
-        this.datocold3;
+    this.datocold1;
+    this.datocold2;
+    this.datocold3;
 
-        this.datocole1;
-        this.datocole2;
-        this.datocole3;
+    this.datocole1;
+    this.datocole2;
+    this.datocole3;
 
-        this.datocolf1;
-        this.datocolf2;
-        this.datocolf3;
+    this.datocolf1;
+    this.datocolf2;
+    this.datocolf3;
 
-        this.datocolg1;
-        this.datocolg2;
-        this.datocolg3;
+    this.datocolg1;
+    this.datocolg2;
+    this.datocolg3;
+
+  }
+
+  static get observedAttributes() {
+    return [
+      "img",
+      "titulo1",
+      "titulo2",
+      "titulo3",
+
+
+      "datocola1",
+      "datocola2",
+      "datocola3",
+
+
+      "datocolb1",
+      "datocolb2",
+      "datocolb3",
+
+
+      "datocolc1",
+      "datocolc2",
+      "datocolc3",
+
+
+      "datocold1",
+      "datocold2",
+      "datocold3",
+
+
+      "datocole1",
+      "datocole2",
+      "datocole3",
+
+
+      "datocolf1",
+      "datocolf2",
+      "datocolf3",
+
+      "datocolg1",
+      "datocolg2",
+      "datocolg3",
+
+
+
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+    switch (nameAtr) {
+      case "img":
+        this.img = newValue;
+        break;
+        //Columnas
+      case "titulo1":
+        this.titulo1 = newValue;
+        break;
+      case "titulo2":
+        this.titulo2 = newValue;
+        break;
+      case "titulo3":
+        this.titulo3 = newValue;
+        break;
+
+
+
+        //Filas   
+      case "datocola1":
+        this.datocola1 = newValue;
+        break;
+
+      case "datocola2":
+        this.datocola2 = newValue;
+        break;
+      case "datocola3":
+        this.datocola3 = newValue;
+        break;
+
+
+      case "datocolb1":
+        this.datocolb1 = newValue;
+        break;
+      case "datocolb2":
+        this.datocolb2 = newValue;
+        break;
+      case "datocolb3":
+        this.datocolb3 = newValue;
+        break;
+
+      case "datocolc1":
+        this.datocolc1 = newValue;
+        break;
+      case "datocolc2":
+        this.datocolc2 = newValue;
+        break;
+
+      case "datocolc3":
+        this.datocolc3 = newValue;
+        break;
+
+      case "datocold1":
+        this.datocold1 = newValue;
+        break;
+      case "datocold2":
+        this.datocold2 = newValue;
+        break;
+      case "datocold3":
+        this.datocold3 = newValue;
+        break;
+
+      case "datocole1":
+        this.datocole1 = newValue;
+        break;
+      case "datocole2":
+        this.datocole2 = newValue;
+        break;
+      case "datocole3":
+        this.datocole3 = newValue;
+        break;
+
+
+
+      case "datocolf1":
+        this.datocolf1 = newValue;
+        break;
+      case "datocolf2":
+        this.datocolf2 = newValue;
+        break;
+      case "datocolf3":
+        this.datocolf3 = newValue;
+        break;
+
+      case "datocolg1":
+        this.datocolg1 = newValue;
+        break;
+      case "datocolg2":
+        this.datocolg2 = newValue;
+        break;
+      case "datocolg3":
+        this.datocolg3 = newValue;
+        break;
+
+
+
+
 
     }
+  }
 
-    static get observedAttributes() {
-        return [
-            "img",
-            "titulo1",
-            "titulo2",
-            "titulo3",
-
-
-            "datocola1",
-            "datocola2",
-            "datocola3",
-
-
-            "datocolb1",
-            "datocolb2",
-            "datocolb3",
-
-
-            "datocolc1",
-            "datocolc2",
-            "datocolc3",
-
-
-            "datocold1",
-            "datocold2",
-            "datocold3",
-
-
-            "datocole1",
-            "datocole2",
-            "datocole3",
-
-
-            "datocolf1",
-            "datocolf2",
-            "datocolf3",
-
-            "datocolg1",
-            "datocolg2",
-            "datocolg3",
-
-
-
-        ]
-    }
-
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
-        switch (nameAtr) {
-            case "img":
-                this.img = newValue;
-                break;
-                //Columnas
-            case "titulo1":
-                this.titulo1 = newValue;
-                break;
-            case "titulo2":
-                this.titulo2 = newValue;
-                break;
-            case "titulo3":
-                this.titulo3 = newValue;
-                break;
-
-
-
-                //Filas   
-            case "datocola1":
-                this.datocola1 = newValue;
-                break;
-
-            case "datocola2":
-                this.datocola2 = newValue;
-                break;
-            case "datocola3":
-                this.datocola3 = newValue;
-                break;
-
-
-            case "datocolb1":
-                this.datocolb1 = newValue;
-                break;
-            case "datocolb2":
-                this.datocolb2 = newValue;
-                break;
-            case "datocolb3":
-                this.datocolb3 = newValue;
-                break;
-
-            case "datocolc1":
-                this.datocolc1 = newValue;
-                break;
-            case "datocolc2":
-                this.datocolc2 = newValue;
-                break;
-
-            case "datocolc3":
-                this.datocolc3 = newValue;
-                break;
-
-            case "datocold1":
-                this.datocold1 = newValue;
-                break;
-            case "datocold2":
-                this.datocold2 = newValue;
-                break;
-            case "datocold3":
-                this.datocold3 = newValue;
-                break;
-
-            case "datocole1":
-                this.datocole1 = newValue;
-                break;
-            case "datocole2":
-                this.datocole2 = newValue;
-                break;
-            case "datocole3":
-                this.datocole3 = newValue;
-                break;
-
-
-
-            case "datocolf1":
-                this.datocolf1 = newValue;
-                break;
-            case "datocolf2":
-                this.datocolf2 = newValue;
-                break;
-            case "datocolf3":
-                this.datocolf3 = newValue;
-                break;
-
-            case "datocolg1":
-                this.datocolg1 = newValue;
-                break;
-            case "datocolg2":
-                this.datocolg2 = newValue;
-                break;
-            case "datocolg3":
-                this.datocolg3 = newValue;
-                break;
-
-
-
-
-
-        }
-    }
-
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <section class="fondo-card">
         <section class="card-imagen">
           <img src="${this.img}" class="imagen-inCard" alt="">
@@ -1525,7 +1550,7 @@ class Cardtablatres extends HTMLElement {
 
    
     `;
-    }
+  }
 }
 
 window.customElements.define("card-productabla3", Cardtablatres);
@@ -1537,135 +1562,135 @@ class cardWithinputs extends HTMLElement {
 
 
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
 
-        this.titulocard;
-        this.botoncard;
-        this.titulocard1;
-        this.botoncard1;
-        this.titulocard2;
-        this.botoncard2;
-        this.titulocard3;
-        this.botoncard3;
-        this.titulocard4;
-        this.botoncard4;
-        this.titulocard5;
-        this.botoncard5;
-
-
-
-    }
-
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido",
-            "boton",
-
-            "titulocard",
-            "botoncard",
-            "titulocard2",
-            "botoncard2",
-            "titulocard3",
-            "botoncard3",
-            "titulocard4",
-            "botoncard4",
-            "titulocard5",
+    this.titulocard;
+    this.botoncard;
+    this.titulocard1;
+    this.botoncard1;
+    this.titulocard2;
+    this.botoncard2;
+    this.titulocard3;
+    this.botoncard3;
+    this.titulocard4;
+    this.botoncard4;
+    this.titulocard5;
+    this.botoncard5;
 
 
-        ]
-    }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  }
 
-        switch (nameAtr) {
-            case "recurso":
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido",
+      "boton",
 
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "boton":
-
-                this.boton = newValue
-
-                break;
+      "titulocard",
+      "botoncard",
+      "titulocard2",
+      "botoncard2",
+      "titulocard3",
+      "botoncard3",
+      "titulocard4",
+      "botoncard4",
+      "titulocard5",
 
 
-            case "titulocard":
-                this.titulocard = newValue
+    ]
+  }
 
-                break;
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
 
-            case "botoncard":
-                this.botoncard = newValue
+    switch (nameAtr) {
+      case "recurso":
 
-                break;
+        this.recurso = newValue
 
-            case "titulocard2":
-                this.titulocard2 = newValue
+        break;
 
-                break;
+      case "titulo":
 
-            case "botoncard2":
-                this.botoncard2 = newValue
+        this.titulo = newValue
 
-                break;
-            case "titulocard3":
-                this.titulocard3 = newValue
+        break;
 
-                break;
+      case "contenido":
 
-            case "botoncard3":
-                this.botoncard3 = newValue
+        this.contenido = newValue
 
-                break;
-            case "titulocard4":
-                this.titulocard4 = newValue
+        break;
 
-                break;
+      case "boton":
 
-            case "botoncard4":
-                this.botoncard4 = newValue
+        this.boton = newValue
 
-                break;
-            case "titulocard5":
-                this.titulocard5 = newValue
-
-                break;
-
-            case "botoncard5":
-                this.botoncard5 = newValue
-
-                break;
+        break;
 
 
-        }
+      case "titulocard":
+        this.titulocard = newValue
+
+        break;
+
+      case "botoncard":
+        this.botoncard = newValue
+
+        break;
+
+      case "titulocard2":
+        this.titulocard2 = newValue
+
+        break;
+
+      case "botoncard2":
+        this.botoncard2 = newValue
+
+        break;
+      case "titulocard3":
+        this.titulocard3 = newValue
+
+        break;
+
+      case "botoncard3":
+        this.botoncard3 = newValue
+
+        break;
+      case "titulocard4":
+        this.titulocard4 = newValue
+
+        break;
+
+      case "botoncard4":
+        this.botoncard4 = newValue
+
+        break;
+      case "titulocard5":
+        this.titulocard5 = newValue
+
+        break;
+
+      case "botoncard5":
+        this.botoncard5 = newValue
+
+        break;
+
 
     }
 
-    connectedCallback() {
+  }
 
-        this.innerHTML = `
+  connectedCallback() {
+
+    this.innerHTML = `
 
         <div class = 'supreme'>
         
@@ -1753,7 +1778,7 @@ class cardWithinputs extends HTMLElement {
         
         `
 
-    }
+  }
 
 
 }
@@ -1769,59 +1794,59 @@ window.customElements.define("card-inputs", cardWithinputs)
 
 
 class cardImg extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
-    }
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
+  }
 
-        static get observedAttributes() {
-            return [
-                "recurso",
-                "titulo",
-                "contenido",
-                "boton",
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido",
+      "boton",
 
-            ]
-        }
-    
-        attributeChangedCallback(nameAtr, oldValue, newValue) {
-    
-            switch (nameAtr) {
-                case "recurso":
-    
-                    this.recurso = newValue
-    
-                    break;
-    
-                case "titulo":
-    
-                    this.titulo = newValue
-    
-                    break;
-    
-                case "contenido":
-    
-                    this.contenido = newValue
-    
-                    break;
-    
-                case "boton":
-    
-                    this.boton = newValue
-    
-                    break;
+    ]
+  }
 
-                    
-        }
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+      case "titulo":
+
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
+
+      case "boton":
+
+        this.boton = newValue
+
+        break;
+
 
     }
-    connectedCallback() {
 
-        this.innerHTML = `
+  }
+  connectedCallback() {
+
+    this.innerHTML = `
         
         <div class = 'supreme'>
         
@@ -1843,46 +1868,46 @@ class cardImg extends HTMLElement {
         
         `
 
-    }
+  }
 }
-    
+
 window.customElements.define("card-productosimg", cardImg)
 
 //SIMULADOR----------------------------------------------------------------------------------------------------------------------------------------------------------
 class Simulador extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
+    this.recurso;
 
-    }
+  }
 
-        static get observedAttributes() {
-            return [
-                "recurso",
-         
+  static get observedAttributes() {
+    return [
+      "recurso",
 
-            ]
-        }
-    
-        attributeChangedCallback(nameAtr, oldValue, newValue) {
-    
-            switch (nameAtr) {
-                case "recurso":
-    
-                    this.recurso = newValue
-    
-                    break;
-    
-                
 
-                    
-        }
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+
+
 
     }
-    connectedCallback() {
 
-        this.innerHTML = `
+  }
+  connectedCallback() {
+
+    this.innerHTML = `
         
         
         
@@ -1894,12 +1919,12 @@ class Simulador extends HTMLElement {
           <div class="row">
             <div class="col-md-12">
               <form id="formulario" method="post" action="">
-              <h3> Tipo de crédito </h3>
+              <h5 class = "body_2">Tipo de crédito</h5>
             
                 <div id="etapa-1">
-                  <div class="form-group">
+                  <div class="" >
                     <div class="dropdown">
-                      <button class="btn btn_formulario btn_large_outline_active formdrop dropdown-toggle text-start" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="btn btn_formulario btn_large_form formdrop dropdown-toggle text-start" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style ="width: 80%;">
                         Nuevo <i class="bi bi-chevron-down float-end"></i>
                       </button>
                       <ul class="dropdown-menu dropdown_form" aria-labelledby="dropdownMenuButton1">
@@ -1907,18 +1932,21 @@ class Simulador extends HTMLElement {
                         <li><a class="dropdown-item" href="#">Preferencial</a></li>
                       </ul>
                     </div>
-                    <h3 for="nombre">Digita el monto:</h3>
+                    <div style = "margin-top: 3%;">
+                    <h5 class = "body_2">Digita el monto</h5>
                     <input type="text" class="form-control form-control_formulario form-input" id="nombre" placeholder="Monto">
-                    <p style = "margin-bottom:20px">Máx. $50.000.000</p>
+                    <p class = "body_2" style = "margin-top:20px; color: gray;">Máx. $50.000.000</p>
+                    </div>
                   </div>
 
+                <div style = "margin-top: 3%;">
+                <h5 class = "body_2">Plazo en meses</h5>
+                  </div
 
-                  <h3> Plazo en meses</h3>
-            
                   <div id="etapa-1">
-                    <div class="form-group">
+                    <div class="">
                       <div class="dropdown">
-                        <button class="btn btn_formulario btn_large_outline_active formdrop dropdown-toggle text-start" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn_large_form  formdrop dropdown-toggle text-start" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style = "width: 80%;">
                           2 meses <i class="bi bi-chevron-down float-end"></i>
                         </button>
                         <ul class="dropdown-menu dropdown_form" aria-labelledby="dropdownMenuButton1">
@@ -1927,10 +1955,10 @@ class Simulador extends HTMLElement {
                         </ul>
                       </div>
 
-                      <h3 class = "simulacion" style = "margin-bottom:20px;">Tasa de simulación 2.02% M.V</h3>
+                      <h5 class = "simulacion body_2" style = "margin-top: 3%;">Tasa de simulación 2.02% M.V</h5>
          
                   <div class="col-md-12 text-center">
-                    <button type="button" class="btn btn_large_active siguiente">Continuar <i class="bi bi-arrow-right float-end"></i></button>
+                    <button type="button" class="btn btn_large_active siguiente" style = "margin-top: 5%; margin-bottom: 5%; margin-left:40%;">Continuar <i class="bi bi-arrow-right float-end"></i></button>
                   </div>
                 </div>
             
@@ -1947,9 +1975,9 @@ class Simulador extends HTMLElement {
         
         `
 
-    }
+  }
 }
-    
+
 window.customElements.define("w-simulador", Simulador)
 
 
@@ -1960,98 +1988,98 @@ class cardWithtwoinputs extends HTMLElement {
 
 
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
 
-        this.titulocard;
-        this.botoncard;
-        this.titulocard1;
-        this.botoncard1;
-        this.titulocard2;
-        this.botoncard2;
-      
-
+    this.titulocard;
+    this.botoncard;
+    this.titulocard1;
+    this.botoncard1;
+    this.titulocard2;
+    this.botoncard2;
 
 
-    }
-
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido",
-            "boton",
-
-            "titulocard",
-            "botoncard",
-            "titulocard2",
-            "botoncard2",
-         
 
 
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido",
+      "boton",
 
-        switch (nameAtr) {
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "boton":
-
-                this.boton = newValue
-
-                break;
+      "titulocard",
+      "botoncard",
+      "titulocard2",
+      "botoncard2",
 
 
-            case "titulocard":
-                this.titulocard = newValue
 
-                break;
+    ]
+  }
 
-            case "botoncard":
-                this.botoncard = newValue
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
 
-                break;
+    switch (nameAtr) {
+      case "recurso":
 
-            case "titulocard2":
-                this.titulocard2 = newValue
+        this.recurso = newValue
 
-                break;
+        break;
 
-            case "botoncard2":
-                this.botoncard2 = newValue
+      case "titulo":
 
-                break;
-    
-        }
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
+
+      case "boton":
+
+        this.boton = newValue
+
+        break;
+
+
+      case "titulocard":
+        this.titulocard = newValue
+
+        break;
+
+      case "botoncard":
+        this.botoncard = newValue
+
+        break;
+
+      case "titulocard2":
+        this.titulocard2 = newValue
+
+        break;
+
+      case "botoncard2":
+        this.botoncard2 = newValue
+
+        break;
 
     }
 
-    connectedCallback() {
+  }
 
-        this.innerHTML = `
+  connectedCallback() {
+
+    this.innerHTML = `
 
         <div class = 'supreme'>
         
@@ -2104,7 +2132,7 @@ class cardWithtwoinputs extends HTMLElement {
         
         `
 
-    }
+  }
 
 
 }
@@ -2121,98 +2149,98 @@ class cardWithtwoinputstxt extends HTMLElement {
 
 
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
 
-        this.titulocard;
-        this.botoncard;
-        this.titulocard1;
-        this.botoncard1;
-        this.titulocard2;
-        this.botoncard2;
-      
-
+    this.titulocard;
+    this.botoncard;
+    this.titulocard1;
+    this.botoncard1;
+    this.titulocard2;
+    this.botoncard2;
 
 
-    }
-
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido",
-            "boton",
-
-            "titulocard",
-            "botoncard",
-            "titulocard2",
-            "botoncard2",
-         
 
 
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido",
+      "boton",
 
-        switch (nameAtr) {
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "boton":
-
-                this.boton = newValue
-
-                break;
+      "titulocard",
+      "botoncard",
+      "titulocard2",
+      "botoncard2",
 
 
-            case "titulocard":
-                this.titulocard = newValue
 
-                break;
+    ]
+  }
 
-            case "botoncard":
-                this.botoncard = newValue
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
 
-                break;
+    switch (nameAtr) {
+      case "recurso":
 
-            case "titulocard2":
-                this.titulocard2 = newValue
+        this.recurso = newValue
 
-                break;
+        break;
 
-            case "botoncard2":
-                this.botoncard2 = newValue
+      case "titulo":
 
-                break;
-    
-        }
+        this.titulo = newValue
+
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
+
+      case "boton":
+
+        this.boton = newValue
+
+        break;
+
+
+      case "titulocard":
+        this.titulocard = newValue
+
+        break;
+
+      case "botoncard":
+        this.botoncard = newValue
+
+        break;
+
+      case "titulocard2":
+        this.titulocard2 = newValue
+
+        break;
+
+      case "botoncard2":
+        this.botoncard2 = newValue
+
+        break;
 
     }
 
-    connectedCallback() {
+  }
 
-        this.innerHTML = `
+  connectedCallback() {
+
+    this.innerHTML = `
 
         <div class = 'supreme'>
         
@@ -2265,7 +2293,7 @@ class cardWithtwoinputstxt extends HTMLElement {
         
         `
 
-    }
+  }
 
 
 }
@@ -2281,111 +2309,111 @@ class cardWiththreeinputs extends HTMLElement {
 
 
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
 
-        this.titulocard;
-        this.botoncard;
-        this.titulocard1;
-        this.botoncard1;
-        this.titulocard2;
-        this.botoncard2;
-        this.titulocard3;
-        this.botoncard3;
-
-
-    }
-
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido",
-            "boton",
-
-            "titulocard",
-            "botoncard",
-            "titulocard2",
-            "botoncard2",
-            "titulocard3",
-            "botoncard3"
-         
+    this.titulocard;
+    this.botoncard;
+    this.titulocard1;
+    this.botoncard1;
+    this.titulocard2;
+    this.botoncard2;
+    this.titulocard3;
+    this.botoncard3;
 
 
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido",
+      "boton",
 
-        switch (nameAtr) {
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "boton":
-
-                this.boton = newValue
-
-                break;
+      "titulocard",
+      "botoncard",
+      "titulocard2",
+      "botoncard2",
+      "titulocard3",
+      "botoncard3"
 
 
-            case "titulocard":
-                this.titulocard = newValue
 
-                break;
+    ]
+  }
 
-            case "botoncard":
-                this.botoncard = newValue
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
 
-                break;
+    switch (nameAtr) {
+      case "recurso":
 
-            case "titulocard2":
-                this.titulocard2 = newValue
+        this.recurso = newValue
 
-                break;
+        break;
 
-            case "botoncard2":
-                this.botoncard2 = newValue
+      case "titulo":
 
-                break;
+        this.titulo = newValue
 
-                case "titulocard3":
-                    this.titulocard3 = newValue
-    
-                    break;
-    
-                case "botoncard3":
-                    this.botoncard3 = newValue
-    
-                    break;
-        
-    
-        }
+        break;
+
+      case "contenido":
+
+        this.contenido = newValue
+
+        break;
+
+      case "boton":
+
+        this.boton = newValue
+
+        break;
+
+
+      case "titulocard":
+        this.titulocard = newValue
+
+        break;
+
+      case "botoncard":
+        this.botoncard = newValue
+
+        break;
+
+      case "titulocard2":
+        this.titulocard2 = newValue
+
+        break;
+
+      case "botoncard2":
+        this.botoncard2 = newValue
+
+        break;
+
+      case "titulocard3":
+        this.titulocard3 = newValue
+
+        break;
+
+      case "botoncard3":
+        this.botoncard3 = newValue
+
+        break;
+
 
     }
 
-    connectedCallback() {
+  }
 
-        this.innerHTML = `
+  connectedCallback() {
+
+    this.innerHTML = `
 
         <div class = 'supreme'>
         
@@ -2455,7 +2483,7 @@ class cardWiththreeinputs extends HTMLElement {
         
         `
 
-    }
+  }
 
 
 }
@@ -2470,124 +2498,124 @@ class cardWithfourinputs extends HTMLElement {
 
 
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
-        this.titulo;
-        this.contenido;
-        this.boton;
+    this.recurso;
+    this.titulo;
+    this.contenido;
+    this.boton;
 
-        this.titulocard;
-        this.botoncard;
-        this.titulocard1;
-        this.botoncard1;
-        this.titulocard2;
-        this.botoncard2;
-        this.titulocard3;
-        this.botoncard3;
-        this.titulocard4;
-        this.botoncard4;
-
-
-    }
-
-    static get observedAttributes() {
-        return [
-            "recurso",
-            "titulo",
-            "contenido",
-            "boton",
-
-            "titulocard",
-            "botoncard",
-            "titulocard2",
-            "botoncard2",
-            "titulocard3",
-            "botoncard3",
-            "titulocard4",
-            "botoncard4"
-         
+    this.titulocard;
+    this.botoncard;
+    this.titulocard1;
+    this.botoncard1;
+    this.titulocard2;
+    this.botoncard2;
+    this.titulocard3;
+    this.botoncard3;
+    this.titulocard4;
+    this.botoncard4;
 
 
-        ]
-    }
+  }
 
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
+  static get observedAttributes() {
+    return [
+      "recurso",
+      "titulo",
+      "contenido",
+      "boton",
 
-        switch (nameAtr) {
-            case "recurso":
-
-                this.recurso = newValue
-
-                break;
-
-            case "titulo":
-
-                this.titulo = newValue
-
-                break;
-
-            case "contenido":
-
-                this.contenido = newValue
-
-                break;
-
-            case "boton":
-
-                this.boton = newValue
-
-                break;
+      "titulocard",
+      "botoncard",
+      "titulocard2",
+      "botoncard2",
+      "titulocard3",
+      "botoncard3",
+      "titulocard4",
+      "botoncard4"
 
 
-            case "titulocard":
-                this.titulocard = newValue
 
-                break;
+    ]
+  }
 
-            case "botoncard":
-                this.botoncard = newValue
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
 
-                break;
+    switch (nameAtr) {
+      case "recurso":
 
-            case "titulocard2":
-                this.titulocard2 = newValue
+        this.recurso = newValue
 
-                break;
+        break;
 
-            case "botoncard2":
-                this.botoncard2 = newValue
+      case "titulo":
 
-                break;
+        this.titulo = newValue
 
-                case "titulocard3":
-                    this.titulocard3 = newValue
-    
-                    break;
-    
-                case "botoncard3":
-                    this.botoncard3 = newValue
-    
-                    break;
-                case "titulocard4":
-                    this.titulocard4 = newValue
+        break;
 
-                    break;
+      case "contenido":
 
-                case "botoncard4":
-                    this.botoncard4 = newValue
+        this.contenido = newValue
 
-                    break;
-        
-    
-        }
+        break;
+
+      case "boton":
+
+        this.boton = newValue
+
+        break;
+
+
+      case "titulocard":
+        this.titulocard = newValue
+
+        break;
+
+      case "botoncard":
+        this.botoncard = newValue
+
+        break;
+
+      case "titulocard2":
+        this.titulocard2 = newValue
+
+        break;
+
+      case "botoncard2":
+        this.botoncard2 = newValue
+
+        break;
+
+      case "titulocard3":
+        this.titulocard3 = newValue
+
+        break;
+
+      case "botoncard3":
+        this.botoncard3 = newValue
+
+        break;
+      case "titulocard4":
+        this.titulocard4 = newValue
+
+        break;
+
+      case "botoncard4":
+        this.botoncard4 = newValue
+
+        break;
+
 
     }
 
-    connectedCallback() {
+  }
 
-        this.innerHTML = `
+  connectedCallback() {
+
+    this.innerHTML = `
 
         <div class = 'supreme'>
         
@@ -2674,7 +2702,7 @@ class cardWithfourinputs extends HTMLElement {
         
         `
 
-    }
+  }
 
 
 }
@@ -2685,39 +2713,39 @@ window.customElements.define("card-inputs4", cardWithfourinputs)
 
 //SIMULADOR CDT----------------------------------------------------------------------------------------------------------------------------------------------------------
 class SimuladorCDT extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.recurso;
+    this.recurso;
 
-    }
+  }
 
-        static get observedAttributes() {
-            return [
-                "recurso",
-         
+  static get observedAttributes() {
+    return [
+      "recurso",
 
-            ]
-        }
-    
-        attributeChangedCallback(nameAtr, oldValue, newValue) {
-    
-            switch (nameAtr) {
-                case "recurso":
-    
-                    this.recurso = newValue
-    
-                    break;
-    
-                
 
-                    
-        }
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+
+    switch (nameAtr) {
+      case "recurso":
+
+        this.recurso = newValue
+
+        break;
+
+
+
 
     }
-    connectedCallback() {
 
-        this.innerHTML = `
+  }
+  connectedCallback() {
+
+    this.innerHTML = `
         
         
         
@@ -2771,173 +2799,173 @@ class SimuladorCDT extends HTMLElement {
         
         `
 
-    }
+  }
 }
-    
+
 window.customElements.define("w-simulador-cdt", SimuladorCDT)
 
 //tasas y tarifas Col x5
 class cardProductasascolcinco extends HTMLElement {
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.img;
-        this.datacredito;
-        this.cifin;
-        this.dias1;
-        this.dias2;
-        this.dias3;
-        this.dias4;
-        this.interes;
+    this.img;
+    this.datacredito;
+    this.cifin;
+    this.dias1;
+    this.dias2;
+    this.dias3;
+    this.dias4;
+    this.interes;
 
-        this.plazos;
-        this.plazo1;
-        this.plazo2;
-        this.plazo3;
-        this.plazo4;
-        this.plazo5;
+    this.plazos;
+    this.plazo1;
+    this.plazo2;
+    this.plazo3;
+    this.plazo4;
+    this.plazo5;
 
 
 
-        this.plazos1;
-        this.plazos2;
-        this.plazos3;
-        this.plazos4;
-        this.plazos5;
+    this.plazos1;
+    this.plazos2;
+    this.plazos3;
+    this.plazos4;
+    this.plazos5;
 
-        this.plazosb;
-        this.plazosb2;
-        this.plazosb3;
-        this.plazosb4;
-        this.plazosb5;
+    this.plazosb;
+    this.plazosb2;
+    this.plazosb3;
+    this.plazosb4;
+    this.plazosb5;
+  }
+
+  static get observedAttributes() {
+    return [
+      "img",
+      "datacredito",
+      "cifin",
+      "dias1",
+      "dias2",
+      "dias3",
+      "dias4",
+      "intereses",
+      "plazos",
+      "plazo1",
+      "plazo2",
+      "plazo3",
+      "plazo4",
+      "plazo5",
+
+      "plazos1",
+      "plazos2",
+      "plazos3",
+      "plazos4",
+      "plazos5",
+
+      "plazosb",
+      "plazosb2",
+      "plazosb3",
+      "plazosb4",
+      "plazosb5"
+
+    ]
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+    switch (nameAtr) {
+      case "datacredito":
+        this.datacredito = newValue;
+        break;
+      case "cifin":
+        this.cifin = newValue;
+        break;
+      case "dias1":
+        this.dias1 = newValue;
+        break;
+      case "dias2":
+        this.dias2 = newValue;
+        break;
+      case "dias3":
+        this.dias3 = newValue;
+        break;
+      case "dias4":
+        this.dias4 = newValue;
+        break;
+      case "intereses":
+        this.interes = newValue;
+        break;
+      case "plazos":
+        this.plazos = newValue;
+        break;
+      case "img":
+        this.img = newValue;
+        break;
+
+      case "plazo1":
+        this.plazo1 = newValue;
+        break;
+      case "plazo2":
+        this.plazo2 = newValue;
+        break;
+      case "plazo3":
+        this.plazo3 = newValue;
+        break;
+      case "plazo4":
+        this.plazo4 = newValue;
+        break;
+      case "plazo5":
+        this.plazo5 = newValue;
+        break;
+
+
+
+
+      case "plazos1":
+        this.plazos1 = newValue;
+        break;
+      case "plazos2":
+        this.plazos2 = newValue;
+        break;
+      case "plazos3":
+        this.plazos3 = newValue;
+        break;
+      case "plazos4":
+        this.plazos4 = newValue;
+        break;
+      case "plazos5":
+        this.plazos5 = newValue;
+        break;
+
+      case "plazosb":
+        this.plazosb = newValue;
+        break;
+
+      case "plazosb2":
+        this.plazosb2 = newValue;
+        break;
+
+      case "plazosb3":
+        this.plazosb3 = newValue;
+        break;
+
+      case "plazosb4":
+        this.plazosb4 = newValue;
+        break;
+
+      case "plazosb5":
+        this.plazosb5 = newValue;
+        break;
+
+
+
+
     }
+  }
 
-    static get observedAttributes() {
-        return [
-            "img",
-            "datacredito",
-            "cifin",
-            "dias1",
-            "dias2",
-            "dias3",
-            "dias4",
-            "intereses",
-            "plazos",
-            "plazo1",
-            "plazo2",
-            "plazo3",
-            "plazo4",
-            "plazo5",
-
-            "plazos1",
-            "plazos2",
-            "plazos3",
-            "plazos4",
-            "plazos5",
-
-            "plazosb",
-            "plazosb2",
-            "plazosb3",
-            "plazosb4",
-            "plazosb5"
-
-        ]
-    }
-
-    attributeChangedCallback(nameAtr, oldValue, newValue) {
-        switch (nameAtr) {
-            case "datacredito":
-                this.datacredito = newValue;
-                break;
-            case "cifin":
-                this.cifin = newValue;
-                break;
-            case "dias1":
-                this.dias1 = newValue;
-                break;
-            case "dias2":
-                this.dias2 = newValue;
-                break;
-            case "dias3":
-                this.dias3 = newValue;
-                break;
-            case "dias4":
-                this.dias4 = newValue;
-                break;
-            case "intereses":
-                this.interes = newValue;
-                break;
-            case "plazos":
-                this.plazos = newValue;
-                break;
-            case "img":
-                this.img = newValue;
-                break;
-
-            case "plazo1":
-                this.plazo1 = newValue;
-                break;
-            case "plazo2":
-                this.plazo2 = newValue;
-                break;
-            case "plazo3":
-                this.plazo3 = newValue;
-                break;
-            case "plazo4":
-                this.plazo4 = newValue;
-                break;
-            case "plazo5":
-                this.plazo5 = newValue;
-                break;
-
-
-
-
-            case "plazos1":
-                this.plazos1 = newValue;
-                break;
-            case "plazos2":
-                this.plazos2 = newValue;
-                break;
-            case "plazos3":
-                this.plazos3 = newValue;
-                break;
-            case "plazos4":
-                this.plazos4 = newValue;
-                break;
-            case "plazos5":
-                this.plazos5 = newValue;
-                break;
-            
-            case "plazosb":
-                this.plazosb = newValue;
-                break;
-            
-            case "plazosb2":
-                this.plazosb2 = newValue;
-                break;
-            
-            case "plazosb3":
-                this.plazosb3 = newValue;
-                break;
-
-            case "plazosb4":
-                this.plazosb4 = newValue;
-                break;
-            
-            case "plazosb5":
-                this.plazosb5 = newValue;
-                break;
-
-
-
-
-        }
-    }
-
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
     <section class="fondo-card">
     <section class="card-imagen">
       <img src="${this.img}" class="imagen-inCard" alt="">
@@ -3033,7 +3061,7 @@ class cardProductasascolcinco extends HTMLElement {
 
    
   `;
-}
+  }
 }
 
 window.customElements.define("card-productasas-cinco", cardProductasascolcinco);
@@ -3044,169 +3072,169 @@ window.customElements.define("card-productasas-cinco", cardProductasascolcinco);
 class Cardtablacinco extends HTMLElement {
 
   constructor() {
-      super();
+    super();
 
-      this.img;
-      this.boton;
-      this.titulo1;
-      this.titulo2;
-      this.titulo3;
-      this.titulo4;
-      this.titulo5;
+    this.img;
+    this.boton;
+    this.titulo1;
+    this.titulo2;
+    this.titulo3;
+    this.titulo4;
+    this.titulo5;
 
-      this.datocola1;
-      this.datocola2;
-      this.datocola3;
-      this.datocola4;
-      this.datocola5;
+    this.datocola1;
+    this.datocola2;
+    this.datocola3;
+    this.datocola4;
+    this.datocola5;
 
-      this.datocolb1;
-      this.datocolb2;
-      this.datocolb3;
-      this.datocolb4;
-      this.datocolb5;
+    this.datocolb1;
+    this.datocolb2;
+    this.datocolb3;
+    this.datocolb4;
+    this.datocolb5;
 
-      this.datocolc1;
-      this.datocolc2;
-      this.datocolc3;
-      this.datocolc4;
-      this.datocolc5;
+    this.datocolc1;
+    this.datocolc2;
+    this.datocolc3;
+    this.datocolc4;
+    this.datocolc5;
 
   }
 
   static get observedAttributes() {
-      return [
-          "img",
-          "titulo1",
-          "titulo2",
-          "titulo3",
-          "titulo4",
-          "titulo5",
-          
-          
-
-
-          "datocola1",
-          "datocola2",
-          "datocola3",
-          "datocola4",
-          "datocola5",
-
-
-          "datocolb1",
-          "datocolb2",
-          "datocolb3",
-          "datocolb4",
-          "datocolb5",
-          
-
-
-          "datocolc1",
-          "datocolc2",
-          "datocolc3",
-          "datocolc4",
-          "datocolc5",
-          "boton"
+    return [
+      "img",
+      "titulo1",
+      "titulo2",
+      "titulo3",
+      "titulo4",
+      "titulo5",
 
 
 
 
+      "datocola1",
+      "datocola2",
+      "datocola3",
+      "datocola4",
+      "datocola5",
 
-      ]
+
+      "datocolb1",
+      "datocolb2",
+      "datocolb3",
+      "datocolb4",
+      "datocolb5",
+
+
+
+      "datocolc1",
+      "datocolc2",
+      "datocolc3",
+      "datocolc4",
+      "datocolc5",
+      "boton"
+
+
+
+
+
+    ]
   }
 
   attributeChangedCallback(nameAtr, oldValue, newValue) {
-      switch (nameAtr) {
-          case "img":
-              this.img = newValue;
-              break;
-              //Columnas
-          case "titulo1":
-              this.titulo1 = newValue;
-              break;
-          case "titulo2":
-              this.titulo2 = newValue;
-              break;
-          case "titulo3":
-              this.titulo3 = newValue;
-              break;
-          case "titulo4":
-              this.titulo4 = newValue;
-              break;
-          case "titulo5":
-              this.titulo5 = newValue;
-              break;
+    switch (nameAtr) {
+      case "img":
+        this.img = newValue;
+        break;
+        //Columnas
+      case "titulo1":
+        this.titulo1 = newValue;
+        break;
+      case "titulo2":
+        this.titulo2 = newValue;
+        break;
+      case "titulo3":
+        this.titulo3 = newValue;
+        break;
+      case "titulo4":
+        this.titulo4 = newValue;
+        break;
+      case "titulo5":
+        this.titulo5 = newValue;
+        break;
 
 
 
-              //Filas   
-          case "datocola1":
-              this.datocola1 = newValue;
-              break;
+        //Filas   
+      case "datocola1":
+        this.datocola1 = newValue;
+        break;
 
-          case "datocola2":
-              this.datocola2 = newValue;
-              break;
-          case "datocola3":
-              this.datocola3 = newValue;
-              break;
-          case "datocola4":
-              this.datocola4 = newValue;
-              break;
-          case "datocola5":
-              this.datocola5 = newValue;
-              break;
-
-
-          case "datocolb1":
-              this.datocolb1 = newValue;
-              break;
-          case "datocolb2":
-              this.datocolb2 = newValue;
-              break;
-          case "datocolb3":
-              this.datocolb3 = newValue;
-              break;
-          case "datocolb4":
-              this.datocolb4 = newValue;
-              break;
-          case "datocolb5":
-              this.datocolb5 = newValue;
-              break;
+      case "datocola2":
+        this.datocola2 = newValue;
+        break;
+      case "datocola3":
+        this.datocola3 = newValue;
+        break;
+      case "datocola4":
+        this.datocola4 = newValue;
+        break;
+      case "datocola5":
+        this.datocola5 = newValue;
+        break;
 
 
-              
-          case "datocolc1":
-              this.datocolc1 = newValue;
-              break;
-          case "datocolc2":
-              this.datocolc2 = newValue;
-              break;
+      case "datocolb1":
+        this.datocolb1 = newValue;
+        break;
+      case "datocolb2":
+        this.datocolb2 = newValue;
+        break;
+      case "datocolb3":
+        this.datocolb3 = newValue;
+        break;
+      case "datocolb4":
+        this.datocolb4 = newValue;
+        break;
+      case "datocolb5":
+        this.datocolb5 = newValue;
+        break;
 
-          case "datocolc3":
-              this.datocolc3 = newValue;
-              break;
-          case "datocolc4":
-              this.datocolc4 = newValue;
-              break;
-          case "datocolc5":
-              this.datocolc5 = newValue;
-              break;
+
+
+      case "datocolc1":
+        this.datocolc1 = newValue;
+        break;
+      case "datocolc2":
+        this.datocolc2 = newValue;
+        break;
+
+      case "datocolc3":
+        this.datocolc3 = newValue;
+        break;
+      case "datocolc4":
+        this.datocolc4 = newValue;
+        break;
+      case "datocolc5":
+        this.datocolc5 = newValue;
+        break;
         //----------------------------
-          case "boton":
-            this.boton = newValue;
-            break;
+      case "boton":
+        this.boton = newValue;
+        break;
 
 
 
 
 
 
-      }
+    }
   }
 
   connectedCallback() {
-      this.innerHTML = `
+    this.innerHTML = `
       <section class="fondo-card">
       <section class="card-imagen">
         <img src="${this.img}" class="imagen-inCard" alt="">
@@ -3306,4 +3334,3 @@ class Cardtablacinco extends HTMLElement {
 }
 
 window.customElements.define("card-productablabrutal", Cardtablacinco);
-

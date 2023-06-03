@@ -31,11 +31,6 @@
         <w-nav-bar></w-nav-bar>
     </header>
 
-    <img class="planB_mobile" src="../planB/loging.png" alt="">
-<a href="../Perfil/perfil.html">
-    <button class="btn btn_large btn_large_active planB_btn">Continuar</button>    
-</a>
-
     <section class="log_in">
         <div class="log_in_text">
             <h3>¡Te damos la bienvenida!</h3>
@@ -49,21 +44,23 @@
                 <p class="text_btn_link_normal">Contraseña</p>
                 <input class="form-control rounded-pill" id="grayInput" placeholder="Escribe aquí" type="password">
             </div>
-            <p class="body_2">¿Olvidaste tu contraseña? Haz click aquí</p>
+            <p class="body_2 pass">¿Olvidaste tu contraseña? Haz click aquí</p>
             <div class="btn_class">
-                <a href="../Perfil/perfil.html" class="btn_a">
-                    <button class="btn btn_medium btn_medium_active">Iniciar Sesión</button>
-                </a>
+
+                <!-- borre etiqueta <a> para evitar errores con el boton  -->
+
+                    <button id="boton_iniciarsesion" class="btn btn_medium btn_medium_active">Iniciar Sesión</button>
+
                 <p class="body_3">O continúa con:</p>
                 <div class="container_icons">
                     <i class="bi bi-google icon"></i>
                     <i class="bi bi-facebook icon"></i>
                     <i class="bi bi-twitter icon"></i>
                 </div>
-                <p class="body_2" style="margin-top: 50px;">¿No tienes cuenta? <a href="./registro.html" class="log">Regístrate</a> </p>
+                <p class="body_2" style="margin-top: 50px;"><span>¿No tienes cuenta? <a href="./registro.html" class="log">Regístrate</a> </span></p>
             </div>
         </div>
-        
+
 
         <div class="log_in_img">
             <img class="log_in_img_img" src="./images/1.png" alt="">
@@ -77,6 +74,7 @@
 
 
     <script type="module" src="../public/Components/components.js"></script>
+    <script type="module" src="./iniciarSesion.js"></script>
 
     <!--Js Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

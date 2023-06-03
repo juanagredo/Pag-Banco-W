@@ -6,7 +6,7 @@ export default class salvavidasComp extends HTMLElement {
         this.algo;
 
         this.home = `           
-        <section style=" padding: 0px 10px; width: calc(100%); border-radius:10px 10px 0px 0px ; height:40px ; margin-top: -10px; ; background-color: #2FD9DE; display:flex; justify-content: space-between; align-items:center;" class= "hidden-title">
+        <section class= "hidden-title">
      
         <i style="color:#fff" class="bi bi-chevron-left"></i>
         <p style="font-weight: 700;
@@ -58,22 +58,22 @@ export default class salvavidasComp extends HTMLElement {
 
         this.micro = `
     <section class="encabezadoseccion">
-<i class="bi bi-chevron-left "></i>
-<button id= "regresa_main" class="btn btn_large_outline_active" style="background-color: #CCEFF1; width: 370px; padding: auto 15px auto;">Microcrédito</button>
 
+<button id= "regresa_main" class="btn btn_large_outline_active" style="background-color: #CCEFF1; width: 370px;">Microcrédito</button>
+<section></section>
 </section>
 <section>
 <h5 class="titulomicro">Estás a un paso de solicitarlo</h5>
 <p class="contenidomicro">Llena el formulario que estás visualizando
 y un analista de crédito se contactará lo 
 más pronto posible.</p>
-<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"><img src="/salvavidas/recursos/imagenes/mascota2.png" alt=""></section></section>
+<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"></section></section>
 <!-- <p class="contenidomicro">Para realizar este proceso deberás de
 rellenar un formulario que encontraras 
 bajando un poco en la pagina.</p>
 
 
-<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"><img src="/salvavidas/recursos/imagenes/form 1.png" alt=""><img src="/salvavidas/recursos/imagenes/mascota2.png" alt=""></section></section> -->
+<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"><img src="/salvavidas/recursos/imagenes/form 1.png" alt=""></section></section> -->
 
 </section>`
 
@@ -136,7 +136,7 @@ bajando un poco en la pagina.</p>
         ${this.home}
         </section>
         <div class="btn-more">
-            <label for="btn-plus" class="salvavidas-logo"><img id="salvalogo" src="/salvavidas/recursos/imagenes/salvalogo-default.svg" width="80"
+            <label for="btn-plus" class="salvavidas-logo"><img id="salvalogo" src="/Salvavidas/recursos/BotonSalvavidas Final (1).gif" width="80"
                     alt="Boton salvavidas"></label>
         </div>
     </section>
@@ -162,7 +162,7 @@ bajando un poco en la pagina.</p>
         ${this.micro}
         </section>
         <div class="btn-more">
-            <label for="btn-plus" class="salvavidas-logo"><img id="salvalogo" src="/salvavidas/recursos/imagenes/salvalogo-default.svg" width="80"
+            <label for="btn-plus" class="salvavidas-logo"><img id="salvalogo" src="/Salvavidas/recursos/BotonSalvavidas Final (1).gif" width="80"
                     alt="Boton salvavidas"></label>
         </div>
     </section>
@@ -225,22 +225,22 @@ function changeToMicro() {
         document.getElementById("content-in-help").innerHTML = `
 
             <section class="encabezadoseccion">
-<i class="bi bi-chevron-left "></i>
-<button id= "regresa_main" class="btn btn_large_outline_active" style="background-color: #CCEFF1; width: 370px; padding: auto 15px auto;">Microcrédito</button>
 
+<button id= "regresa_main" class="btn btn_large_outline_active" style="background-color: #CCEFF1; width: 370px; padding: auto 15px auto;">Microcrédito</button>
+<section></section>
 </section>
 <section>
 <h5 class="titulomicro">Estás a un paso de solicitarlo</h5>
 <p class="contenidomicro">Llena el formulario que estás visualizando
 y un analista de crédito se contactará lo 
 más pronto posible.</p>
-<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"><img src="/salvavidas/recursos/imagenes/mascota2.png" alt=""></section></section>
+<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"></section></section>
 <!-- <p class="contenidomicro">Para realizar este proceso deberás de
     rellenar un formulario que encontraras 
     bajando un poco en la pagina.</p>
 
 
-<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"><img src="/salvavidas/recursos/imagenes/form 1.png" alt=""><img src="/salvavidas/recursos/imagenes/mascota2.png" alt=""></section></section> -->
+<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"><img src="/salvavidas/recursos/imagenes/form 1.png" alt=""></section></section> -->
 
 </section>
     `;
@@ -266,7 +266,7 @@ function returnToMain() {
     document.getElementById("content-in-help").innerHTML = "";
 
     document.getElementById("content-in-help").innerHTML = `   
-    <section style=" padding: 0px 10px; width: calc(100%); border-radius:10px 10px 0px 0px ; height:40px ; margin-top: -10px; ; background-color: #00b1bb; display:flex; justify-content: space-between; align-items:center;" class= "hidden-title">
+    <section  class= "hidden-title">
      
     <i style="color:#fff" class="bi bi-chevron-left"></i>
     <p style="font-weight: 700;
@@ -334,25 +334,6 @@ function returnToMain() {
 
 }
 
-let textocambiar = `
-<section class="encabezadoseccion">
-<i class="bi bi-chevron-left "></i>
-<button class="btn btn_large_outline_active" style="background-color: #CCEFF1; width: 370px; padding: auto 15px auto;">Microcrédito</button>
-
-</section>
-<section>
-<h5 class="titulomicro">¿Cómo solicitar un Microcrédito?</h5>
-<p class="contenidomicro">Llena el formulario y un analista de
-crédito se contactara lo mas pronto posible.</p>
-<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"><img src="/salvavidas/recursos/imagenes/mascota2.png" alt=""></section></section>
-<!-- <p class="contenidomicro">Para realizar este proceso deberás de
-    rellenar un formulario que encontraras 
-    bajando un poco en la pagina.</p>
-
-
-<section style="display: flex; justify-content: space-around;"> <section class="imagenesmicro"><img src="/salvavidas/recursos/imagenes/form 1.png" alt=""><img src="/salvavidas/recursos/imagenes/mascota2.png" alt=""></section></section> -->
-
-</section>`
 
 //console.log(document.getElementById("btn-plus").checked)
 if (!sessionStorage.getItem("active")) {
@@ -393,7 +374,7 @@ function conversacion() {
     document.getElementById("content-in-help").innerHTML = `           
     
 
-    <section style=" padding: 0px 10px; width: calc(100%); border-radius:10px 10px 0px 0px ; height:40px ; margin-top: -10px; ; background-color: #2FD9DE; display:flex; justify-content: space-between; align-items:center;" class= "hidden-title">
+    <section class= "hidden-title not-hidden">
      
     <i id="chatback" style="cursor:pointer; color:#fff" class="bi bi-chevron-left"></i>
     <p style="font-weight: 700;

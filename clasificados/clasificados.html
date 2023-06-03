@@ -26,25 +26,10 @@
 </head>
 
 <body>
-    <w-nav-bar></w-nav-bar>
-
-    <!-- AQUI PONGO EL TITULO DE LA SECCION CON LOS BREADCRUMBS-->
-    <div class="breadcrumb-title-section">
-        <div class="container">
-            <div class="row ">
-                <div class="col">
-                    <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item" id="bread_lv1"><a href="/landing.html"><span>Inicio</span></a></li>
-                            <li class="breadcrumb-item" id="bread_lv2"><a href="/ComunidadW/comunidadw.html"><span>Comunidad W</span></a></li>
-                            <li class="breadcrumb-item active" id="bread_lv3" aria-current="page"><span>Clasificados</span></li>
-                        </ol>
-                    </nav>
-                    <h4 class="breadcrumb-title" id="bread_title"><span>Clasificados</span></h4>
-                </div>
-            </div>
-        </div>
-    </div>
+    <header>
+        <w-nav-bar></w-nav-bar>
+        <bread-n-title actual="Clasificados" link="../landing.html-../ComunidadW/comunidadw.html" level="Inicio >-Comunidad W >"></bread-n-title>
+    </header>
 
     <!-- AQUI PONGO EL BANNER INICIAL DE LOS CLASIFICADOS-->
     <section class="container">
@@ -69,38 +54,36 @@
             <form>
                 <br>
                 <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="city-filter"></label>
-                            <select class="form-control btn_large btn_large_active btn text_button_medium"
-                                id="exampleFormControlSelect1">
-                                <option disabled selected>Ciudad</option>
-                                <option>Bogotá</option>
-                                <option>Cali</option>
-                                <option>Popayan</option>
-                                <option>Palmira</option>
-                                <option>Santander de Quilichao</option>
-                                <option>Yumbo</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="category-filter"></label>
-                            <select class="form-control filters btn_large btn_large_active btn text_button_medium"
-                                id="exampleFormControlSelect1">
-                                <option disabled selected>Categoría</option>
-                                <option>Construcción</option>
-                                <option>Diseño</option>
-                                <option>Estética y Cosmetica</option>
-                                <option>Inmobiliaria</option>
-                                <option>Joyería</option>
-                                <option>Restaurante</option>
-                                <option>Ropa</option>
-                                <option>Veterinaria</option>
-                            </select>
-                        </div>
-                    </div>
+                  <div class="col">
+                    <div class="form-group">
+                        <label for="city-filter"></label>
+                        <select class="form-control btn_medium btn_large_active btn text_button_medium" id="city-filter">
+                            <option disabled selected>Ciudad</option>
+                            <option>Bogotá</option>
+                            <option>Cali</option>
+                            <option>Popayan</option>
+                            <option>Palmira</option>
+                            <option>Santander de Quilichao</option>
+                            <option>Yumbo</option>
+                        </select>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                        <label for="category-filter"></label>
+                        <select class="form-control filters btn_medium btn_medium_active btn text_button_medium" id="category-filter">
+                          <option disabled selected>Categoría</option>
+                          <option>Construcción</option>
+                          <option>Diseño</option>
+                          <option>Estética y Cosmetica</option>
+                          <option>Inmobiliaria</option>
+                          <option>Joyería</option>
+                          <option>Restaurante</option>
+                          <option>Ropa</option>
+                          <option>Veterinaria</option>
+                        </select>
+                      </div>
+                  </div>
                 </div>
             </form>
         </div>
@@ -114,46 +97,89 @@
                 <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
                     recurso="res/commerce-1.png" titulo="Luzatt Accesorios"
                     contenido="Luzatt es una marca Colombiana de accesorios en tendencia, para mujeres que quieren sentirse...">
+                <card-forblog class="classified-item"
+                    boton="Aqui titulo para boton" 
+                    likes="120" 
+                    comments="130" 
+                    recurso="res/commerce-1.png"
+                    titulo="Luzatt Accesorios"
+                    contenido="Luzatt es una marca Colombiana de accesorios en tendencia, para mujeres que quieren sentirse..."
+                    tags="Cali"
+                    color="family"
+                    tags_2="Salud y Belleza"
+                    color_2="grow">
                 </card-forblog>
 
                 <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
                     recurso="res/commerce-2.png" titulo="Venta de Apartamento"
-                    contenido="Venta de apartamento en Ciudad Pacífica, 62 m2, 4 Piso, amplio balcón, estudio, habitación...">
+                    contenido="Venta de apartamento en Ciudad Pacífica, 62 m2, 4 Piso, amplio balcón, estudio, habitación..."
+                    tags="Cali"
+                    color="family"
+                    tags_2="Inmobiliaria"
+                    color_2="grow">
                 </card-forblog>
 
                 <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
                     recurso="res/commerce-3.png" titulo="Acuarela"
-                    contenido="Creamos y producimos Jabones artesanales, Exfoliantes Cremas y sérum naturales...">
+                    contenido="Creamos y producimos Jabones artesanales, Exfoliantes Cremas y sérum naturales..."
+                    tags="Cali"
+                    color="family"
+                    tags_2="Salud y Belleza"
+                    color_2="grow">
                 </card-forblog>
 
                 <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
                     recurso="res/commerce-4.png" titulo="Eli Gonzalez"
-                    contenido="Contribuyo a personas, marcas y empresas a activar su poder a través de la imagen efectiva.">
+                    contenido="Contribuyo a personas, marcas y empresas a activar su poder a través de la imagen efectiva."
+                    tags="Cali"
+                    color="family"
+                    tags_2="Diseño e Imagen"
+                    color_2="grow">
                 </card-forblog>
 
                 <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
                     recurso="res/commerce-5.png" titulo="Austral"
-                    contenido="Acabados obra civil servicios de aseo construciones de edificios casa locales comerciales...">
+                    contenido="Acabados obra civil servicios de aseo construciones de edificios casa locales comerciales..."
+                    tags="Cali"
+                    color="family"
+                    tags_2="Construcción"
+                    color_2="grow">
                 </card-forblog>
 
                 <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
                     recurso="res/commerce-6.png" titulo="Califood"
-                    contenido="restaurante street food que nació en la ciudad de Cali. utilizando materia prima de la mas alta...">
+                    contenido="restaurante street food que nació en la ciudad de Cali. utilizando materia prima de la mas alta..."
+                    tags="Cali"
+                    color="family"
+                    tags_2="Restaurantes"
+                    color_2="grow">
                 </card-forblog>
 
                 <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
                     recurso="res/commerce-2.png" titulo="Venta de Apartamento"
-                    contenido="Venta de apartamento en Ciudad Pacífica, 62 m2, 4 Piso, amplio balcón, estudio, habitación...">
+                    contenido="Venta de apartamento en Ciudad Pacífica, 62 m2, 4 Piso, amplio balcón, estudio, habitación..."
+                    tags="Cali"
+                    color="family"
+                    tags_2="Inmobiliaria"
+                    color_2="grow">
                 </card-forblog>
 
                 <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
                     recurso="res/commerce-1.png" titulo="Eli Gonzalez"
-                    contenido="Contribuyo a personas, marcas y empresas a activar su poder a través de la imagen efectiva.">
+                    contenido="Contribuyo a personas, marcas y empresas a activar su poder a través de la imagen efectiva."
+                    tags="Cali"
+                    color="family"
+                    tags_2="Diseño e Imagen"
+                    color_2="grow">
                 </card-forblog>
 
                 <card-forblog class="classified-item" boton="Aqui titulo para boton" likes="120" comments="130"
                     recurso="res/placeholder.png" titulo="Breve título"
-                    contenido="The gradual accumulation of information about atomic and small-scale behaviour during">
+                    contenido="The gradual accumulation of information about atomic and small-scale behaviour during"
+                    tags="Cali"
+                    color="family"
+                    tags_2="Coming Soon"
+                    color_2="grow">
                 </card-forblog>
 
             </div>
@@ -171,11 +197,8 @@
                 </div>
                 <div class="publish_body">
                     <h3>Publica tu clasificado ahora</h3>
-                    <p class="body_2">Publica un anuncio de tu negocio, producto, servicio o microempresa para que
-                        llegue a más personas y así ayudarte a impulsar tu iniciativa</p>
-                    <a href="add_commerce.html">
-                        <button class="btn_large btn_large_active btn text_button_medium">Publica tu clasificado<i
-                                class="bi bi-arrow-right"></i></button>
+                    <p class="body_2">Publica un anuncio de tu negocio, producto, servicio o microempresa para que llegue a más personas y así ayudarte a impulsar tu iniciativa</p>
+                    <a href="add_commerce.html" class="btn_large btn_large_active btn text_button_medium">Publica tu clasificado<i class="bi bi-arrow-right"></i></button>
                     </a>
                 </div>
             </div>

@@ -1,8 +1,8 @@
 @import '../../../style.scss';
 
-.search_button {
+.search_button_desk {
     width: 15% !important;
-    height: 44px !important;
+    height: 42px !important;
     background-color: $color_blue1 !important;
     color: $color_base_white;
     border-radius: 0% 48px 48px 0% !important;
@@ -13,6 +13,22 @@
         color: $color_blue1 !important;
     }
 }
+
+.search_button_mobile {
+    width: 15% !important;
+    height: 42px !important;
+    background-color: $color_blue1 !important;
+    color: $color_base_white;
+    border-radius: 0% 48px 48px 0% !important;
+    margin: 0 !important;
+    padding: 0% !important;
+
+    &:hover {
+        background-color: white !important;
+        color: $color_blue1 !important;
+    }
+}
+
 
 .navup_buttons {
     width: 100% !important;
@@ -33,22 +49,35 @@
     border-radius: 48px 0px 0px 48px;
 }
 
-.placeholder-input-desktop {
-    width: 459px;
-    height: 44px;
+.navbar-margin {
+    margin-bottom: 0px; /* Puedes ajustar este valor según tus necesidades */
+  }
+  
+
+.placeholder-input-desk {
+    width: 423px;
+    height: 42px;
     border: none;
     background-color: $fill_input;
     margin-left: 10%;
 }
-
+.first-nav{
+    background-color: $color_accent_white !important;
+    margin-bottom: 80px !important;
+}
 .second_nav {
-    background-color: $color_base_white;
-    filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.15));
+    background-color: $color_base_white !important;
+    margin-top: 70px;
+    height: 58px;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
 
     &_link {
+        gap: 29px;
+
         li {
             a {
                 color: $color_orange1;
+                padding-left: 0% !important;
 
                 &:hover {
                     color: $color_base_gray !important;
@@ -83,8 +112,7 @@
 }
 
 .nav_btn i {
-    margin-left: 0px !important;
-    margin-right: 20px !important;
+    margin: 0%;
 }
 
 .change-white {
@@ -102,3 +130,28 @@
     border-left: .3em solid transparent;
 }
 
+.background_responsive_navbar {
+    background-color: $color_base_white;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.icon_search {
+    margin: 0% !important;
+}
+
+
+@media (max-width: 800px) {
+    body{
+        padding-top: 4rem !important;
+    }
+    .img_banner{
+        height: 5% !important;
+    }
+    .second_nav {
+        margin-top: 0px;
+        &_link {
+            gap: 5px;
+        }
+    }
+
+}

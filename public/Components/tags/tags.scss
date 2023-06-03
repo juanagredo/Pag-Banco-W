@@ -7,7 +7,7 @@ p {
 
 .badge {
     --bs-badge-font-weight: 400;
-
+    //--bs-badge-font-size: 400;
 }
 
 // *************** AQUI ABAJO LOS ESTILOS DE sidebar, breadcrumbs, user product, agenda *******************//
@@ -42,11 +42,12 @@ p {
     &_w {
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
+        //font-weight: 400;
+        //font-size: 16px;
         line-height: 20px;
         border-radius: 32px;
-        padding: 8px 16px;
+        margin-top: 20px;
+        padding: 6px 12px;
     }
 
     &_family {
@@ -104,23 +105,38 @@ p {
     }
 }
 
-.breadcrumb {
+#breadcrumb {
+
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0%;
+    color: $color_violet1;
+    
+    & li {
+        margin-right: 5px;
+    }
+    
+    & a {
+        text-decoration: none;
+        color: $color_violet1;
+    }
+
+    &-item {
+        font-weight: bold;
+    }
 
     &-title {
-
-        & h4{
             color: $color_orange1;
-            padding: 0px 12%;
-        }
 
         &-section {
+            height: 100px;
             background-color: $color_accent_white;
-            padding: 14px 12%;
+            padding: 20px 12%;
             border-radius: 0 0 20px 20px;
         }
     }
 }
-
 
 a {
     &-item {
@@ -145,87 +161,71 @@ a {
 .user {
 
     &-product {
-
         &-container {
             background-color: $color_accent_white;
+            //width: 100%;
+            //max-width: 528px;
+            width: 450px;
+            max-height: 290px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px $color_violet4;
         }
 
-        &-product {
-            &-container {
-                background-color: $color_accent_white;
-                max-width: 528px;
-                min-width: 450px;
-                max-height: 290px;
-                //min-height: 290px;
-                border-radius: 20px;
-                overflow: hidden;
-                box-shadow: 0 4px 14px $color_violet4;
-                //margin-top: 30px;
-                //margin-left: 30px;
-                //margin-bottom: 30px;
+        &-head {
+            background-color: $color_violet1;
+            padding: 10px 30px 1px;
+
+            h5 {
+                color: $color_base_white;
             }
+        }
 
-            &-head {
-                background-color: $color_violet1;
-                padding: 10px 30px 1px;
+        &-body {
+            padding: 27px 50px 0px;
 
-                h5 {
-                    color: $color_base_white;
-                }
+            h3 {
+                color: $color_violet1;
             }
+        }
 
-            &-body {
-                padding: 27px 50px 0px;
+        &-data {
+            display: flex;
+            flex-direction: row;
+            padding: 10px 25px;
 
-                h3 {
-                    color: $color_violet1;
-                }
-            }
+            &-item {
+                margin-right: 50px;
 
-            &-data {
-                display: flex;
-                flex-direction: row;
-                padding: 10px 25px;
+                &-head {
+                    padding: 10px 30px 1px;
 
-                &-item {
-                    &-head {
-                        padding: 10px 30px 1px;
-
-                        h5 {
-                            color: $color_base_white;
-                        }
+                    h5 {
+                        color: $color_base_white;
                     }
+                }
 
-                    &-body {
-                        padding: 27px 50px 0px;
+                &-body {
+                    padding: 27px 50px 0px;
 
-                        h3 {
-                            color: $color_violet1;
-                        }
-                    }
-
-                    &-data {
-                        display: flex;
-                        flex-direction: row;
-                        padding: 10px 25px;
-
-                        &-item {
-                            margin-right: 50px;
-                        }
+                    h3 {
+                        color: $color_violet1;
                     }
                 }
             }
         }
-    }
-
-    &-info {}
+    }    
 }
 
-.agenda {
+.agenda{
     &-container {
-        width: 100%;
-        max-width: 528px;
-
+        width: 80%;
+        background-color: $color_blue3;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 14px $color_blue3;
+    }
+/* REVISAR SI ESTO SI ESTA BIEN PUESTO AQUI O NO
         .ahorro {
             background-color: $color_violet1;
         }
@@ -242,99 +242,94 @@ a {
         .inversion {
             background-color: #343c7f;
         }
+        */
 
-        .agenda {
-            &-container {
-                background-color: $color_blue3;
-                border-radius: 20px;
-                overflow: hidden;
-                box-shadow: 0 4px 14px $color_blue3;
+    &-head {
+        background-color: $color_blue1;
+        padding: 10px 25px 1px;
 
-                width: 100%;
-            }
-
-            &-head {
-                background-color: $color_blue1;
-                padding: 10px 25px 1px;
-
-                h5 {
-                    color: $color_base_white;
-                }
-            }
-
-            &-body {
-                padding: 10px 35px 1px;
-            }
-
+        h5 {
+            color: $color_base_white;
         }
     }
 
-    .calendar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: $color_accent_white;
+    &-body {
+        padding: 10px 35px 1px;
+    }
+}
+
+.calendar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $color_accent_white;
+    border-radius: 20px;
+    box-shadow: 0 3px 11px rgba(0, 0, 0, 0.15);
+    padding: 10px 43px 1px;
+
+    &-container {
+        background-color: $fill_input;
         border-radius: 20px;
-        box-shadow: 0 3px 11px rgba(0, 0, 0, 0.15);
-        padding: 10px 43px 1px;
+    }
 
-        &-container {
-            background-color: $fill_input;
-            border-radius: 20px;
+    &-item-selected {
+        font-weight: 700;
+
+        p {
+            color: $color_blue1;
         }
+    }
 
-        &-item-selected {
-            font-weight: 700;
+    &-data {
+        padding: 30px 30px;
+        margin-bottom: 30px;
+    }
+
+    &-event {
+
+        &-head {
+
+            h5 {
+                font-family: 700;
+                color: $color_dark_violet2;
+            }
 
             p {
-                color: $color_blue1;
+                color: $color_base_gray;
             }
         }
 
-        &-data {
-            padding: 30px 30px;
-            margin-bottom: 30px;
+        &-body {
+            display: flex;
+            flex-direction: row;
         }
 
-        &-event {
+        &-detail {
+            margin-right: 50px;
 
-            &-head {
-
-                h5 {
-                    font-family: 700;
-                    color: $color_dark_violet2;
-                }
-
-                p {
-                    color: $color_base_gray;
-                }
+            :first-child {
+                font-weight: 700;
+                color: $color_dark_violet2;
             }
 
-            &-body {
-                display: flex;
-                flex-direction: row;
+            p {
+                color: $color_base_gray;
             }
 
-            &-detail {
-                margin-right: 50px;
-
-                :first-child {
-                    font-weight: 700;
-                    color: $color_dark_violet2;
-                }
-
-                p {
-                    color: $color_base_gray;
-                }
-
-            }
         }
     }
 }
 
+
+
 @media only screen and (max-width: 768px) {
     .user {
         &-product {
+            &-container{
+                width: 95vw;
+                //max-width: 90%;
+            }
+            
             &-head {
                 padding: 15px 20px 1px;
             }
@@ -350,6 +345,10 @@ a {
     }
 
     .agenda {
+        &-container{
+            width: 95vw;
+            margin: 0 auto;
+        }
         &-head {
             padding: 15px 20px 1px;
         }
@@ -375,5 +374,15 @@ a {
             }
         }
     }
+
+    #breadcrumb {
+        &-title {
+            &-section {
+                padding: 20px 5.2%;
+                height: 90px;
+            }
+        }
+    }
+    
 }
 

@@ -70,7 +70,7 @@ h5 {
   padding-left: 10px;
 }
 
-#greenInput {
+.greenInput {
   width: 300px;
   height: 42px;
   border-color: #2DC071;
@@ -78,7 +78,7 @@ h5 {
   border-radius: 48px;
 }
 
-#redInput {
+.redInput {
   width: 300px;
   height: 42px;
   border-color: #EB3232;
@@ -86,12 +86,53 @@ h5 {
   border-radius: 48px;
 }
 
-#grayInput {
-  width: 300px;
+.grayInput {
+  width: 30%;
   height: 42px;
+  border: solid;
+  border-width: 1px;
   border-color: #CDCFD0;
-  background-color: #F2F2F2;
+  background-color: #F2F4F5;
   border-radius: 48px;
+  padding: 2%;
+}
+
+.messageInput {
+  width: 30%;
+  height: 140px;
+  border: solid;
+  border-width: 1px;
+  border-color: #CDCFD0;
+  background-color: #F2F4F5;
+  border-radius: 20px;
+  padding: 2%;
+}
+.messageInput::-moz-placeholder {
+  position: relative;
+  top: -40px;
+}
+.messageInput::placeholder {
+  position: relative;
+  top: -40px;
+}
+
+.label_file {
+  padding: 6px 12px;
+  cursor: pointer;
+  width: 30%;
+  height: 80px;
+  border: solid;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #CDCFD0;
+  background-color: #F2F4F5;
+  border-radius: 20px;
+  padding: 2%;
+}
+
+.inputFile {
+  visibility: hidden;
+  width: 0;
 }
 
 #inputSearch {
@@ -133,6 +174,23 @@ h5 {
   background-color: rgba(0, 177, 187, 0.2);
   color: #27262c;
   margin: 0px 20px;
+}
+
+#dropDownStyleRed {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  background-color: rgba(235, 50, 50, 0.2);
+  color: #27262C;
+}
+
+#dropDownStyleCyan {
+  width: 423px;
+  height: 42px;
+  border-width: 2px;
+  border-color: #00B1BB;
+  background-color: rgba(0, 177, 187, 0.2);
+  color: #27262C;
 }
 
 #dropDownStyleRed {
@@ -191,6 +249,31 @@ h5 {
   .body_3 {
     font-size: 12px;
   }
+  .grayInput {
+    width: 100%;
+  }
+  .messageInput {
+    width: 100%;
+  }
+  .messageInput::-moz-placeholder {
+    position: relative;
+    top: -40px;
+  }
+  .messageInput::placeholder {
+    position: relative;
+    top: -40px;
+  }
+  .label_file {
+    padding: 0px 0px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .checkInput {
+    border-radius: 1px;
+    border: solid;
+    border-width: 1px;
+    border-color: #CDCFD0;
+  }
 }
 .text_button_bold {
   font-weight: 600;
@@ -223,6 +306,16 @@ h5 {
   font-size: 12px;
 }
 
+.right {
+  margin-left: 50px;
+  margin-right: -35px;
+}
+
+.left {
+  margin-right: 50px;
+  margin-left: -35px;
+}
+
 .btn {
   height: 42px;
   border-radius: 48px;
@@ -230,6 +323,9 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.btn_icon {
+  justify-content: space-around !important;
 }
 .btn_large {
   width: auto;
@@ -278,14 +374,18 @@ h5 {
 .btn_large_transparent:disabled {
   color: #CDCFD0;
 }
+.btn_large_form {
+  border: none;
+  background-color: #BDF0F2;
+}
+.btn_large_form:active {
+  background-color: #FAFAFA;
+  color: #00B1BB;
+}
 .btn_medium {
   width: auto;
-  padding: 9px 75px;
-}
-.btn_medium i {
-  position: relative;
-  margin-left: 45px;
-  margin-right: -55px;
+  height: 42px;
+  padding: 9px 55px;
 }
 .btn_medium_active {
   border: none;
@@ -303,12 +403,13 @@ h5 {
   color: #979C9E;
 }
 .btn_medium_outline {
+  background-color: #FFFFFF;
   filter: drop-shadow(0px 4px 10px rgba(0, 177, 187, 0.3));
-  background-color: transparent;
 }
 .btn_medium_outline_active {
   border: 1px solid #00B1BB;
   color: #00B1BB;
+  text-shadow: none;
 }
 .btn_medium_outline:disabled {
   border: 1px solid #CDCFD0;
@@ -324,6 +425,14 @@ h5 {
 }
 .btn_medium_transparent:disabled {
   color: #CDCFD0;
+}
+.btn_medium_form {
+  border: none;
+  background-color: #BDF0F2;
+}
+.btn_medium_form:active {
+  background-color: #FAFAFA;
+  color: #00B1BB;
 }
 .btn_small {
   width: 10.7%;
@@ -366,11 +475,30 @@ h5 {
 .btn_small_transparent:disabled {
   color: #CDCFD0;
 }
+.btn_small_form {
+  border: none;
+  background-color: #BDF0F2;
+}
+.btn_small_form:active {
+  background-color: #FAFAFA;
+  color: #00B1BB;
+}
 
 @media only screen and (max-width: 768px) {
+  i {
+    font-size: 24px;
+  }
+  .right {
+    margin-left: 20px;
+    margin-right: -10px;
+  }
+  .left {
+    margin-right: 50px;
+    margin-left: -35px;
+  }
   .btn_large {
     width: auto;
-    padding: 9px 65px;
+    padding: 9px 45px;
   }
   .btn_medium {
     width: auto;
@@ -532,7 +660,7 @@ h5 {
     border: none;
     /*   Lo que esta haciendo esto es ajustar el tamano y cerrando bordes del input con boton */
   }
-  #inputButtonSize #inputButtonColor {
+  #inputButtonColor {
     height: 44px;
     border: none;
     background-color: #eeeeee;
@@ -543,6 +671,21 @@ h5 {
     border-color: #2DC071;
     background-color: rgba(0, 177, 187, 0.2);
     color: #27262c;
+  }
+  #dropDownStyleRed {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    background-color: rgba(235, 50, 50, 0.2);
+    color: #27262C;
+  }
+  #dropDownStyleCyan {
+    width: 29.38%;
+    height: 42px;
+    border-width: 2px;
+    border-color: #00B1BB;
+    background-color: rgba(0, 177, 187, 0.2);
+    color: #27262C;
   }
   #dropDownStyleRed {
     width: 29.38%;
@@ -561,398 +704,723 @@ h5 {
     color: #27262C;
   }
 }
-.salvavidas-logo {
-  height: 100px;
-  width: 100px;
-  filter: drop-shadow(0px 9px 14px rgba(146, 60, 60, 0));
-  transition: filter 0.2 ease;
+@media screen and (max-width: 3000px) {
+  #regresa_main {
+    transform: scale(0.8);
+    margin-top: 15px;
+    margin-left: -35px;
+  }
+  .salvavidas-logo {
+    height: 100px;
+    width: 100px;
+    filter: drop-shadow(0px 9px 14px rgba(146, 60, 60, 0));
+    transition: filter 0.2 ease;
+  }
+  .salvavidas-logo :hover {
+    filter: drop-shadow(0px 9px 14px rgba(197, 78, 78, 0.25));
+  }
+  .lista-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .encabezado {
+    display: flex;
+    color: #00B1BB;
+    gap: 5px;
+    margin-top: 20px;
+  }
+  .x {
+    transform: scale(1.3);
+  }
+  #salvalogo:hover {
+    transform: scaleX(1.05) scaleY(1.05);
+  }
+  #content-in-help {
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 400px;
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #FFF;
+    overflow-x: hidden;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: all 400ms ease;
+    padding: 20px;
+    padding-top: 0px;
+  }
+  #content-in-help::-webkit-scrollbar {
+    background: gainsboro;
+    border-radius: 7px;
+    visibility: hidden;
+  }
+  #content-in-help::-webkit-scrollbar-thumb {
+    background: rgb(192, 192, 192);
+    border-radius: 5px;
+  }
+  #btn-plus:checked ~ #content-in-help {
+    opacity: 1;
+    visibility: visible;
+    bottom: 140px;
+    right: 40px;
+    height: auto;
+    max-height: 618px;
+    width: 350px;
+    z-index: 1;
+  }
+  #btn-plus {
+    display: none;
+  }
+  .contenedor {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  .saludo-salva {
+    display: flex;
+    align-items: center;
+  }
+  .saludo-salva p {
+    width: 200px;
+  }
+  #just-fill {
+    background: rgba(39, 38, 44, 0.3);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    height: 1720px;
+    width: auto;
+    background-color: blueviolet;
+  }
+  #just-to-know {
+    height: 22px;
+    width: 80%;
+    background-color: #03A1AE;
+    border-radius: 24px;
+    border: none;
+    margin: auto 35px auto 30px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+  .search-in-salvavidas {
+    padding: auto;
+    position: relative;
+  }
+  #search-bar-salvavidas {
+    width: 90%;
+    height: 21px;
+    margin-top: 10px;
+    margin-left: 17px;
+    border-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    border-style: solid;
+    padding-left: 20px;
+    padding-right: 7px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 24px;
+    color: #979C9E;
+    background-color: #eee;
+  }
+  .title-salvavidas-preguntas {
+    width: 200;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 10px;
+    line-height: 120%;
+    color: #000000;
+  }
+  #preguntas-frecuentes-titulo {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #preguntas-frecuentes-sugerencias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .pregunta-frecuente-salvavidas {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9.37418px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* Azul/main */
+    color: #00B1BB;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.68709px 8.3326px;
+    gap: 51.56px;
+    width: 80%;
+    height: 22px;
+    /* Azul/main */
+    border: 0.520788px solid #00B1BB;
+    filter: drop-shadow(0px 2.08315px 5.20788px rgba(0, 177, 187, 0.3));
+    border-radius: 24.9978px;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin-bottom: 11px;
+  }
+  #info-salvalogo {
+    width: 85%;
+    height: 280px;
+    background: #FFFFFF;
+    box-shadow: 0px 1.59881px 5.59582px rgba(0, 0, 0, 0.15);
+    border-radius: 5.17391px;
+    margin: auto;
+    overflow: hidden;
+  }
+  #tittle-info-salvalogo {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12.4174px;
+    line-height: 120%;
+    color: #6321A6;
+  }
+  .texto-en-info {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9.31304px;
+    line-height: 155.5%;
+    color: #000000;
+  }
+  #info-salvalogo img {
+    margin: 10px 40px auto 40px;
+  }
+  .titulomicro {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+    display: flex;
+    align-items: center;
+    /* Violeta/main */
+    color: #6321A6;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .contenidomicro {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 155.5%;
+    /* or 28px */
+    display: flex;
+    align-items: center;
+    color: #000000;
+    max-width: 380px;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .imagenesmicro {
+    align-items: center;
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+  }
+  .search_button {
+    width: 15% !important;
+    height: 35px !important;
+    background-color: #00B1BB !important;
+    color: #F2F2F2;
+    border-radius: 0% 48px 48px 0% !important;
+    margin: 0 !important;
+  }
+  .search_button:hover {
+    background-color: white !important;
+    color: #00B1BB !important;
+  }
+  .form-control {
+    margin-right: 0 !important;
+    border-radius: 48px 0px 0px 48px;
+    padding-left: 10px;
+  }
+  .placeholder-input-desktop {
+    width: 189px;
+    height: 35px;
+    border: none;
+    background-color: #F2F4F5;
+  }
+  .hidden-title {
+    visibility: hidden;
+  }
+  .not-hidden {
+    visibility: visible !important;
+    padding: 20px 20px;
+    width: calc(100% + 40px);
+    border-radius: 10px 10px 0px 0px;
+    height: 50px;
+    margin-left: -20px;
+    background-color: #2FD9DE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-chat {
+    background-color: #2FD9DE;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .header-chat p {
+    margin: 0;
+  }
+  .header-chat i {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+  .header-contenido {
+    display: flex;
+    align-items: center;
+  }
+  .pregunta-chat {
+    margin-right: 0px;
+  }
+  .comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    margin: 10px;
+  }
+  .profile-pic {
+    width: 51px;
+    height: 51px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .comment-body {
+    background-color: #f2f2f2;
+    width: auto;
+    height: auto;
+    max-width: 282px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding: 10px;
+    border-radius: 9px;
+  }
+  .respuesta .comment-body {
+    max-width: 80%;
+    margin-right: 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  /* Nueva clase para respuesta */
+  .respuesta {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .banco-pic {
+    width: 51px;
+    height: 51px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .botonayuda-div {
+    display: flex;
+    justify-content: center;
+    margin-right: -25px;
+  }
+  .inputchatsalvavidas {
+    border-top: 2px #00B1BB;
+    border-style: solid none none none;
+    width: 100%;
+    height: 45px;
+    background-color: #FAFAFA;
+    text-align: start;
+    color: #303233;
+  }
+  .inputchatsalvavidas::-moz-placeholder {
+    color: #979C9E;
+  }
+  .inputchatsalvavidas::placeholder {
+    color: #979C9E;
+  }
 }
-.salvavidas-logo :hover {
-  filter: drop-shadow(0px 9px 14px rgba(197, 78, 78, 0.25));
-}
-
-.lista-botones {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.encabezado {
-  display: flex;
-  color: #00B1BB;
-  gap: 5px;
-}
-
-.x {
-  transform: scale(1.3);
-}
-
-#salvalogo:hover {
-  transform: scaleX(1.05) scaleY(1.05);
-}
-
-#content-in-help {
-  text-decoration: none;
-  border-radius: 5px;
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 0px;
-  opacity: 0;
-  visibility: hidden;
-  background-color: #FFF;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-  padding: 10Px;
-  transition: all 400ms ease;
-}
-
-#content-in-help::-webkit-scrollbar {
-  background: gainsboro;
-  border-radius: 7px;
-  visibility: hidden;
-}
-
-#content-in-help::-webkit-scrollbar-thumb {
-  background: rgb(192, 192, 192);
-  border-radius: 5px;
-}
-
-#btn-plus:checked ~ #content-in-help {
-  opacity: 1;
-  visibility: visible;
-  bottom: 110px;
-  height: auto;
-  max-height: 618px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-#btn-plus {
-  display: none;
-}
-
-.contenedor {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.saludo-salva {
-  display: flex;
-  align-items: center;
-}
-.saludo-salva p {
-  width: 200px;
-}
-
-#just-fill {
-  background: rgba(39, 38, 44, 0.3);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  height: 1720px;
-  width: auto;
-  background-color: blueviolet;
-}
-
-#just-to-know {
-  height: 22px;
-  width: 80%;
-  background-color: #03A1AE;
-  border-radius: 24px;
-  border: none;
-  margin: auto 35px auto 30px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 24px;
-  color: #FFFFFF;
-}
-
-.search-in-salvavidas {
-  padding: auto;
-  position: relative;
-}
-
-#search-bar-salvavidas {
-  width: 90%;
-  height: 21px;
-  margin-top: 10px;
-  margin-left: 17px;
-  border-color: rgb(240, 240, 240);
-  border-radius: 20px;
-  border-style: solid;
-  padding-left: 20px;
-  padding-right: 7px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 9px;
-  line-height: 24px;
-  color: #979C9E;
-  background-color: #eee;
-}
-
-.title-salvavidas-preguntas {
-  width: 200;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: bolder;
-  font-size: 10px;
-  line-height: 120%;
-  color: #000000;
-}
-
-#preguntas-frecuentes-titulo {
-  padding-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-#preguntas-frecuentes-sugerencias {
-  padding-left: 20px;
-  margin-bottom: 10px;
-}
-
-.pregunta-frecuente-salvavidas {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 9.37418px;
-  line-height: 12px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  /* Azul/main */
-  color: #00B1BB;
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4.68709px 8.3326px;
-  gap: 51.56px;
-  width: 200px;
-  height: 22px;
-  /* Azul/main */
-  border: 0.520788px solid #00B1BB;
-  filter: drop-shadow(0px 2.08315px 5.20788px rgba(0, 177, 187, 0.3));
-  border-radius: 24.9978px;
-  /* Inside auto layout */
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-  margin-bottom: 11px;
-}
-
-#info-salvalogo {
-  width: 85%;
-  height: 280px;
-  background: #FFFFFF;
-  box-shadow: 0px 1.59881px 5.59582px rgba(0, 0, 0, 0.15);
-  border-radius: 5.17391px;
-  margin: auto;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-
-#tittle-info-salvalogo {
-  margin-top: 15px;
-  margin-left: 10px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12.4174px;
-  line-height: 120%;
-  color: #6321A6;
-}
-
-.texto-en-info {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 20px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 9.31304px;
-  line-height: 155.5%;
-  color: #000000;
-}
-
-#info-salvalogo img {
-  margin: 10px 40px auto 40px;
-}
-
-.titulomicro {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 120%;
-  /* or 29px */
-  display: flex;
-  align-items: center;
-  /* Violeta/main */
-  color: #6321A6;
-  margin-top: 15px;
-  margin-left: 10px;
-}
-
-.contenidomicro {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 155.5%;
-  /* or 28px */
-  display: flex;
-  align-items: center;
-  color: #000000;
-  max-width: 380px;
-  margin-top: 15px;
-  margin-left: 10px;
-}
-
-.imagenesmicro {
-  align-items: center;
-  margin-top: 15px;
-  display: flex;
-  gap: 20px;
-}
-
-.search_button {
-  width: 15% !important;
-  height: 35px !important;
-  background-color: #00B1BB !important;
-  color: #F2F2F2;
-  border-radius: 0% 48px 48px 0% !important;
-  margin: 0 !important;
-}
-.search_button:hover {
-  background-color: white !important;
-  color: #00B1BB !important;
-}
-
-.form-control {
-  margin-right: 0 !important;
-  border-radius: 48px 0px 0px 48px;
-}
-
-.placeholder-input-desktop {
-  width: 189px;
-  height: 35px;
-  border: none;
-  background-color: #F2F4F5;
-}
-
-.form-control {
-  padding-left: 10px;
-}
-
-.header-chat {
-  background-color: #2FD9DE;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.header-chat p {
-  margin: 0;
-}
-
-.header-chat i {
-  margin-right: 10px;
-  font-size: 24px;
-}
-
-.header-contenido {
-  display: flex;
-  align-items: center;
-}
-
-.pregunta-chat {
-  margin-right: 0px;
-}
-
-.comment {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: end;
-  margin: 10px;
-}
-
-.profile-pic {
-  width: 51px;
-  height: 51px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  border-radius: 50%;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-.comment-body {
-  background-color: #f2f2f2;
-  width: auto;
-  height: auto;
-  max-width: 282px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  padding: 10px;
-  border-radius: 9px;
-}
-
-.respuesta .comment-body {
-  max-width: 282px;
-  margin-right: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-/* Nueva clase para respuesta */
-.respuesta {
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-.banco-pic {
-  width: 51px;
-  height: 51px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-
-.botonayuda-div {
-  display: flex;
-  justify-content: center;
-  margin-right: -25px;
-}
-
-.inputchatsalvavidas {
-  border-top: 2px #00B1BB;
-  border-style: solid none none none;
-  width: 100%;
-  height: 45px;
-  background-color: #FAFAFA;
-  text-align: start;
-  color: #303233;
-}
-
-.inputchatsalvavidas::-moz-placeholder {
-  color: #979C9E;
-}
-
-.inputchatsalvavidas::placeholder {
-  color: #979C9E;
+@media screen and (max-width: 550px) {
+  .hidden-title {
+    visibility: visible;
+    padding: 20px 20px;
+    width: calc(100% + 40px);
+    border-radius: 10px 10px 0px 0px;
+    height: 50px;
+    margin-left: -20px;
+    background-color: #2FD9DE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .salvavidas-logo {
+    height: 100px;
+    width: 100px;
+    filter: drop-shadow(0px 9px 14px rgba(146, 60, 60, 0));
+    transition: filter 0.2 ease;
+  }
+  .salvavidas-logo :hover {
+    filter: drop-shadow(0px 9px 14px rgba(197, 78, 78, 0.25));
+  }
+  .encabezadoseccion {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .lista-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  /*
+  #salvalogo:hover {
+      transform: scaleX(1.05) scaleY(1.05);
+  }
+  */
+  #content-in-help {
+    text-decoration: none;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #FFF;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: all 400ms ease;
+  }
+  #content-in-help::-webkit-scrollbar {
+    background: gainsboro;
+    border-radius: 7px;
+    visibility: hidden;
+  }
+  #content-in-help::-webkit-scrollbar-thumb {
+    background: rgb(192, 192, 192);
+    border-radius: 5px;
+  }
+  #btn-plus:checked ~ #content-in-help {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0px;
+    right: 1px;
+    height: 600px;
+    max-height: 600px;
+    width: 100%;
+  }
+  #btn-plus {
+    display: none;
+  }
+  .contenedor {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+  }
+  .saludo-salva {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    justify-content: space-between;
+  }
+  .saludo-salva p {
+    width: 60%;
+  }
+  #just-fill {
+    background: rgba(39, 38, 44, 0.3);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    height: 1720px;
+    width: auto;
+    background-color: blueviolet;
+  }
+  #just-to-know {
+    height: 22px;
+    width: 80%;
+    background-color: #03A1AE;
+    border-radius: 24px;
+    border: none;
+    margin: auto 35px auto 44px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+  .to-search-salvavidas {
+    display: flex;
+    justify-content: center;
+  }
+  .title-salvavidas-preguntas {
+    width: 200;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 10px;
+    line-height: 120%;
+    color: #000000;
+  }
+  #preguntas-frecuentes-titulo {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #preguntas-frecuentes-sugerencias {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  .pregunta-frecuente-salvavidas {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9.37418px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* Azul/main */
+    color: #00B1BB;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.68709px 8.3326px;
+    gap: 51.56px;
+    width: 200px;
+    height: 22px;
+    /* Azul/main */
+    border: 0.520788px solid #00B1BB;
+    filter: drop-shadow(0px 2.08315px 5.20788px rgba(0, 177, 187, 0.3));
+    border-radius: 24.9978px;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin-bottom: 11px;
+    transform: scale(1.4);
+  }
+  #info-salvalogo {
+    width: 85%;
+    height: 280px;
+    background: #FFFFFF;
+    box-shadow: 0px 1.59881px 5.59582px rgba(0, 0, 0, 0.15);
+    border-radius: 5.17391px;
+    margin: auto;
+    overflow: hidden;
+  }
+  #tittle-info-salvalogo {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12.4174px;
+    line-height: 120%;
+    color: #6321A6;
+  }
+  .texto-en-info {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9.31304px;
+    line-height: 155.5%;
+    color: #000000;
+  }
+  #info-salvalogo img {
+    margin: 10px 40px auto 40px;
+  }
+  .titulomicro {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+    display: flex;
+    align-items: center;
+    /* Violeta/main */
+    color: #6321A6;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .contenidomicro {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 155.5%;
+    /* or 28px */
+    display: flex;
+    align-items: center;
+    color: #000000;
+    max-width: 380px;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .imagenesmicro {
+    align-items: center;
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+  }
+  .search_button {
+    width: 15% !important;
+    height: 35px !important;
+    background-color: #00B1BB !important;
+    color: #F2F2F2;
+    border-radius: 0% 48px 48px 0% !important;
+    margin: 0 !important;
+  }
+  .search_button:hover {
+    background-color: white !important;
+    color: #00B1BB !important;
+  }
+  .form-control {
+    margin-right: 0 !important;
+    border-radius: 48px 0px 0px 48px;
+    padding-left: 10px;
+  }
+  .placeholder-input-desktop {
+    width: 80%;
+    height: 35px;
+    border: none;
+    background-color: #F2F4F5;
+  }
+  .header-chat {
+    background-color: #2FD9DE;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .header-chat p {
+    margin: 0;
+  }
+  .header-chat i {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+  .header-contenido {
+    display: flex;
+    align-items: center;
+  }
+  .pregunta-chat {
+    margin-right: 0px;
+  }
+  .comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    margin: 10px;
+  }
+  .profile-pic {
+    width: 51px;
+    height: 51px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .comment-body {
+    background-color: #f2f2f2;
+    width: auto;
+    height: auto;
+    max-width: 282px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding: 10px;
+    border-radius: 9px;
+  }
+  .respuesta .comment-body {
+    max-width: 80%;
+    margin-right: 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  /* Nueva clase para respuesta */
+  .respuesta {
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+  }
+  .banco-pic {
+    width: 51px;
+    height: 51px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .botonayuda-div {
+    display: flex;
+    justify-content: center;
+    margin-right: -25px;
+  }
+  .inputchatsalvavidas {
+    border-top: 2px #00B1BB;
+    border-style: solid none none none;
+    width: 100%;
+    height: 45px;
+    background-color: #FAFAFA;
+    text-align: start;
+    color: #303233;
+  }
+  .inputchatsalvavidas::-moz-placeholder {
+    color: #979C9E;
+  }
+  .inputchatsalvavidas::placeholder {
+    color: #979C9E;
+  }
+  #regresa_main {
+    transform: scale(0.789);
+  }
 }/*# sourceMappingURL=salvavidas.css.map */

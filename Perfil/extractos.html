@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
     <!--Nuestros css's-->
-    <link rel="stylesheet" href="/public/Components/tags/tags.css">
+    <!--link rel="stylesheet" href="/public/Components/tags/tags.css"-->
     <link rel="stylesheet" href="productos.css">
 
     <!--Typography-->
@@ -34,9 +34,9 @@
 <body>
 
     <w-nav-bar></w-nav-bar>
-    <div class="user-content container-fluid p-0">
+    <div class="container-fluid p-0">
         <div class="row">
-            <aside class="sidebar-container col-12 col-md-3 col-xl-3 bd-sidebar">
+            <aside class="col-12 col-md-3 col-xl-2 bd-sidebar">
                 <user-sidebar route="extractos"></user-sidebar>
             </aside>
 
@@ -50,55 +50,57 @@
                     <div class="products-container-select">
                         <h5>Que documento desea emitir?</h4>
                             <ul>
-                                <li>Extractos</li>
-                                <li>Certificado de Cuenta</li>
-                                <li>Certificado de Crédito</li>
-                                <li>Declaracion de Renta</li>
+                                <li id="extractos-btn">Extractos</li>
+                                <li id="cert_cta-btn">Certificado de Cuenta</li>
+                                <li id="cert_cred-btn">Certificado de Crédito</li>
+                                <li id="dec_renta-btn">Declaracion de Renta</li>
                             </ul>
                     </div>
                     <div class="products-container-form">
-                        <h3>Extractos</h3>
+                        <br><br><br>
+                        <h3 id="form_title">Extractos</h3>
 
-                        <div class="form-group">
-                            <label for="dropdown">Año</label>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle rounded-pill" type="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    id="dropDownStyleGreen">
-                                    Seleccione el Año
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">2023</a>
-                                    <a class="dropdown-item" href="#">2022</a>
-                                    <a class="dropdown-item" href="#">2021</a>
+                        <section class="form_section get_user_document">
+
+                            <div class="form-group">
+                                <label for="dropdown">Año</label>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle rounded-pill" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        id="dropDownStyleGreen">
+                                        Seleccione el Año
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">2023</a>
+                                        <a class="dropdown-item" href="#">2022</a>
+                                        <a class="dropdown-item" href="#">2021</a>
+                                    </div>
+                                </div>
+    
+                                <label for="dropdown">Mes</label>
+                                <div class="dropdown form-group">
+                                    <button class="btn btn-secondary dropdown-toggle rounded-pill" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        id="dropDownStyleGreen">
+                                        Seleccione el Mes
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Diciembre</a>
+                                        <a class="dropdown-item" href="#">Noviembre</a>
+                                        <a class="dropdown-item" href="#">Octubre</a>
+                                        <a class="dropdown-item" href="#">Septiembre</a>
+                                        <a class="dropdown-item" href="#">Agosto</a>
+                                        <a class="dropdown-item" href="#">Julio</a>
+                                        <a class="dropdown-item" href="#">Junio</a>
+                                        <a class="dropdown-item" href="#">Mayo</a>
+                                        <a class="dropdown-item" href="#">Abril</a>
+                                        <a class="dropdown-item" href="#">Marzo</a>
+                                        <a class="dropdown-item" href="#">Febrero</a>
+                                        <a class="dropdown-item" href="#">Enero</a>
+                                    </div>
                                 </div>
                             </div>
-
-                            <label for="dropdown">Mes</label>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle rounded-pill" type="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    id="dropDownStyleGreen">
-                                    Seleccione el Mes
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Diciembre</a>
-                                    <a class="dropdown-item" href="#">Noviembre</a>
-                                    <a class="dropdown-item" href="#">Octubre</a>
-                                    <a class="dropdown-item" href="#">Septiembre</a>
-                                    <a class="dropdown-item" href="#">Agosto</a>
-                                    <a class="dropdown-item" href="#">Julio</a>
-                                    <a class="dropdown-item" href="#">Junio</a>
-                                    <a class="dropdown-item" href="#">Mayo</a>
-                                    <a class="dropdown-item" href="#">Abril</a>
-                                    <a class="dropdown-item" href="#">Marzo</a>
-                                    <a class="dropdown-item" href="#">Febrero</a>
-                                    <a class="dropdown-item" href="#">Enero</a>
-                                </div>
-                            </div>
-
-                            <!--button class="btn btn_small" type="submit">hola bb</button-->
-                        </div>
+                        </section>
 
                     </div>
                 </div>
@@ -107,7 +109,7 @@
 
     </div>
 
-    <img class="planB" src="../planB/extracto.png" alt="">
+    <!--img class="planB" src="../planB/extracto.png" alt=""-->
 
     <w-footer></w-footer>
 
@@ -115,6 +117,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
+    <script src="extractos.js"></script>
     <script type="module" src="/public/Components/components.js"></script>
 </body>
 

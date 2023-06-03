@@ -1,0 +1,32 @@
+@import '../../../style.scss';
+
+.container {
+    &_btn {
+        width: 60%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        padding: 0px 25px 0px 85px;
+        justify-content: space-between;
+        align-items: center;
+        background: $color_accent_white;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+        border-radius: 80px;
+
+        &_text {
+            padding: 0px 85px;
+
+            &_text {
+                color: $color_text !important;
+            }
+        }
+
+        & h5 {
+            color: $color_violet1;
+        }
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}

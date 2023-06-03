@@ -1,0 +1,128 @@
+@import '../../../style.scss';
+
+.nav-pills {
+    width: 87.5%;
+    padding: 0px 4%;
+    justify-content: space-between;
+}
+
+.container {
+
+    &_product_similar {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 25px;
+
+        --bs-nav-pills-link-active-bg: $color_accent_white;
+        --bs-nav-pills-link-active-color: #27262C;
+        --bs-nav-pills-border-radius: 20px 20px 0px 0px;
+        --bs-nav-link-color: #27262C;
+        --bs-nav-pills-link-active-bg: #FAFAFA;
+    }
+}
+
+i {
+    font-size: 25px;
+}
+
+
+.tab-content {
+    margin-top: -20px;
+}
+
+#container_product_select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 9.2%;
+    width: 87.5%;
+    height: auto;
+    background-color: $color_accent_white;
+    box-shadow: 0px 3.16604px 11.0812px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    gap: 4.6%;
+}
+
+.product_selected {
+
+    &_img {
+        width: 46.07%;
+    }
+
+    &_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-items: flex-start;
+        gap: 5.12px;
+        width: 48, 34%;
+        background-color: $color_accent_white;
+
+        & h5 {
+            color: $color_dark_violet1;
+        }
+
+        & h4 {
+            color: $color_blue2;
+        }
+
+        & li {
+            color: $color_text;
+            margin: 7px 0px;
+        }
+
+    }
+}
+
+.list_product {
+    list-style: disc inside url("marcador.png");
+}
+
+@media only screen and (max-width: 768px) {
+    #container_product_select {
+        flex-direction: column;
+        padding: 30px 12.85%;
+        width: 93.71%;
+        gap: 4.6%;
+    }
+    
+    .product_selected {
+    
+        &_img {
+            width: 79.23%;
+        }
+    }
+
+    button {
+        align-self: center;
+    }
+
+    .container {
+
+        &_product_similar {
+            height: 61.76px;
+            padding: 8px 25px;
+    
+            --bs-nav-pills-link-active-bg: $color_accent_white;
+            --bs-nav-pills-link-active-color: #27262C;
+            --bs-nav-pills-border-radius: 20px 20px 0px 0px;
+            --bs-nav-link-color: #27262C;
+            --bs-nav-pills-link-active-bg: #FAFAFA;
+        }
+    }
+
+    .nav-pills {
+        width: 93.71%;
+        padding: 0px 4%;
+        justify-content: space-between;
+    }
+
+    .name_label {
+        display: none;
+    }
+}

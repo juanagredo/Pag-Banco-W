@@ -9,7 +9,7 @@ class Product extends HTMLElement {
 
     render() {
         this.innerHTML = `
-            <link rel="stylesheet" href="tags.css">
+            
             <div class="user-product-container">
                 <div class="user-product-head ahorro">
                     <h5 id="product-name"><span>Tipo - Nombre Producto</span></p>

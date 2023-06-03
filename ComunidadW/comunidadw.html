@@ -26,17 +26,17 @@
 </head>
 
 <body>
-
     <header>
+        <link rel="stylesheet" href="">
         <w-nav-bar></w-nav-bar>
-        <section class="breadcrumb_section">
-            <bread-n-title></bread-n-title>
-        </section>
+        <bread-n-title actual="W Contigo" link="../landing.html-../ComunidadW/comunidadw.html"
+        level="Inicio >-Comunidad W >"></bread-n-title>
     </header>
-
-    <article id="share">
-        <div id="container_text_btn">
-            <h1> Historias de grandeza que marcan la diferencia </h1>
+    
+    <img class="img_share_mobile" src="img/m1.png" alt="">
+    <section id="share">
+        <div class="container_text_btn">
+            <h1>Historias de grandeza que hacen diferencia</h1>
             <p class="body1"> Aprende de educación financiera y explora mas sobre la Comunidad W,
                 mediante historias que
                 dejan huella </p>
@@ -46,10 +46,8 @@
                 </button>
             </a>
         </div>
-        <div id="container_img_share">
-            <img id="container_img_share_img" src="./img/1.png" alt="">
-        </div>
-    </article>
+        <img class="img_share" src="./img/1.png" alt="">
+    </section>
 
     <section id="ours_labels">
         <div id="ours_labels_title">
@@ -76,21 +74,24 @@
 
         <article id="ours_labels_card">
             <card-boton icon="bi bi-people" titulo="Conoce más sobre 
-            nuestras categorías" contenido="Aprende sobre nuestras categorías, estas te ayudaran a encontrar las historias que mas se ajusten a tus intereses"
-            boton="Continuar"></card-boton>
+            nuestras categorías"
+                contenido="Aprende sobre nuestras categorías, estas te ayudaran a encontrar las historias que más se ajusten a tus intereses"
+                boton="Continuar"></card-boton>
 
         </article>
     </section>
 
     <section id="filter_container">
         <button class="btn btn_small btn_small_active"> <i class="bi bi-filter"></i> Filtro </button>
-        <button class="btn btn_medium btn_medium_outline_active text_btn_link_normal btn_tag"> Aprende en Familia </button>
-        <button class="btn btn_medium btn_medium_outline_active text_btn_link_normal btn_tag"> Crece con tu negocio </button>
+        <button class="btn btn_medium btn_medium_outline_active text_btn_link_normal btn_tag"> Aprende en Familia
+        </button>
+        <button class="btn btn_medium btn_medium_outline_active text_btn_link_normal btn_tag"> Crece con tu negocio
+        </button>
         <button class="btn btn_medium btn_medium_outline_active text_btn_link_normal btn_tag"> Crecemos juntos </button>
     </section>
 
-    <section id="w_articles_all">
-        <section id="w_articles">
+    <section id="w_articles">
+        <div class="container_all">
             <div class="container_eachCard">
                 <card-forblog recurso="./img/card1.png" titulo='Me encanta banco W'
                     contenido="Las mejores opciones en cuanto a apoyo financiero, este banco me salvó con su crédito  gotahorro ya que me ayudó a... "
@@ -121,27 +122,23 @@
                     contenido="Las mejores opciones en cuanto a apoyo financiero, este banco me salvó con su crédito  gotahorro ya que me ayudó a... "
                     likes='149' comments="87"></card-forblog>
             </div>
-        </section>
-    
-        <section id="btn_mas">
+        </div>
+        <div class="btn_mas">
             <button class="btn btn_medium btn_medium_active">Ver más</button>
-        </section>
+        </div>
     </section>
-
-
-    <!--<img src="../Images/card.png" alt="">-->
 
     <section id="w_card">
         <div id="w_card_desk">
             <w-card-desk photo="../Images/card.png" title="Atrévete a ser parte de la comunidad W"
-                text="Cuéntanos tu historia de grandeza, agrega una categoría a la que pertenezcas y se parte de la comunidad W"
+                text="Cuéntanos tu historia de grandeza, agrega una categoría y se parte de la comunidad W"
                 btn="Publica tu historia"></w-card-desk>
         </div>
 
         <div id="w_card_mobile">
-            <card-imagen recurso="../Images/card.png" titulo="Atrévete a ser parte de la comunidad W"
-            contenido="Cuéntanos tu historia de grandeza, agrega una categoría a la que pertenezcas y se parte de la comunidad W"
-            boton="Publica tu historia"></card-imagen>
+            <image-card recurso="../ComunidadW/img/m2.png" titulo="Atrévete a ser parte de la comunidad W"
+                contenido="Cuéntanos tu historia de grandeza, agrega una categoría y se parte de la comunidad W"
+                boton="Publica tu historia"></image-card>
         </div>
     </section>
 
