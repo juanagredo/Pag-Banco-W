@@ -28,6 +28,30 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        padding: 0px 30px;
+
+        // @media screen and (max-width: 768px) {
+        //     height: 330px;
+        // }
+
+
+        @media screen and (max-width: 900px) {
+            height: 260px;
+        }
+
+        @media screen and (min-width: 900px) {
+            height: 350px;
+        }
+
+        @media screen and (min-width: 1100px) {
+            height: 400px;
+        }
+
+        @media screen and (min-width: 1350px) {
+            height: 485px;
+        }
+
+
     }
 
     #imagenes-carr {
@@ -88,22 +112,22 @@
         }
 
 
-        .indexz-0.izq-carr {      
+        .indexz-0.izq-carr {
             left: 20%;
 
         }
 
         .indexz-1.izq-carr {
-           
+
             left: 10%;
-         
+
         }
 
-        .indexz-0.der-carr {   
-            right: 20%; 
+        .indexz-0.der-carr {
+            right: 20%;
         }
 
-        .indexz-1.der-carr { 
+        .indexz-1.der-carr {
             right: 10%;
         }
 
@@ -165,6 +189,13 @@
 //<--------------------------------------------------->
 // movil
 //<--------------------------------------------------->
+
+
+//<--------------------------------------------------->
+// movil
+//<--------------------------------------------------->
+
+
 @media screen and (max-width: 768px) {
     .portadas-invensibles {
         display: flex;
@@ -235,12 +266,61 @@
         width: 100%;
         object-fit: cover;
     }
-}
 
+
+    .revive-momentos{
+        p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 120%;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+    }
+
+    #imagenes-carr {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Permite el desplazamiento suave en dispositivos iOS */
+        scroll-snap-type: x mandatory; /* Hace que las imágenes se desplacen por página */
+      }
+      
+      #carrusel-inv {
+        padding: 20px;
+        display: flex;
+        scroll-snap-align: center; /* Centra las imágenes dentro del carrusel */
+        gap: 20%;
+
+        .carrusel-img {
+            box-shadow: 0px 4.32653px 15.1429px rgba(0, 0, 0, 0.15);
+            border-radius: 5%;
+            width: 50%;
+            object-fit: contain; /* Ajusta la imagen al contenedor */
+          }
+    
+    }
+      
+      #carr_izq,
+      #carr_der {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) scale(2.5);
+        z-index: 1;
+        cursor: pointer;
+      }
+      
+      #carr_izq {
+        left: 10px;
+      }
+      
+      #carr_der {
+        right: 10px;
+      }
+      
 //<--------------------------------------------->
-//<--------------------------------------------->
-//<--------------------------------------------->
-body {
+
     ._fit_content {
         width: fit-content !important;
     }
@@ -322,256 +402,207 @@ body {
             color: #27262C;
         }
     }
-}
 
-
-
-.animdertoizq1 {
-
-    animation: toizq 1.7s;
-
-
-}
-
-.animdertoizq2 {
-
-
-    animation: toizq2 1.7s;
-
-    // z-index: 0;
-    // width: calc(100% / 1.4);
-
-}
-
-.animdertoizq3 {
-
-
-    //z-index: 1;
-    //width: calc(100% / 1.2);
-    animation: toizq3 1.7s;
-
-}
-
-.animdertoizq4 {
-
-
-    // z-index: 2;
-    // width: 100%;
-
-    animation: toizq4 1.7s;
-}
-
-.animdertoizq5 {
-
-    animation: toizq5 1.7s;
-    // z-index: 1;
-    // width: calc(100% / 1.2);
-
-    
-
-}
-
-
-.animizqtoder1 {
-
-    animation: toder5 1.7s;
-    z-index: 1;
-
-
-}
-
-.animizqtoder2 {
-
-    animation: toder5 1.7s;
-    z-index: 2;
-
-
-}
-
-.animizqtoder3 {
-
-    animation: toder5 1.7s;
-    z-index: 1;
-
-
-}
-
-.animizqtoder4 {
-
-    animation: toder5 1.7s;
-    z-index: 0;
-
-
-}
-
-.animizqtoder5 {
-
-    
-    animation: toizq 1.7s;
-
-}
-
-
-@keyframes toizq {
-
-    0% {
-        transform: scale(1);
-        left: 20%;
+    .animdertoizq1 {
+        animation: toizq 1.7s;
     }
 
-    35% {
-        transform: scale(0.9);
-        left: 17%;
-
+    .animdertoizq2 {
+        animation: toizq2 1.7s;
     }
 
-    65% {
-        transform: scale(0.9);
-        left: 70%;
+    .animdertoizq3 {
+        animation: toizq3 1.7s;
     }
 
-    100% {
-        transform: scale(1);
-        left: 64%;
-    }
-}
-
-@keyframes toizq2 {
-
-    0% {
-
-        z-index: 1;
-        width: 20%;
-        left: 10%;
-        
+    .animdertoizq4 {
+        animation: toizq4 1.7s;
     }
 
-    100% {
-
-        z-index: 0;
-        width: 15%;
-        left: 4%;
-        
-    }
-}
-
-@keyframes toizq3 {
-
-    0% {
-
-        z-index: 2;
-        width: 25%;
-        left: 0%;
-        
+    .animdertoizq5 {
+        animation: toizq5 1.7s;
     }
 
-    100% {
-
-        z-index: 1;
-        width: 20%;
-        left: -6%;
-        
-    }
-}
-
-@keyframes toizq4 {
-
-    0% {
-
-        z-index: 1;
-        width: 20%;
-        right:  6%;
-        
-    }
-
-    100% {
-
-        z-index: 2;
-        width: 25%;
-        right: 15.9%;
-        
-    }
-}
-
-
-@keyframes toizq5 {
-
-    0% {
-
-        z-index: 0;
-        width: 15%;
-        right: 20%;
-        
-    }
-
-    100% {
-
-        z-index: 1;
-        width: 20%;
-        right: 26%;
-        
-    }
-}
-
-@keyframes toder {
-
-    0% {
-        transform: scale(1);
-    }
-
-    15% {
-        transform: scale(0.9);
-    }
-
-    85% {
-        transform: scale(0.9);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes toder2 {
-
-    0% {
+    .animizqtoder1 {
+        animation: toder 1.7s;
         z-index: 1;
     }
 
-    100% {
-        z-index: 0;
-    }
-}
-
-@keyframes toder3 {
-
-    0% {
+    .animizqtoder2 {
+        animation: toder2 1.7s;
         z-index: 2;
     }
 
-    100% {
-          z-index: 1;
-    }
-}
-
-@keyframes toder4 {
-
-    0% {
-    z-index: 1;
+    .animizqtoder3 {
+        animation: toder3 1.7s;
+        z-index: 1;
     }
 
-    100% {
-        z-index: 2;
-    }
-}
-
-@keyframes toder5 {
-
-    0% {
+    .animizqtoder4 {
+        animation: toder4 1.7s;
         z-index: 0;
     }
 
-    100% {
-        z-index: 1;
+    .animizqtoder5 {
+        animation: toder5 1.7s;
     }
+
+
+    @keyframes toizq {
+        0% {
+            transform: scale(1);
+            left: 20%;
+        }
+
+        35% {
+            transform: scale(0.9);
+            left: 17%;
+        }
+
+        65% {
+            transform: scale(0.9);
+            left: 70%;
+        }
+
+        100% {
+            transform: scale(1);
+            left: 64%;
+        }
+    }
+
+    @keyframes toizq2 {
+        0% {
+            z-index: 1;
+            width: 20%;
+            left: 10%;
+        }
+
+        100% {
+            z-index: 0;
+            width: 15%;
+            left: 4%;
+        }
+    }
+
+    @keyframes toizq3 {
+        0% {
+            z-index: 2;
+            width: 25%;
+            left: 0%;
+        }
+
+        100% {
+            z-index: 1;
+            width: 20%;
+            left: -6%;
+        }
+    }
+
+    @keyframes toizq4 {
+        0% {
+            z-index: 1;
+            width: 20%;
+            right: 6%;
+        }
+
+        100% {
+            z-index: 2;
+            width: 25%;
+            right: 15.9%;
+        }
+    }
+
+
+    @keyframes toizq5 {
+        0% {
+            z-index: 0;
+            width: 15%;
+            right: 20%;
+        }
+
+        100% {
+            z-index: 1;
+            width: 20%;
+            right: 26%;
+        }
+    }
+
+    @keyframes toder {
+        0% {
+            width: 15%;
+            left: 20%;
+            z-index: 0;
+        }
+
+        100% {
+            width: 20%;
+            left: 26%;
+            z-index: 1;
+        }
+    }
+
+    @keyframes toder2 {
+        0% {
+            left: 10%;
+            width: 20%;
+            z-index: 1;
+        }
+
+        100% {
+            left: 16%;
+            width: 25%;
+            z-index: 2;
+        }
+    }
+
+    @keyframes toder3 {
+        0% {
+            width: 25%;
+            left: 0%;
+            z-index: 2;
+        }
+
+        100% {
+            width: 20%;
+            left: 6%;
+            z-index: 1;
+        }
+    }
+
+    @keyframes toder4 {
+        0% {
+            left: -10%;
+            width: 20%;
+            z-index: 1;
+        }
+
+        100% {
+            left: -4%;
+            width: 15%;
+            z-index: 0;
+        }
+    }
+
+    @keyframes toder5 {
+        0% {
+            transform: scale(1);
+            left: -20%;
+        }
+
+        35% {
+            transform: scale(0.9);
+            left: -14%;
+        }
+
+        65% {
+            transform: scale(0.9);
+            left: -70%;
+        }
+
+        100% {
+            transform: scale(1);
+            left: -64%;
+        }
+    }
+
 }

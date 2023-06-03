@@ -70,7 +70,7 @@ h5 {
   padding-left: 10px;
 }
 
-.greenInput {
+#greenInput {
   width: 300px;
   height: 42px;
   border-color: #2DC071;
@@ -78,7 +78,7 @@ h5 {
   border-radius: 48px;
 }
 
-.redInput {
+#redInput {
   width: 300px;
   height: 42px;
   border-color: #EB3232;
@@ -86,53 +86,12 @@ h5 {
   border-radius: 48px;
 }
 
-.grayInput {
-  width: 30%;
+#grayInput {
+  width: 300px;
   height: 42px;
-  border: solid;
-  border-width: 1px;
   border-color: #CDCFD0;
-  background-color: #F2F4F5;
+  background-color: #F2F2F2;
   border-radius: 48px;
-  padding: 2%;
-}
-
-.messageInput {
-  width: 30%;
-  height: 140px;
-  border: solid;
-  border-width: 1px;
-  border-color: #CDCFD0;
-  background-color: #F2F4F5;
-  border-radius: 20px;
-  padding: 2%;
-}
-.messageInput::-moz-placeholder {
-  position: relative;
-  top: -40px;
-}
-.messageInput::placeholder {
-  position: relative;
-  top: -40px;
-}
-
-.label_file {
-  padding: 6px 12px;
-  cursor: pointer;
-  width: 30%;
-  height: 80px;
-  border: solid;
-  border-style: dashed;
-  border-width: 1px;
-  border-color: #CDCFD0;
-  background-color: #F2F4F5;
-  border-radius: 20px;
-  padding: 2%;
-}
-
-.inputFile {
-  visibility: hidden;
-  width: 0;
 }
 
 #inputSearch {
@@ -249,31 +208,6 @@ h5 {
   .body_3 {
     font-size: 12px;
   }
-  .grayInput {
-    width: 100%;
-  }
-  .messageInput {
-    width: 100%;
-  }
-  .messageInput::-moz-placeholder {
-    position: relative;
-    top: -40px;
-  }
-  .messageInput::placeholder {
-    position: relative;
-    top: -40px;
-  }
-  .label_file {
-    padding: 0px 0px;
-    cursor: pointer;
-    width: 100%;
-  }
-  .checkInput {
-    border-radius: 1px;
-    border: solid;
-    border-width: 1px;
-    border-color: #CDCFD0;
-  }
 }
 .text_button_bold {
   font-weight: 600;
@@ -374,14 +308,6 @@ h5 {
 .btn_large_transparent:disabled {
   color: #CDCFD0;
 }
-.btn_large_form {
-  border: none;
-  background-color: #BDF0F2;
-}
-.btn_large_form:active {
-  background-color: #FAFAFA;
-  color: #00B1BB;
-}
 .btn_medium {
   width: auto;
   height: 42px;
@@ -426,14 +352,6 @@ h5 {
 .btn_medium_transparent:disabled {
   color: #CDCFD0;
 }
-.btn_medium_form {
-  border: none;
-  background-color: #BDF0F2;
-}
-.btn_medium_form:active {
-  background-color: #FAFAFA;
-  color: #00B1BB;
-}
 .btn_small {
   width: 10.7%;
 }
@@ -475,30 +393,11 @@ h5 {
 .btn_small_transparent:disabled {
   color: #CDCFD0;
 }
-.btn_small_form {
-  border: none;
-  background-color: #BDF0F2;
-}
-.btn_small_form:active {
-  background-color: #FAFAFA;
-  color: #00B1BB;
-}
 
 @media only screen and (max-width: 768px) {
-  i {
-    font-size: 24px;
-  }
-  .right {
-    margin-left: 20px;
-    margin-right: -10px;
-  }
-  .left {
-    margin-right: 50px;
-    margin-left: -35px;
-  }
   .btn_large {
     width: auto;
-    padding: 9px 45px;
+    padding: 9px 65px;
   }
   .btn_medium {
     width: auto;
@@ -724,12 +623,37 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0px 30px;
   }
+}
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .carrusel-invens {
+    height: 260px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 900px) {
+  .carrusel-invens {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1100px) {
+  .carrusel-invens {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1350px) {
+  .carrusel-invens {
+    height: 485px;
+  }
+}
+@media screen and (min-width: 768px) {
   #imagenes-carr {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
+}
+@media screen and (min-width: 768px) {
   #carrusel-inv {
     position: relative;
     width: 100%;
@@ -782,12 +706,16 @@ h5 {
   #carrusel-inv .-blacked {
     filter: brightness(1);
   }
+}
+@media screen and (min-width: 768px) {
   .portadas-invensibles {
     display: flex;
     align-items: center;
     gap: 70px;
     padding-left: 12%;
   }
+}
+@media screen and (min-width: 768px) {
   .mujeres-emprendedoras .t {
     font-family: "Montserrat";
     font-style: normal;
@@ -799,17 +727,25 @@ h5 {
     color: #FF8826 !important;
     margin-top: 6W0PX;
   }
+}
+@media screen and (min-width: 768px) {
   .derechas-invensibles {
     margin-right: 50px;
   }
+}
+@media screen and (min-width: 768px) {
   .izquierdas-invensibles p {
     margin-top: 45px;
   }
+}
+@media screen and (min-width: 768px) {
   .dsk img {
     display: block;
     visibility: visible;
     height: auto;
   }
+}
+@media screen and (min-width: 768px) {
   .movil img {
     display: none;
     visibility: hidden;
@@ -875,232 +811,283 @@ h5 {
     -o-object-fit: cover;
        object-fit: cover;
   }
-}
-body ._fit_content {
-  width: -moz-fit-content !important;
-  width: fit-content !important;
-}
-body ._no_padding {
-  padding: 0px !important;
-  border-radius: 30px !important;
-}
-body .imagenes-inv {
-  width: 100%;
-}
-body .mujeres-emprendedoras {
-  background-color: #BDF0F2;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: max(30px, 15%);
-  padding: 30px 40px;
-}
-body .cards-inv {
-  flex-basis: 33.3333333333%;
-  min-width: 290px;
-  max-width: 370px;
-  height: auto;
-}
-body .padding-inv {
-  padding: 25px;
-  padding-top: 5px;
-}
-body .encabezado-inv h5 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 120%;
-  color: #27262C;
-}
-body .encabezado-inv p {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 155.5%;
-  color: #979C9E;
-  margin-top: -5px;
-}
-body .contenido-inv {
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-body .contenido-inv h6 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 120%;
-  color: #27262C;
-}
-body .contenido-inv p {
-  margin-top: -5px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
-  color: #27262C;
-}
-
-.animdertoizq1 {
-  animation: toizq 1.7s;
-}
-
-.animdertoizq2 {
-  animation: toizq2 1.7s;
-}
-
-.animdertoizq3 {
-  animation: toizq3 1.7s;
-}
-
-.animdertoizq4 {
-  animation: toizq4 1.7s;
-}
-
-.animdertoizq5 {
-  animation: toizq5 1.7s;
-}
-
-.animizqtoder1 {
-  animation: toder5 1.7s;
-  z-index: 1;
-}
-
-.animizqtoder2 {
-  animation: toder5 1.7s;
-  z-index: 2;
-}
-
-.animizqtoder3 {
-  animation: toder5 1.7s;
-  z-index: 1;
-}
-
-.animizqtoder4 {
-  animation: toder5 1.7s;
-  z-index: 0;
-}
-
-.animizqtoder5 {
-  animation: toizq 1.7s;
-}
-
-@keyframes toizq {
-  0% {
-    transform: scale(1);
-    left: 20%;
+  .revive-momentos p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    margin-top: 20px;
+    margin-left: 20px;
   }
-  35% {
-    transform: scale(0.9);
-    left: 17%;
+  #imagenes-carr {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Permite el desplazamiento suave en dispositivos iOS */
+    scroll-snap-type: x mandatory; /* Hace que las imágenes se desplacen por página */
   }
-  65% {
-    transform: scale(0.9);
-    left: 70%;
+  #carrusel-inv {
+    padding: 20px;
+    display: flex;
+    scroll-snap-align: center; /* Centra las imágenes dentro del carrusel */
+    gap: 20%;
   }
-  100% {
-    transform: scale(1);
-    left: 64%;
+  #carrusel-inv .carrusel-img {
+    box-shadow: 0px 4.32653px 15.1429px rgba(0, 0, 0, 0.15);
+    border-radius: 5%;
+    width: 50%;
+    -o-object-fit: contain;
+       object-fit: contain; /* Ajusta la imagen al contenedor */
   }
-}
-@keyframes toizq2 {
-  0% {
+  #carr_izq,
+  #carr_der {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(2.5);
     z-index: 1;
-    width: 20%;
-    left: 10%;
+    cursor: pointer;
   }
-  100% {
-    z-index: 0;
-    width: 15%;
-    left: 4%;
+  #carr_izq {
+    left: 10px;
   }
-}
-@keyframes toizq3 {
-  0% {
-    z-index: 2;
-    width: 25%;
-    left: 0%;
+  #carr_der {
+    right: 10px;
   }
-  100% {
-    z-index: 1;
-    width: 20%;
-    left: -6%;
+  ._fit_content {
+    width: -moz-fit-content !important;
+    width: fit-content !important;
   }
-}
-@keyframes toizq4 {
-  0% {
-    z-index: 1;
-    width: 20%;
-    right: 6%;
+  ._no_padding {
+    padding: 0px !important;
+    border-radius: 30px !important;
   }
-  100% {
-    z-index: 2;
-    width: 25%;
-    right: 15.9%;
+  .imagenes-inv {
+    width: 100%;
   }
-}
-@keyframes toizq5 {
-  0% {
-    z-index: 0;
-    width: 15%;
-    right: 20%;
+  .mujeres-emprendedoras {
+    background-color: #BDF0F2;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: max(30px, 15%);
+    padding: 30px 40px;
   }
-  100% {
-    z-index: 1;
-    width: 20%;
-    right: 26%;
+  .cards-inv {
+    flex-basis: 33.3333333333%;
+    min-width: 290px;
+    max-width: 370px;
+    height: auto;
   }
-}
-@keyframes toder {
-  0% {
-    transform: scale(1);
+  .padding-inv {
+    padding: 25px;
+    padding-top: 5px;
   }
-  15% {
-    transform: scale(0.9);
+  .encabezado-inv h5 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #27262C;
   }
-  85% {
-    transform: scale(0.9);
+  .encabezado-inv p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 155.5%;
+    color: #979C9E;
+    margin-top: -5px;
   }
-  100% {
-    transform: scale(1);
+  .contenido-inv {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
   }
-}
-@keyframes toder2 {
-  0% {
+  .contenido-inv h6 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    color: #27262C;
+  }
+  .contenido-inv p {
+    margin-top: -5px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #27262C;
+  }
+  .animdertoizq1 {
+    animation: toizq 1.7s;
+  }
+  .animdertoizq2 {
+    animation: toizq2 1.7s;
+  }
+  .animdertoizq3 {
+    animation: toizq3 1.7s;
+  }
+  .animdertoizq4 {
+    animation: toizq4 1.7s;
+  }
+  .animdertoizq5 {
+    animation: toizq5 1.7s;
+  }
+  .animizqtoder1 {
+    animation: toder 1.7s;
     z-index: 1;
   }
-  100% {
-    z-index: 0;
-  }
-}
-@keyframes toder3 {
-  0% {
+  .animizqtoder2 {
+    animation: toder2 1.7s;
     z-index: 2;
   }
-  100% {
+  .animizqtoder3 {
+    animation: toder3 1.7s;
     z-index: 1;
   }
-}
-@keyframes toder4 {
-  0% {
-    z-index: 1;
-  }
-  100% {
-    z-index: 2;
-  }
-}
-@keyframes toder5 {
-  0% {
+  .animizqtoder4 {
+    animation: toder4 1.7s;
     z-index: 0;
   }
-  100% {
-    z-index: 1;
+  .animizqtoder5 {
+    animation: toder5 1.7s;
+  }
+  @keyframes toizq {
+    0% {
+      transform: scale(1);
+      left: 20%;
+    }
+    35% {
+      transform: scale(0.9);
+      left: 17%;
+    }
+    65% {
+      transform: scale(0.9);
+      left: 70%;
+    }
+    100% {
+      transform: scale(1);
+      left: 64%;
+    }
+  }
+  @keyframes toizq2 {
+    0% {
+      z-index: 1;
+      width: 20%;
+      left: 10%;
+    }
+    100% {
+      z-index: 0;
+      width: 15%;
+      left: 4%;
+    }
+  }
+  @keyframes toizq3 {
+    0% {
+      z-index: 2;
+      width: 25%;
+      left: 0%;
+    }
+    100% {
+      z-index: 1;
+      width: 20%;
+      left: -6%;
+    }
+  }
+  @keyframes toizq4 {
+    0% {
+      z-index: 1;
+      width: 20%;
+      right: 6%;
+    }
+    100% {
+      z-index: 2;
+      width: 25%;
+      right: 15.9%;
+    }
+  }
+  @keyframes toizq5 {
+    0% {
+      z-index: 0;
+      width: 15%;
+      right: 20%;
+    }
+    100% {
+      z-index: 1;
+      width: 20%;
+      right: 26%;
+    }
+  }
+  @keyframes toder {
+    0% {
+      width: 15%;
+      left: 20%;
+      z-index: 0;
+    }
+    100% {
+      width: 20%;
+      left: 26%;
+      z-index: 1;
+    }
+  }
+  @keyframes toder2 {
+    0% {
+      left: 10%;
+      width: 20%;
+      z-index: 1;
+    }
+    100% {
+      left: 16%;
+      width: 25%;
+      z-index: 2;
+    }
+  }
+  @keyframes toder3 {
+    0% {
+      width: 25%;
+      left: 0%;
+      z-index: 2;
+    }
+    100% {
+      width: 20%;
+      left: 6%;
+      z-index: 1;
+    }
+  }
+  @keyframes toder4 {
+    0% {
+      left: -10%;
+      width: 20%;
+      z-index: 1;
+    }
+    100% {
+      left: -4%;
+      width: 15%;
+      z-index: 0;
+    }
+  }
+  @keyframes toder5 {
+    0% {
+      transform: scale(1);
+      left: -20%;
+    }
+    35% {
+      transform: scale(0.9);
+      left: -14%;
+    }
+    65% {
+      transform: scale(0.9);
+      left: -70%;
+    }
+    100% {
+      transform: scale(1);
+      left: -64%;
+    }
   }
 }/*# sourceMappingURL=premios.css.map */
