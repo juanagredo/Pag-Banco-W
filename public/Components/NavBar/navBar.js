@@ -79,7 +79,7 @@ class NavBar extends HTMLElement {
         <nav class="navbar navbar-expand-lg navbar-light d-none  d-md-block first-nav fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/landing.html">
-                    <img class="logo1" src="/public/Components/NavBar/images/logo.png" alt="Logo de mi sitio web">
+                    <img class="logo1" src="./public/Components/NavBar/images/logo.png" alt="Logo de mi sitio web">
                 </a>
             <div class="d-flex justify-content-center align-items-center">
                 <form id = 'search-1' class="d-flex my-2 my-lg-0">
