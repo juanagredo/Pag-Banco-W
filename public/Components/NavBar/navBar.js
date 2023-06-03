@@ -11,7 +11,7 @@ class NavBar extends HTMLElement {
           title: 'CDT'
         },
         {
-          url: './Pag-Banco-W/Creditos/credito.html',
+          url: './Creditos/credito.html',
           title: 'Microcrédito'
         },
         {
@@ -156,7 +156,7 @@ class NavBar extends HTMLElement {
                         data-bs-toggle="dropdown" aria-expanded="false"> Crédito </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../../../Creditos/All/all-credits.html">Todos</a>
-                            <a class="dropdown-item" href="./Pag-Banco-W/Creditos/credito.html">Microcredito</a>
+                            <a class="dropdown-item" href="./Creditos/credito.html">Microcredito</a>
                             <a class="dropdown-item" href="#">Yo construyo</a>
                             <a class="dropdown-item" href="#">Gotahorro</a>
                             <a class="dropdown-item" href="#">Inmueble productivo</a>
